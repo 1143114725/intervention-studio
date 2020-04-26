@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    
+    <!-- 标题栏  Start-->
+<LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/visit_left_iv"
+                android:layout_width="0dp"
+            	android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/login_margin_top" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_back" />
+            </LinearLayout>
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_survey_name_tv"
+                android:layout_width="0dp"
+            	android:layout_weight="8"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#444"
+                android:textSize="@dimen/index_detail"
+                android:textStyle="bold" />
+
+            <TextView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/login_margin_top_small"
+            android:paddingRight="@dimen/login_margin_top_small"
+            android:layout_marginRight="@dimen/pagemargin"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textSize="@dimen/Tip_Subtitle"
+            android:textStyle="bold" 
+            android:background="@drawable/nq_back"
+            android:text="刷新"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.01dip"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+    <!-- 标题栏  END-->
+    
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</LinearLayout>

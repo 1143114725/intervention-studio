@@ -1,0 +1,59 @@
+<resources>
+
+    <dimen name="endbutton_text_size">45dp</dimen>
+    <dimen name="nqbtn_text_size">18dp</dimen>
+    <dimen name="button_text_size">16dp</dimen>
+    <dimen name="sry_text_big">16dp</dimen>
+    <dimen name="sry_text_small">14dp</dimen>
+    <dimen name="all_upload_size">16dp</dimen>
+    <dimen name="upload_size">18dp</dimen>
+    <dimen name="left_textsize">18dp</dimen>
+    <dimen name="left_login_bottom">18dp</dimen>
+    <dimen name="index_button_top">16dp</dimen>
+    <dimen name="index_detail">18dp</dimen>
+    <dimen name="adpter_text_size">16dp</dimen>
+    <dimen name="total_index_detail">18dp</dimen>
+    <dimen name="local_text_size">14dp</dimen>
+    <dimen name="padding_dimens_size">2sp</dimen>
+    <dimen name="no_survey">18dp</dimen>
+    <dimen name="small_locate">14dp</dimen>
+    <dimen name="image_out_width">110dp</dimen>
+    <dimen name="image_out_height">37dp</dimen>
+    <dimen name="padding_big_dimens_size">3sp</dimen>
+    <dimen name="login_margin_top">10dp</dimen>
+    <dimen name="login_margin_top_small">5dp</dimen>
+    <dimen name="login_margin_top_small_thr">3dp</dimen>
+    <dimen name="login_margin_top_small_one">1dp</dimen>
+    <dimen name="login_margin_top_big">15dp</dimen>
+    <dimen name="popmenu_yoff">10.0dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="dimen_20dp">80dp</dimen>
+    <dimen name="text_size_item_height">40dp</dimen>
+    <dimen name="text_size_default">16dp</dimen>
+    <dimen name="survey_text_size">16dp</dimen>
+    <dimen name="survey_middle_text_size">18dp</dimen>
+    <dimen name="survey_big_text_size">19dp</dimen>
+    
+    <!-- 页边距 -->
+    <dimen name="pagemargin">16dp</dimen>
+    <dimen name="pointfivemargin">24dp</dimen>
+	<dimen name="doublemargin">32dp</dimen>
+	<!-- 字号 -->
+	<dimen name="Tip_Small">12dp</dimen>
+	<dimen name="Tip_Body">14dp</dimen>
+	<dimen name="Tip_Subtitle">16dp</dimen>
+	
+	<dimen name="Tip_Other18">18dp</dimen>
+	
+	<dimen name="Tip_Appbar">20dp</dimen>
+	<dimen name="Tip_Headline">24dp</dimen>
+	<dimen name="Tip_LargeOne">34dp</dimen>
+	<dimen name="Tip_LargeTwo">45dp</dimen>
+	<dimen name="Tip_LargeThree">56dp</dimen>
+	<dimen name="Tip_LargeFour">112dp</dimen>
+	
+	
+	
+</resources>

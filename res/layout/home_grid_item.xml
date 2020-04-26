@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/grid_item_top"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border" >
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/grid_item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_margin_top_small"
+            android:layout_marginLeft="@dimen/login_margin_top_small"
+            android:layout_marginTop="@dimen/login_margin_top_small"
+            android:text="@string/number"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sry_text_big" />
+        
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/grid_item_scsize"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin_top_small"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sry_text_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grid_item_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/borders"
+        android:orientation="vertical" >
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/grid_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/login_margin_top_small"
+            android:layout_marginLeft="@dimen/login_margin_top_small"
+            android:layout_marginTop="@dimen/login_margin_top_small"
+            android:text="@string/title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sry_text_big" />
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/grid_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/login_margin_top_small"
+            android:lines="3"
+            android:text="@string/content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sry_text_small" />
+    </LinearLayout>
+
+</LinearLayout>

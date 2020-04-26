@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     >
+     <include 
+         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         layout="@layout/topbar"/>
+	  
+    <LinearLayout
+         android:id="@+id/menuLL"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:visibility="invisible"
+	    android:background="@drawable/menu_bg">
+	  <LinearLayout
+         android:id="@+id/menuContentLL"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    >
+    	<ListView 
+    	    android:id="@+id/menuList"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="0dp"
+    	    android:layout_weight="1"
+    	    android:scrollingCache="false"
+    	    android:fadingEdge="none"
+    	    android:cacheColorHint="#00000000"
+    	    android:divider="#00000000"
+    	    android:listSelector="@drawable/menu_item_bg"
+    	   	/>
+
+    	<LinearLayout
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	   >
+
+    	    <View
+    	        android:layout_width="0dp"
+    	        android:layout_height="0dp"
+    	        android:layout_weight="1" />
+
+    	    <Button
+    	        android:id="@+id/btnList"
+    	        android:layout_width="0dp"
+    	        android:layout_height="@dimen/endbutton_text_size"
+    	        android:layout_gravity="center"
+    	        android:layout_margin="@dimen/login_margin_top_small"
+    	        android:layout_weight="2"
+    	        android:background="#6751B6"
+    	        android:gravity="center"
+    	        android:text="@string/jump_btn"
+    	        android:textColor="@color/white"
+    	        android:textSize="@dimen/total_index_detail" />
+
+    	    <View
+    	        android:layout_width="0dp"
+    	        android:layout_height="1dp"
+    	        android:layout_weight="1" />
+    	</LinearLayout>
+    	 </LinearLayout>
+     </LinearLayout>
+
+     <com.investigate.newsupper.pageview.MenuHorizontalScrollView
+    	android:id="@+id/mScrollView"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#00ffffff"
+    	android:fadingEdge="none"
+    	android:scrollbars="none" >
+	
+    	<LinearLayout
+    	    android:id="@+id/top"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="fill_parent"
+    	    android:background="#00ffffff"
+    	    android:orientation="horizontal" >
+    	</LinearLayout>
+     </com.investigate.newsupper.pageview.MenuHorizontalScrollView>
+    
+</FrameLayout>
