@@ -1,80 +1,171 @@
 package com.investigate.newsupper.intervention;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-import android.content.Context;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-
-import com.investigate.newsupper.bean.Answer;
-import com.investigate.newsupper.bean.AnswerMap;
 import com.investigate.newsupper.global.MyApp;
 import com.investigate.newsupper.util.BaseLog;
 import com.investigate.newsupper.util.DialogUtil;
-import com.investigate.newsupper.util.ListUtils;
+import com.investigate.newsupper.util.Util;
+
+import android.content.Context;
+import android.view.View;
+
 /**
- * 常驻干预
+ * 干预 字符串 surveyID index
+ * 
  * @author EraJi
  * @date 2020年4月26日22:03:12
- *
+ * 
  */
 public class Interventionutil {
-	public  int surveyId;
-	public  MyApp ma;
-	public  String uuid;
+
+	/*********** 千金裘 *********************/
+	public static final int SURVEY_ID_QJQ = 4112;
+
+	public static final int INTERVENTION_QJQ_Q1 = 53;
+	public static final int INTERVENTION_QJQ_Q2 = 54;
 	
-	public Interventionutil(int surveyId, MyApp ma, String uuid) {
+	public static final int INTERVENTION_QJQ_L7 = 141;
+
+	public static final int INTERVENTION_QJQ_L8 = 142;
+
+	public static final int INTERVENTION_QJQ_K4a = 154;
+	public static final int INTERVENTION_QJQ_K4 = 218;
+
+	public static final int INTERVENTION_QJQ_K13 = 168;
+	public static final int INTERVENTION_QJQ_K13a = 220;
+
+	public static final int INTERVENTION_QJQ_K14a = 169;
+	public static final int INTERVENTION_QJQ_K14b = 170;
+
+	public static final int INTERVENTION_QJQ_U1 = 173;
+	public static final int INTERVENTION_QJQ_U1a = 222;
+	
+	public static final int INTERVENTION_QJQ_P5 = 6;
+	public static final int INTERVENTION_QJQ_S1a = 15;
+
+	/*********** 千金裘 *********************/
+	
+	
+	private int surveyId;
+	private MyApp ma;
+	private String uuid;
+    private static Interventionutil mInstance;
+
+    public synchronized static Interventionutil getInstance(int surveyId, MyApp ma, String uuid) {
+
+        if (mInstance == null) {
+            mInstance = new Interventionutil(surveyId,ma,uuid);
+        }else{
+        	mInstance.surveyId = surveyId;
+        	mInstance.ma = ma;
+        	mInstance.uuid = uuid;
+        }
+        return mInstance;
+    }
+    
+	
+
+	private Interventionutil(int surveyId, MyApp ma, String uuid) {
 		super();
 		this.surveyId = surveyId;
 		this.ma = ma;
 		this.uuid = uuid;
 	}
+    
 	
 	/**
-	 * 获取答案
-	 * 
-	 * @param index
-	 * @return
+	 * 动态生成题干 后面调用
+	 * @param surveyId
+	 * @param qIndex
+	 * @param ma
+	 * @param uuid
+	 * @param vs
 	 */
-	public Answer getanswer(String index) {
-		Answer p4aans = ma.dbService.getAnswer(uuid, index);
-		if (p4aans != null && p4aans.getAnswerMapArr() != null) {
-			return p4aans;
-		}
-		return null;
+	public void createQuestionBodyViewBefore(int qIndex,ArrayList<View> vs) {
+		
+		switch (surveyId) {
+		case SURVEY_ID_QJQ:
+			InterventionQJQ(qIndex, vs);
+			break;
 
+		default:
+			break;
+		}
 	}
 	
-	public String getRowText(String str){
-		String rowtext = "";
-		String s[] = str.split("@@");
+
+	/**
+	 * 下一页的时候判断
+	 */
+	public boolean nextpage(int qIndex,ArrayList<View> vs,Context context,String uuid){
 		
-		Answer ans = getanswer(s[0]);
-		if (ans != null) {
-			for (int i = 0; i < ans.getAnswerMapArr().size(); i++) {
-				AnswerMap ansmaperlist = ans.getAnswerMapArr().get(i);
-				if (ansmaperlist.getAnswerValue().equals(s[1])) {
-					rowtext = ansmaperlist.getAnswerText();
+		boolean isresult = true;
+		switch (surveyId) {
+		case SURVEY_ID_QJQ:
+			
+			if (INTERVENTION_QJQ_Q2 == qIndex) {
+				String  result = InterventionQjq.getInstance(surveyId, ma, uuid)
+						.sortCorrespondence(INTERVENTION_QJQ_Q2, INTERVENTION_QJQ_Q1,"Q1的评分和Q2的选择不一致!");
+				if(!Util.isEmpty(result)){
+					DialogUtil.newdialog(context, result);
+					isresult = false;
 				}
 			}
+			if (INTERVENTION_QJQ_L8 == qIndex) {
+				String  result = InterventionQjq.getInstance(surveyId, ma, uuid)
+						.sortCorrespondence(INTERVENTION_QJQ_L8, INTERVENTION_QJQ_L7,"L7评分和L8的选择顺序不一致!");
+				if(!Util.isEmpty(result)){
+					DialogUtil.newdialog(context, result);
+					isresult = false;
+				}
+			}
+			
+			if (INTERVENTION_QJQ_S1a == qIndex) {
+				String  result = InterventionQjq.getInstance(surveyId, ma, uuid)
+						.chickSentence(INTERVENTION_QJQ_P5,INTERVENTION_QJQ_S1a,uuid);
+				if(!Util.isEmpty(result)){
+					DialogUtil.newdialog(context, result);
+					isresult = false;
+				}
+			}
+			
+			
+			break;
+
+		default:
+			break;
 		}
-		return rowtext;
+		return isresult;
 	}
-	
-	
+
+	private void InterventionQJQ(int qIndex,ArrayList<View> vs) {
+		
+		
+		
+		switch (qIndex) {
+		case INTERVENTION_QJQ_Q2:
+			
+			break;
+		case INTERVENTION_QJQ_K4:
+		
+			InterventionQjq.getInstance(surveyId,ma, uuid).insertsortO(vs, INTERVENTION_QJQ_L8+"", INTERVENTION_QJQ_K4a+"");
+
+			break;
+		case INTERVENTION_QJQ_K13a:
+			
+			InterventionQjq.getInstance(surveyId,ma, uuid).insertsortO(vs, INTERVENTION_QJQ_K4+"", INTERVENTION_QJQ_K13+"");
+
+			break;
+		case INTERVENTION_QJQ_U1a:
+			InterventionQjq.getInstance(surveyId,ma, uuid).insertsortO(vs, INTERVENTION_QJQ_L8+"", INTERVENTION_QJQ_U1+"");
+			break;
+
+		default:
+			break;
+		}
+
+	}
 
 }

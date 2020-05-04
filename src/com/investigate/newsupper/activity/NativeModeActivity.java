@@ -158,6 +158,7 @@ import com.investigate.newsupper.intervention.InterventionEP2;
 import com.investigate.newsupper.intervention.InterventionEP3;
 import com.investigate.newsupper.intervention.InterventionEP4;
 import com.investigate.newsupper.intervention.InterventionQjq;
+import com.investigate.newsupper.intervention.Interventionutil;
 import com.investigate.newsupper.listener.OnActionListener;
 import com.investigate.newsupper.main.MainService;
 import com.investigate.newsupper.pageview.MenuHorizontalScrollView;
@@ -2538,7 +2539,6 @@ public class NativeModeActivity extends BaseActivity implements
 					}
 				}
 			}
-
 			if (Util.StopTimeClick(q.qStopTime)) {
 				Toasts.makeText(NativeModeActivity.this,
 						"您还有" + Util.toTime + "秒的做答时间", Toast.LENGTH_SHORT)
@@ -5737,6 +5737,17 @@ public class NativeModeActivity extends BaseActivity implements
 	private void nextPage(boolean isNoValidate) {
 
 		int state = getQuestionAnswer(MSG_NEXT, isNoValidate);
+		
+		boolean result = Interventionutil.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+							.nextpage(q.qIndex,vs,NativeModeActivity.this,feed.getUuid());
+		
+		
+		if (!result) {
+			setTopClick(true);
+			return;
+		}
+		
+		
 		sum = 0;
 		// System.out.println("state--------->" + state);
 		// 为false就验证 不让过。
@@ -6018,9 +6029,90 @@ public class NativeModeActivity extends BaseActivity implements
 		 * 获取当前题目
 		 */
 		q = qs.get(realIndex);
+		if (Integer.parseInt(feed.getSurveyId()) == 4117) {
+			if (q.qIndex == 230) {
+				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-日间行车";
+			}
+			if (q.qIndex == 231) {
+				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-夜间行车";
+			}
+			if (q.qIndex == 271) {
+				q.qTitle = "访问员读出:请您仔细观看如图所示电动尾翼的效果";
+			}
+		}
+		if (Integer.parseInt(feed.getSurveyId()) == 4112) {
+			
+			if (q.qIndex == 230) {
+				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-日间行车";
+			}
+			if (q.qIndex == 231) {
+				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-夜间行车";
+			}
+			
+			if (q.qIndex == 169) {
+				int isshowK14a = InterventionQjq.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+						.getAnstext("220");
+				BaseLog.v("isshowK14==================" +isshowK14a );		
+				
+				q.qTitle = "请问为什么将Y车排在【"
+						+InterventionQjq.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+						.insertTitleAnstext(q,"220",0)
+						+"】前面呢?【多选】";
+						
+						
+						
+				
+				
+				if (isshowK14a == 1) {
+					if (operType == MSG_NEXT) {
+						index++;
+						createQuestionBodyView(MSG_NEXT);
+						return;
+					}else if (operType == MSG_PRE) {
+						index--;
+						bodyView.removeAllViews();
+						// 单复选矩阵固定
+						bodyView_new.removeAllViews();
+						vs.clear();
+						createQuestionBodyView(MSG_PRE);
+						return;
+					}
+				}
+			}
+			
+			
+			if (q.qIndex == 170) {
+				int isshowK14a = InterventionQjq.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+						.getAnstext("220");
+				BaseLog.v("isshowK14==================" +isshowK14a );		
 
+				q.qTitle = "请问为什么将Y车排在【"
+						+InterventionQjq.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+						.insertTitleAnstext(q,"220",0)
+						+"】后面呢?【多选】";
+				
+				
+				if (isshowK14a == 2) {
+					if (operType == MSG_NEXT) {
+						index++;
+						createQuestionBodyView(MSG_NEXT);
+						return;
+					}else if (operType == MSG_PRE) {
+						index--;
+						bodyView.removeAllViews();
+						// 单复选矩阵固定
+						bodyView_new.removeAllViews();
+						vs.clear();
+						createQuestionBodyView(MSG_PRE);
+						return;
+					}
+				}
+			}
+			
+		}
 		
-
+		
+//		
 
 		// 监控初始位置
 		/**
@@ -10705,20 +10797,16 @@ public class NativeModeActivity extends BaseActivity implements
 			}
 			if (q.qIndex == INTERVENTION_Q14_1) {
 				intervention.insertsortO(vs,INTERVENTION_Y9,INTERVENTION_Q14);
-
 			}
-			
 			if (q.qIndex == INTERVENTION_E14_1) {
 				intervention.insertsortO(vs,INTERVENTION_Q14_1+"",INTERVENTION_E14);
-
 			}
-			
 			if (q.qIndex == INTERVENTION_E15_1) {
 				intervention.insertsortO(vs,INTERVENTION_E14_1+"",INTERVENTION_E15);
-
 			}
-
-
+		}else{
+			Interventionutil.getInstance(Integer.parseInt(q.surveyId), ma, feed.getUuid())
+											.createQuestionBodyViewBefore(q.qIndex, vs);
 		}
 
 		
