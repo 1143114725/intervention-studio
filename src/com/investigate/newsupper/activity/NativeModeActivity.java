@@ -6029,7 +6029,9 @@ public class NativeModeActivity extends BaseActivity implements
 		 * 获取当前题目
 		 */
 		q = qs.get(realIndex);
-		if (Integer.parseInt(feed.getSurveyId()) == 4117) {
+		
+		if (Integer.parseInt(feed.getSurveyId()) == 4112) {
+			
 			if (q.qIndex == 230) {
 				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-日间行车";
 			}
@@ -6038,15 +6040,6 @@ public class NativeModeActivity extends BaseActivity implements
 			}
 			if (q.qIndex == 271) {
 				q.qTitle = "访问员读出:请您仔细观看如图所示电动尾翼的效果";
-			}
-		}
-		if (Integer.parseInt(feed.getSurveyId()) == 4112) {
-			
-			if (q.qIndex == 230) {
-				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-日间行车";
-			}
-			if (q.qIndex == 231) {
-				q.qTitle = "访问员读出：请您仔细观看如图所示的360全景影像标清的效果-夜间行车";
 			}
 			
 			if (q.qIndex == 169) {
@@ -7057,7 +7050,7 @@ public class NativeModeActivity extends BaseActivity implements
 						middleSueveySize);
 
 				String strTilte = "";
-
+					BaseLog.v("Q155：" + q.qTitle);
 				if (Util.isEmpty(q.qTitle)) {
 					q.qTitle = NativeModeActivity.this
 							.getString(R.string.no_title);
