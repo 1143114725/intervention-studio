@@ -158,7 +158,7 @@ public class InterventionQjq {
 		int sort = 5;
 		if (ans != null) {
 			// col:row
-			Map<Integer, String> map = new HashMap<>();
+			Map<Integer, String> map = new HashMap<Integer, String>();
 			for (int i = 0; i < ans.getAnswerMapArr().size(); i++) {
 				int col = ans.getAnswerMapArr().get(i).getCol();
 				int row = ans.getAnswerMapArr().get(i).getRow();

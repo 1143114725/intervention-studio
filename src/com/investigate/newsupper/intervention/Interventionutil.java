@@ -26,6 +26,11 @@ public class Interventionutil {
 	public static final int INTERVENTION_QJQ_Q1 = 53;
 	public static final int INTERVENTION_QJQ_Q2 = 54;
 	
+	
+	public static final int INTERVENTION_QJQ_L6C = 568;
+
+	public static final int INTERVENTION_QJQ_L6D = 569;
+	
 	public static final int INTERVENTION_QJQ_L7 = 141;
 
 	public static final int INTERVENTION_QJQ_L8 = 142;
@@ -116,6 +121,15 @@ public class Interventionutil {
 			if (INTERVENTION_QJQ_L8 == qIndex) {
 				String  result = InterventionQjq.getInstance(surveyId, ma, uuid)
 						.sortCorrespondence(INTERVENTION_QJQ_L8, INTERVENTION_QJQ_L7,"L7评分和L8的选择顺序不一致!");
+				if(!Util.isEmpty(result)){
+					DialogUtil.newdialog(context, result);
+					isresult = false;
+				}
+			}
+			
+			if (INTERVENTION_QJQ_L6D == qIndex) {
+				String  result = InterventionQjq.getInstance(surveyId, ma, uuid)
+						.sortCorrespondence(INTERVENTION_QJQ_L6D, INTERVENTION_QJQ_L6C,"L6C评分和L6D的选择顺序不一致!");
 				if(!Util.isEmpty(result)){
 					DialogUtil.newdialog(context, result);
 					isresult = false;

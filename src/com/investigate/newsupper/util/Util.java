@@ -1876,7 +1876,7 @@ System.out.println("am.getAnswerName().split"+am.getAnswerName().split("_")[3]);
 										/**
 										 * 是数字
 										 */
-										if (isFormat(rv.getEqualText1(), 8)) {
+										if (isFormat(rv.getEqualText1(), 9)) {
 											// int realValue, String matchEqual,
 											// int
 											// equalText1, int equalText2,
@@ -1885,7 +1885,7 @@ System.out.println("am.getAnswerName().split"+am.getAnswerName().split("_")[3]);
 											// System.out.println(Integer.parseInt(am.getAnswerValue())
 											// + ":" +
 											// Integer.parseInt(rv.getEqualText1()));
-											if (isFormat(am.getAnswerValue(), 8) && restValueValidate(
+											if (isFormat(am.getAnswerValue(), 9) && restValueValidate(
 													Float.parseFloat(am.getAnswerValue()), null,
 													Float.parseFloat(rv.getEqualText1()), 0, rv.getEqual1(), null)) {
 												_isValueMatcher = true;
@@ -2455,7 +2455,7 @@ System.out.println("am.getAnswerName().split"+am.getAnswerName().split("_")[3]);
 											// equalText1, int equalText2,
 											// String
 											// equal1, String equal2
-											if (isFormat(am.getAnswerValue(), 8) && restValueValidate(
+											if (isFormat(am.getAnswerValue(), 9) && restValueValidate(
 													Float.parseFloat(am.getAnswerValue()), null,
 													Float.parseFloat(rv.getEqualText1()), 0, rv.getEqual1(), null)) {
 												_isValueMatcher = true;
