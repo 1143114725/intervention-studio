@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root_vessel"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        style="@style/SurveyHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 更多 -->
+
+        <LinearLayout
+            android:id="@+id/my_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_more_se" />
+        </LinearLayout>
+
+        <!-- 目录 -->
+
+        <LinearLayout
+            android:id="@+id/my_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_menu" />
+        </LinearLayout>
+
+        <!-- 知识库 -->
+
+        <LinearLayout
+            android:id="@+id/survey_title_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@id/my_setting"
+            android:layout_toRightOf="@id/my_btn"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:id="@+id/survey_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="问卷加载中..."
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/index_detail"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_title_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/nq_back"
+                android:focusable="true"
+                android:gravity="center"
+                android:maxHeight="40dp"
+                android:maxWidth="130dp"
+                android:text="@string/choiceType"
+                android:textColor="@color/white"
+                android:textSize="@dimen/local_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/title_rl"
+        android:layout_gravity="center"
+        android:background="@color/gray" />
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        style="@style/StyleProgressBarMini"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/title_bar_line"
+        android:background="@drawable/shape"
+        android:max="100"
+        android:padding="0dp"
+        android:progress="50" />
+    <!-- 上一页下一页 -->
+    <RelativeLayout
+        android:id="@+id/re_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/login_margin_top"
+        android:paddingTop="@dimen/login_margin_top" >
+        
+
+        <Button
+            android:id="@+id/bq_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bq_back"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top_small"
+            android:text="@string/back_page"
+            android:textColor="@color/black"
+            android:textSize="@dimen/nqbtn_text_size"
+            android:textStyle="bold" />
+        <!-- android:background="" -->
+ 
+        <Button
+            android:id="@+id/nq_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/bq_btn"
+            android:background="@drawable/nq_back"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top_small"
+            android:text="@string/next_page"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nqbtn_text_size"
+            android:textStyle="bold" />
+        
+        <com.investigate.newsupper.view.CountDownTimerButton
+            android:id="@+id/time_nq_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bq_btn"
+            android:background="@drawable/nq_back"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top_small"
+            android:text="@string/next_page"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/nqbtn_text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_locationshow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@+id/nq_btn"
+            android:layout_toRightOf="@+id/nq_btn"
+            android:src="@drawable/locationgone" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/buttons_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/re_btn"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/question_scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons_line"
+        android:layout_below="@id/title_bar_line"
+        android:orientation="vertical" >
+
+        <!-- 单复选矩阵固定 -->
+
+        <RelativeLayout
+            android:id="@+id/quesiont_rl_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <!-- 单题拍照 -->
+
+            <LinearLayout
+                android:id="@+id/ltitle_tv_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:gravity="left|center_vertical" >
+
+                <TextView
+                    android:id="@+id/qtitle_tv_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/ivSign_new"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/login_margin_top"
+                        android:layout_marginRight="@dimen/login_margin_top"
+                        android:background="@drawable/signs"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivRecord_new"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/login_margin_top"
+                        android:layout_marginRight="@dimen/login_margin_top"
+                        android:background="@drawable/record_on"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/caption_tv_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ltitle_tv_new"
+                android:layout_marginBottom="10dip"
+                android:gravity="left|center_vertical"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/caption_ll_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/caption_tv_new"
+                android:layout_marginBottom="10dip"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+            <!-- 放第一行 -->
+
+            <LinearLayout
+                android:id="@+id/body_ll_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/caption_ll_new"
+                android:layout_marginBottom="10dip"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+        <!-- 单复选矩阵固定 -->
+
+        <com.investigate.newsupper.view.UIScrollView
+            android:id="@+id/visit_sv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:id="@+id/quesiont_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- 单题拍照 -->
+
+                <LinearLayout
+                    android:id="@+id/ltitle_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/qtitle_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ivSign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/login_margin_top"
+                            android:layout_marginRight="@dimen/login_margin_top"
+                            android:layout_marginTop="5dip"
+                            android:background="@drawable/signs"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivRecord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/login_margin_top"
+                            android:layout_marginRight="@dimen/login_margin_top"
+                            android:layout_marginTop="5dip"
+                            android:background="@drawable/record_on"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                   
+          		<LinearLayout
+          		    android:id="@+id/pll"
+          		    android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                
+            
+                </LinearLayout>
+                
+                </LinearLayout>
+
+               
+                <!-- 上方追加说明 -->
+
+                <TextView
+                    android:id="@+id/caption_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ltitle_tv"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="left|center_vertical"
+                    android:visibility="gone" />
+                <!-- 加 图片 -->
+
+                <LinearLayout
+                    android:id="@+id/caption_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/caption_tv"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+                <!-- 大树  干预提示语  显示 -->
+
+                <TextView
+                    android:id="@+id/notice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/caption_ll"
+                    android:visibility="gone" />
+                <!-- 大树  干预提示语  显示 -->
+
+                <LinearLayout
+                    android:id="@+id/body_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/notice_tv"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:scrollingCache="false" />
+                <!-- 下方追加说明 -->
+
+                <TextView
+                    android:id="@+id/comment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/body_ll"
+                    android:gravity="center"
+                    android:visibility="gone" />
+                <!-- 下方包含图片追加说明 -->
+
+                <LinearLayout
+                    android:id="@+id/comment_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_tv"
+                    android:layout_marginBottom="10dip"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </com.investigate.newsupper.view.UIScrollView>
+    </LinearLayout>
+    <!-- android:background="@drawable/sy" -->
+
+    <ProgressBar
+        android:id="@+id/visit_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_qmtips"
+        android:padding="25dip"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:id="@+id/img_caption_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/login_margin_top"
+            android:background="#e7e7e7"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:id="@+id/result_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/login_margin_top"
+            android:background="#e7e7e7"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:visibility="gone" >
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="您已完成本访问"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问时间：2014/09/24 15:53:20"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visitor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="记录人员：DAP"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_addr_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问地点：阜成大厦"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visitor_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问状态：中断断续"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/upload_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="上传状态：未上传"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/upload_alert_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="返回首页选择左侧上传页面，手动上传数据。"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dip"
+                android:orientation="vertical" >
+
+                <!-- android:layout_gravity="left|center_vertical" -->
+
+                <Button
+                    android:id="@+id/left_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/endbutton_text_size"
+                    android:layout_marginBottom="@dimen/login_margin_top"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:background="@drawable/nq_back"
+                    android:gravity="center"
+                    android:onClick="btnClick"
+                    android:text="继 续"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:typeface="serif" />
+
+                <!-- android:layout_gravity="right|center_vertical" -->
+
+                <Button
+                    android:id="@+id/right_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/endbutton_text_size"
+                    android:layout_marginBottom="@dimen/login_margin_top"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:background="@drawable/bq_back"
+                    android:gravity="center"
+                    android:onClick="btnClick"
+                    android:text="终 止"
+                    android:textColor="#585858"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:typeface="serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/jump_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/jump_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/login_margin_top_small"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/gray"
+            android:dividerHeight="1px"
+            android:listSelector="@color/white" />
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/pic_sd"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:content="@+id/images_rl"
+        android:handle="@+id/drag_icon_iv"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/images_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" >
+
+            <ImageSwitcher
+                android:id="@+id/switcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/img_count_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/gallery"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:typeface="serif" />
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:spacing="16dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/drag_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tray_handle" />
+    </SlidingDrawer>
+
+    <LinearLayout
+        android:id="@+id/popup_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#aa000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/popup_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

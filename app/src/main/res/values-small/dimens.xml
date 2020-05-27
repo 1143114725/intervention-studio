@@ -1,0 +1,55 @@
+<resources>
+    <dimen name="endbutton_text_size">40dp</dimen>
+    <dimen name="nqbtn_text_size">12dp</dimen>
+    <dimen name="button_text_size">10dp</dimen>
+    <dimen name="sry_text_big">10dp</dimen>
+    <dimen name="sry_text_small">8dp</dimen>
+    <dimen name="all_upload_size">10dp</dimen>
+    <dimen name="upload_size">12dp</dimen>
+    <dimen name="left_textsize">12dp</dimen>
+    <dimen name="left_login_bottom">12dp</dimen>
+    <dimen name="index_button_top">10dp</dimen>
+    <dimen name="index_detail">12dp</dimen>
+    <dimen name="adpter_text_size">10dp</dimen>
+    <dimen name="total_index_detail">12dp</dimen>
+    <dimen name="local_text_size">8dp</dimen>
+    <dimen name="padding_dimens_size">2sp</dimen>
+    <dimen name="no_survey">12dp</dimen>
+    <dimen name="small_locate">8dp</dimen>
+    <dimen name="image_out_width">100dp</dimen>
+    <dimen name="image_out_height">35dp</dimen>
+    <dimen name="padding_big_dimens_size">3sp</dimen>
+    <dimen name="login_margin_top">6dp</dimen>
+    <dimen name="login_margin_top_small">3dp</dimen>
+    <dimen name="login_margin_top_big">9dp</dimen>
+    <dimen name="popmenu_yoff">10.0dp</dimen>
+    <dimen name="text_size_default">10dp</dimen>
+    <dimen name="survey_text_size">10dp</dimen>
+    <dimen name="survey_middle_text_size">12dp</dimen>
+    <dimen name="survey_big_text_size">13dp</dimen>
+    
+    
+    
+
+        <!-- 页边距 -->
+    <dimen name="pagemargin">10dp</dimen>
+    <!-- 未适配 -->
+    <dimen name="pointfivemargin">24dp</dimen>
+    <!-- 未适配 -->
+	<dimen name="doublemargin">32dp</dimen>
+	<!-- 字号 --><!-- 未适配 -->
+	<dimen name="Tip_Small">12dp</dimen>
+	<dimen name="Tip_Body">12dp</dimen>
+	<dimen name="Tip_Subtitle">10dp</dimen>
+	
+	<dimen name="Tip_Other18">12dp</dimen>
+	
+	<!-- 未适配 -->
+	<dimen name="Tip_Appbar">20dp</dimen>
+	<dimen name="Tip_Headline">24dp</dimen>
+	<dimen name="Tip_LargeOne">34dp</dimen>
+	<dimen name="Tip_LargeTwo">45dp</dimen>
+	<dimen name="Tip_LargeThree">56dp</dimen>
+	<dimen name="Tip_LargeFour">112dp</dimen>
+<!-- 未适配 -->
+</resources>

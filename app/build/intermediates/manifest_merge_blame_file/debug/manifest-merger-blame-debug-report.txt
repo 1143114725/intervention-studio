@@ -1,0 +1,799 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.investigate.newsupper"
+4    android:versionCode="8"
+5    android:versionName="18.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="14"
+8-->D:\intervention\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->D:\intervention\app\src\main\AndroidManifest.xml
+10
+11    <!-- app上线更新  6 -->
+12    <permission
+12-->D:\intervention\app\src\main\AndroidManifest.xml:9:5-11:47
+13        android:name="com.investigate.newsupper.permission.MAPS_RECEIVE"
+13-->D:\intervention\app\src\main\AndroidManifest.xml:10:9-73
+14        android:protectionLevel="signature" />
+14-->D:\intervention\app\src\main\AndroidManifest.xml:11:9-44
+15
+16    <uses-permission android:name="com.investigate.newsupper.permission.MAPS_RECEIVE" />
+16-->D:\intervention\app\src\main\AndroidManifest.xml:13:5-89
+16-->D:\intervention\app\src\main\AndroidManifest.xml:13:22-86
+17    <!-- 新版本定位key -->
+18
+19
+20    <!-- __________________________Permission_________________________ -->
+21    <!-- 异常上传的权限 -->
+22    <uses-permission android:name="android.permission.READ_LOGS" />
+22-->D:\intervention\app\src\main\AndroidManifest.xml:20:5-21:47
+22-->D:\intervention\app\src\main\AndroidManifest.xml:20:22-65
+23    <!-- 拨打电话权限 -->
+24    <uses-permission android:name="android.permission.CALL_PHONE" />
+24-->D:\intervention\app\src\main\AndroidManifest.xml:23:5-69
+24-->D:\intervention\app\src\main\AndroidManifest.xml:23:22-66
+25    <!-- 访问网络的链接状态 -->
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->D:\intervention\app\src\main\AndroidManifest.xml:25:5-79
+26-->D:\intervention\app\src\main\AndroidManifest.xml:25:22-76
+27    <!-- 访问GPS位置的链接状态 -->
+28    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+28-->D:\intervention\app\src\main\AndroidManifest.xml:27:5-28:23
+28-->D:\intervention\app\src\main\AndroidManifest.xml:27:22-76
+29    </uses-permission>
+30    <!-- 访问互联网权限 -->
+31    <uses-permission android:name="android.permission.INTERNET" />
+31-->D:\intervention\app\src\main\AndroidManifest.xml:30:5-67
+31-->D:\intervention\app\src\main\AndroidManifest.xml:30:22-64
+32    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+32-->D:\intervention\app\src\main\AndroidManifest.xml:31:5-98
+32-->D:\intervention\app\src\main\AndroidManifest.xml:31:22-95
+33    <!-- My Location -->
+34    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+34-->D:\intervention\app\src\main\AndroidManifest.xml:33:5-81
+34-->D:\intervention\app\src\main\AndroidManifest.xml:33:22-78
+35    <!-- SDCARD写入权限 -->
+36    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+36-->D:\intervention\app\src\main\AndroidManifest.xml:35:5-36:23
+36-->D:\intervention\app\src\main\AndroidManifest.xml:35:22-78
+37    </uses-permission>
+38    <!-- 访问WIFI的链接状态 -->
+39    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+39-->D:\intervention\app\src\main\AndroidManifest.xml:38:5-39:23
+39-->D:\intervention\app\src\main\AndroidManifest.xml:38:22-73
+40    </uses-permission>
+41    <!-- 访问WIFI状态改变权限 -->
+42    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+42-->D:\intervention\app\src\main\AndroidManifest.xml:41:5-76
+42-->D:\intervention\app\src\main\AndroidManifest.xml:41:22-73
+43    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+43-->D:\intervention\app\src\main\AndroidManifest.xml:42:5-79
+43-->D:\intervention\app\src\main\AndroidManifest.xml:42:22-76
+44    <!-- 改变网路状态权限 -->
+45    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+45-->D:\intervention\app\src\main\AndroidManifest.xml:44:5-45:47
+45-->D:\intervention\app\src\main\AndroidManifest.xml:44:22-80
+46    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+46-->D:\intervention\app\src\main\AndroidManifest.xml:46:5-71
+46-->D:\intervention\app\src\main\AndroidManifest.xml:46:22-68
+47    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+47-->D:\intervention\app\src\main\AndroidManifest.xml:47:5-75
+47-->D:\intervention\app\src\main\AndroidManifest.xml:47:22-72
+48    <uses-permission android:name="android.permission.CAMERA" />
+48-->D:\intervention\app\src\main\AndroidManifest.xml:48:5-65
+48-->D:\intervention\app\src\main\AndroidManifest.xml:48:22-62
+49    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+49-->D:\intervention\app\src\main\AndroidManifest.xml:49:5-50:47
+49-->D:\intervention\app\src\main\AndroidManifest.xml:49:22-72
+50
+51    <!-- 允许程序读取或写入系统设置 -->
+52    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+52-->D:\intervention\app\src\main\AndroidManifest.xml:53:5-54:47
+52-->D:\intervention\app\src\main\AndroidManifest.xml:53:22-70
+53    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+53-->D:\intervention\app\src\main\AndroidManifest.xml:55:5-56:47
+53-->D:\intervention\app\src\main\AndroidManifest.xml:55:22-77
+54    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+54-->D:\intervention\app\src\main\AndroidManifest.xml:57:5-78
+54-->D:\intervention\app\src\main\AndroidManifest.xml:57:22-75
+55
+56    <uses-feature android:name="android.hardware.camera" />
+56-->D:\intervention\app\src\main\AndroidManifest.xml:59:5-60
+56-->D:\intervention\app\src\main\AndroidManifest.xml:59:19-57
+57    <!-- 维码扫描 -->
+58    <uses-feature android:name="android.hardware.camera.autofocus" />
+58-->D:\intervention\app\src\main\AndroidManifest.xml:61:5-70
+58-->D:\intervention\app\src\main\AndroidManifest.xml:61:19-67
+59
+60    <uses-permission android:name="android.permission.VIBRATE" />
+60-->D:\intervention\app\src\main\AndroidManifest.xml:63:5-66
+60-->D:\intervention\app\src\main\AndroidManifest.xml:63:22-63
+61    <!-- 指纹识别权限 -->
+62    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+62-->D:\intervention\app\src\main\AndroidManifest.xml:65:5-73
+62-->D:\intervention\app\src\main\AndroidManifest.xml:65:22-71
+63    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+63-->D:\intervention\app\src\main\AndroidManifest.xml:68:5-69:47
+63-->D:\intervention\app\src\main\AndroidManifest.xml:68:22-83
+64
+65    <!-- 测试权限 -->
+66    <!-- <instrumentation -->
+67    <!-- android:name="android.test.InstrumentationTestRunner" -->
+68    <!-- android:targetPackage="com.investigate.newsupper" /> -->
+69
+70
+71    <!-- 屏幕适配支持 -->
+72    <supports-screens
+72-->D:\intervention\app\src\main\AndroidManifest.xml:77:5-82:39
+73        android:anyDensity="true"
+73-->D:\intervention\app\src\main\AndroidManifest.xml:78:9-34
+74        android:largeScreens="true"
+74-->D:\intervention\app\src\main\AndroidManifest.xml:79:9-36
+75        android:normalScreens="true"
+75-->D:\intervention\app\src\main\AndroidManifest.xml:80:9-37
+76        android:resizeable="true"
+76-->D:\intervention\app\src\main\AndroidManifest.xml:81:9-34
+77        android:smallScreens="true" />
+77-->D:\intervention\app\src\main\AndroidManifest.xml:82:9-36
+78
+79    <uses-feature
+79-->D:\intervention\app\src\main\AndroidManifest.xml:84:5-86:35
+80        android:glEsVersion="0x00020000"
+80-->D:\intervention\app\src\main\AndroidManifest.xml:85:9-41
+81        android:required="true" />
+81-->D:\intervention\app\src\main\AndroidManifest.xml:86:9-32
+82
+83    <application
+83-->D:\intervention\app\src\main\AndroidManifest.xml:88:5-457:19
+84        android:name="com.investigate.newsupper.global.MyApp"
+84-->D:\intervention\app\src\main\AndroidManifest.xml:90:9-62
+85        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+85-->[com.android.support:support-compat:28.0.0] C:\EraJieZhang\gradle\caches\transforms-2\files-2.1\f1491a81a65d4033a56d6549564e765e\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+86        android:debuggable="true"
+87        android:icon="@drawable/icon"
+87-->D:\intervention\app\src\main\AndroidManifest.xml:91:9-38
+88        android:label="@string/app_name"
+88-->D:\intervention\app\src\main\AndroidManifest.xml:92:9-41
+89        android:largeHeap="true"
+89-->D:\intervention\app\src\main\AndroidManifest.xml:93:9-33
+90        android:testOnly="true"
+91        android:theme="@style/AppTheme"
+91-->D:\intervention\app\src\main\AndroidManifest.xml:96:9-40
+92        android:usesCleartextTraffic="true" >
+92-->D:\intervention\app\src\main\AndroidManifest.xml:95:9-44
+93        <meta-data
+93-->D:\intervention\app\src\main\AndroidManifest.xml:97:9-99:71
+94            android:name="com.google.android.maps.v2.API_KEY"
+94-->D:\intervention\app\src\main\AndroidManifest.xml:98:13-62
+95            android:value="AIzaSyDeSNFQnx4XeL2hSKrBFMz-I__56Oq1m4w" />
+95-->D:\intervention\app\src\main\AndroidManifest.xml:99:13-68
+96        <!--
+97          <activity android:name="com.investigate.newsupper.test.TestActivity" > 
+98              <intent-filter>
+99                <action android:name="android.intent.action.MAIN" />
+100
+101                <category android:name="android.intent.category.LAUNCHER" />
+102            </intent-filter>
+103           </activity>
+104        -->
+105
+106        <activity
+106-->D:\intervention\app\src\main\AndroidManifest.xml:111:8-121:20
+107            android:name="com.investigate.newsupper.activity.WelcomeActivity"
+107-->D:\intervention\app\src\main\AndroidManifest.xml:112:13-78
+108            android:label="@string/title_activity_main"
+108-->D:\intervention\app\src\main\AndroidManifest.xml:113:13-56
+109            android:screenOrientation="portrait"
+109-->D:\intervention\app\src\main\AndroidManifest.xml:114:13-49
+110            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+110-->D:\intervention\app\src\main\AndroidManifest.xml:115:13-71
+111            <intent-filter>
+111-->D:\intervention\app\src\main\AndroidManifest.xml:116:13-120:29
+112                <action android:name="android.intent.action.MAIN" />
+112-->D:\intervention\app\src\main\AndroidManifest.xml:117:17-69
+112-->D:\intervention\app\src\main\AndroidManifest.xml:117:25-66
+113
+114                <category android:name="android.intent.category.LAUNCHER" />
+114-->D:\intervention\app\src\main\AndroidManifest.xml:119:17-77
+114-->D:\intervention\app\src\main\AndroidManifest.xml:119:27-74
+115            </intent-filter>
+116        </activity>
+117        <activity
+117-->D:\intervention\app\src\main\AndroidManifest.xml:123:9-128:20
+118            android:name="com.investigate.newsupper.activity.HomeActivity"
+118-->D:\intervention\app\src\main\AndroidManifest.xml:124:13-75
+119            android:configChanges="keyboardHidden|orientation"
+119-->D:\intervention\app\src\main\AndroidManifest.xml:125:13-63
+120            android:screenOrientation="portrait"
+120-->D:\intervention\app\src\main\AndroidManifest.xml:126:13-49
+121            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+121-->D:\intervention\app\src\main\AndroidManifest.xml:127:13-71
+122        </activity>
+123        <activity
+123-->D:\intervention\app\src\main\AndroidManifest.xml:129:9-134:20
+124            android:name="com.investigate.newsupper.activity.CheckAddrActivity"
+124-->D:\intervention\app\src\main\AndroidManifest.xml:130:13-80
+125            android:configChanges="keyboardHidden|orientation"
+125-->D:\intervention\app\src\main\AndroidManifest.xml:131:13-63
+126            android:screenOrientation="portrait"
+126-->D:\intervention\app\src\main\AndroidManifest.xml:132:13-49
+127            android:theme="@android:style/Theme.NoTitleBar" >
+127-->D:\intervention\app\src\main\AndroidManifest.xml:133:13-60
+128        </activity>
+129        <activity
+129-->D:\intervention\app\src\main\AndroidManifest.xml:135:9-140:20
+130            android:name="com.investigate.newsupper.activity.UploadActivity"
+130-->D:\intervention\app\src\main\AndroidManifest.xml:136:13-77
+131            android:configChanges="keyboardHidden|orientation"
+131-->D:\intervention\app\src\main\AndroidManifest.xml:137:13-63
+132            android:screenOrientation="portrait"
+132-->D:\intervention\app\src\main\AndroidManifest.xml:138:13-49
+133            android:theme="@android:style/Theme.NoTitleBar" >
+133-->D:\intervention\app\src\main\AndroidManifest.xml:139:13-60
+134        </activity>
+135        <!-- 旧新提示 -->
+136        <activity
+136-->D:\intervention\app\src\main\AndroidManifest.xml:142:9-145:59
+137            android:name="com.investigate.newsupper.activity.ShowNoticeActivity"
+137-->D:\intervention\app\src\main\AndroidManifest.xml:143:13-81
+138            android:configChanges="keyboardHidden|orientation"
+138-->D:\intervention\app\src\main\AndroidManifest.xml:144:13-63
+139            android:theme="@android:style/Theme.Dialog" />
+139-->D:\intervention\app\src\main\AndroidManifest.xml:145:13-56
+140        <activity
+140-->D:\intervention\app\src\main\AndroidManifest.xml:146:9-150:50
+141            android:name="com.investigate.newsupper.activity.ShowImageActivity"
+141-->D:\intervention\app\src\main\AndroidManifest.xml:147:13-80
+142            android:configChanges="keyboardHidden|orientation"
+142-->D:\intervention\app\src\main\AndroidManifest.xml:148:13-63
+143            android:launchMode="singleTask"
+143-->D:\intervention\app\src\main\AndroidManifest.xml:149:13-44
+144            android:theme="@style/Transparent" />
+144-->D:\intervention\app\src\main\AndroidManifest.xml:150:13-47
+145        <activity
+145-->D:\intervention\app\src\main\AndroidManifest.xml:151:9-155:63
+146            android:name="com.investigate.newsupper.activity.VideoPlayerActivity"
+146-->D:\intervention\app\src\main\AndroidManifest.xml:152:13-82
+147            android:configChanges="keyboardHidden|orientation|locale|navigation"
+147-->D:\intervention\app\src\main\AndroidManifest.xml:153:13-81
+148            android:screenOrientation="unspecified"
+148-->D:\intervention\app\src\main\AndroidManifest.xml:154:13-52
+149            android:theme="@android:style/Theme.NoTitleBar" />
+149-->D:\intervention\app\src\main\AndroidManifest.xml:155:13-60
+150        <activity
+150-->D:\intervention\app\src\main\AndroidManifest.xml:156:9-161:20
+151            android:name="com.investigate.newsupper.activity.SettingActivity"
+151-->D:\intervention\app\src\main\AndroidManifest.xml:157:13-78
+152            android:configChanges="keyboardHidden|orientation"
+152-->D:\intervention\app\src\main\AndroidManifest.xml:158:13-63
+153            android:screenOrientation="portrait"
+153-->D:\intervention\app\src\main\AndroidManifest.xml:159:13-49
+154            android:theme="@android:style/Theme.NoTitleBar" >
+154-->D:\intervention\app\src\main\AndroidManifest.xml:160:13-60
+155        </activity>
+156        <activity
+156-->D:\intervention\app\src\main\AndroidManifest.xml:162:9-167:20
+157            android:name="com.investigate.newsupper.activity.KnowleageActivity"
+157-->D:\intervention\app\src\main\AndroidManifest.xml:163:13-80
+158            android:configChanges="keyboardHidden|orientation"
+158-->D:\intervention\app\src\main\AndroidManifest.xml:164:13-63
+159            android:screenOrientation="portrait"
+159-->D:\intervention\app\src\main\AndroidManifest.xml:165:13-49
+160            android:theme="@android:style/Theme.NoTitleBar" >
+160-->D:\intervention\app\src\main\AndroidManifest.xml:166:13-60
+161        </activity>
+162        <activity
+162-->D:\intervention\app\src\main\AndroidManifest.xml:168:9-173:20
+163            android:name="com.investigate.newsupper.activity.KnowledgeDetailActivity"
+163-->D:\intervention\app\src\main\AndroidManifest.xml:169:13-86
+164            android:configChanges="keyboardHidden|orientation"
+164-->D:\intervention\app\src\main\AndroidManifest.xml:170:13-63
+165            android:screenOrientation="portrait"
+165-->D:\intervention\app\src\main\AndroidManifest.xml:171:13-49
+166            android:theme="@android:style/Theme.NoTitleBar" >
+166-->D:\intervention\app\src\main\AndroidManifest.xml:172:13-60
+167        </activity>
+168        <activity
+168-->D:\intervention\app\src\main\AndroidManifest.xml:174:9-179:20
+169            android:name="com.investigate.newsupper.activity.LoginActivity"
+169-->D:\intervention\app\src\main\AndroidManifest.xml:175:13-76
+170            android:configChanges="keyboardHidden|orientation"
+170-->D:\intervention\app\src\main\AndroidManifest.xml:176:13-63
+171            android:screenOrientation="portrait"
+171-->D:\intervention\app\src\main\AndroidManifest.xml:177:13-49
+172            android:theme="@android:style/Theme.NoTitleBar" >
+172-->D:\intervention\app\src\main\AndroidManifest.xml:178:13-60
+173        </activity>
+174        <!-- 注销页面 -->
+175        <activity
+175-->D:\intervention\app\src\main\AndroidManifest.xml:181:9-185:20
+176            android:name="com.investigate.newsupper.activity.LogoutDialogActivity"
+176-->D:\intervention\app\src\main\AndroidManifest.xml:182:13-83
+177            android:screenOrientation="portrait"
+177-->D:\intervention\app\src\main\AndroidManifest.xml:183:13-49
+178            android:theme="@android:style/Theme.Dialog" >
+178-->D:\intervention\app\src\main\AndroidManifest.xml:184:13-56
+179        </activity>
+180
+181        <!-- 提示页面 -->
+182        <activity
+182-->D:\intervention\app\src\main\AndroidManifest.xml:188:9-193:20
+183            android:name="com.investigate.newsupper.activity.NoticeActivity"
+183-->D:\intervention\app\src\main\AndroidManifest.xml:189:13-77
+184            android:launchMode="singleTask"
+184-->D:\intervention\app\src\main\AndroidManifest.xml:190:13-44
+185            android:screenOrientation="portrait"
+185-->D:\intervention\app\src\main\AndroidManifest.xml:191:13-49
+186            android:theme="@android:style/Theme.Dialog" >
+186-->D:\intervention\app\src\main\AndroidManifest.xml:192:13-56
+187        </activity>
+188
+189        <!-- 追加说明类 -->
+190        <activity
+190-->D:\intervention\app\src\main\AndroidManifest.xml:196:9-200:20
+191            android:name="com.investigate.newsupper.activity.MyDialogActivity"
+191-->D:\intervention\app\src\main\AndroidManifest.xml:197:13-79
+192            android:screenOrientation="portrait"
+192-->D:\intervention\app\src\main\AndroidManifest.xml:198:13-49
+193            android:theme="@android:style/Theme.Dialog" >
+193-->D:\intervention\app\src\main\AndroidManifest.xml:199:13-56
+194        </activity>
+195        <!-- 数据字典 -->
+196        <activity
+196-->D:\intervention\app\src\main\AndroidManifest.xml:202:9-206:20
+197            android:name="com.investigate.newsupper.view.EditTextListView"
+197-->D:\intervention\app\src\main\AndroidManifest.xml:203:13-75
+198            android:screenOrientation="portrait"
+198-->D:\intervention\app\src\main\AndroidManifest.xml:204:13-49
+199            android:theme="@android:style/Theme.Dialog" >
+199-->D:\intervention\app\src\main\AndroidManifest.xml:205:13-56
+200        </activity>
+201        <activity
+201-->D:\intervention\app\src\main\AndroidManifest.xml:207:9-212:20
+202            android:name="com.investigate.newsupper.activity.SubscibeActivity"
+202-->D:\intervention\app\src\main\AndroidManifest.xml:208:13-79
+203            android:configChanges="keyboardHidden|orientation"
+203-->D:\intervention\app\src\main\AndroidManifest.xml:209:13-63
+204            android:screenOrientation="portrait"
+204-->D:\intervention\app\src\main\AndroidManifest.xml:210:13-49
+205            android:theme="@android:style/Theme.NoTitleBar" >
+205-->D:\intervention\app\src\main\AndroidManifest.xml:211:13-60
+206        </activity>
+207        <activity
+207-->D:\intervention\app\src\main\AndroidManifest.xml:213:9-218:20
+208            android:name="com.investigate.newsupper.activity.RegistActivity"
+208-->D:\intervention\app\src\main\AndroidManifest.xml:214:13-77
+209            android:configChanges="keyboardHidden|orientation"
+209-->D:\intervention\app\src\main\AndroidManifest.xml:215:13-63
+210            android:screenOrientation="portrait"
+210-->D:\intervention\app\src\main\AndroidManifest.xml:216:13-49
+211            android:theme="@android:style/Theme.NoTitleBar" >
+211-->D:\intervention\app\src\main\AndroidManifest.xml:217:13-60
+212        </activity>
+213        <activity
+213-->D:\intervention\app\src\main\AndroidManifest.xml:219:9-224:20
+214            android:name="com.investigate.newsupper.activity.VisitActivity"
+214-->D:\intervention\app\src\main\AndroidManifest.xml:220:13-76
+215            android:configChanges="keyboardHidden|orientation"
+215-->D:\intervention\app\src\main\AndroidManifest.xml:221:13-63
+216            android:screenOrientation="portrait"
+216-->D:\intervention\app\src\main\AndroidManifest.xml:222:13-49
+217            android:theme="@android:style/Theme.NoTitleBar" >
+217-->D:\intervention\app\src\main\AndroidManifest.xml:223:13-60
+218        </activity>
+219        <activity
+219-->D:\intervention\app\src\main\AndroidManifest.xml:225:9-229:20
+220            android:name="com.investigate.newsupper.activity.ChoiceModeActivity"
+220-->D:\intervention\app\src\main\AndroidManifest.xml:226:13-81
+221            android:screenOrientation="portrait"
+221-->D:\intervention\app\src\main\AndroidManifest.xml:227:13-49
+222            android:theme="@android:style/Theme.Dialog" >
+222-->D:\intervention\app\src\main\AndroidManifest.xml:228:13-56
+223        </activity>
+224        <activity
+224-->D:\intervention\app\src\main\AndroidManifest.xml:230:9-235:20
+225            android:name="com.investigate.newsupper.activity.MapActivity"
+225-->D:\intervention\app\src\main\AndroidManifest.xml:231:13-74
+226            android:configChanges="keyboardHidden|orientation"
+226-->D:\intervention\app\src\main\AndroidManifest.xml:232:13-63
+227            android:screenOrientation="portrait"
+227-->D:\intervention\app\src\main\AndroidManifest.xml:233:13-49
+228            android:theme="@android:style/Theme.NoTitleBar" >
+228-->D:\intervention\app\src\main\AndroidManifest.xml:234:13-60
+229        </activity>
+230        <activity
+230-->D:\intervention\app\src\main\AndroidManifest.xml:236:9-241:20
+231            android:name="com.investigate.newsupper.activity.DataMonitorActivity"
+231-->D:\intervention\app\src\main\AndroidManifest.xml:237:13-82
+232            android:configChanges="keyboardHidden|orientation"
+232-->D:\intervention\app\src\main\AndroidManifest.xml:238:13-63
+233            android:screenOrientation="portrait"
+233-->D:\intervention\app\src\main\AndroidManifest.xml:239:13-49
+234            android:theme="@android:style/Theme.NoTitleBar" >
+234-->D:\intervention\app\src\main\AndroidManifest.xml:240:13-60
+235        </activity>
+236        <activity
+236-->D:\intervention\app\src\main\AndroidManifest.xml:242:9-246:63
+237            android:name="com.investigate.newsupper.activity.WebModeActivity"
+237-->D:\intervention\app\src\main\AndroidManifest.xml:243:13-78
+238            android:configChanges="keyboardHidden|orientation|screenSize"
+238-->D:\intervention\app\src\main\AndroidManifest.xml:244:13-74
+239            android:screenOrientation="portrait"
+239-->D:\intervention\app\src\main\AndroidManifest.xml:245:13-49
+240            android:theme="@android:style/Theme.NoTitleBar" />
+240-->D:\intervention\app\src\main\AndroidManifest.xml:246:13-60
+241        <activity
+241-->D:\intervention\app\src\main\AndroidManifest.xml:247:9-253:20
+242            android:name="com.investigate.newsupper.activity.NativeModeActivity"
+242-->D:\intervention\app\src\main\AndroidManifest.xml:248:13-81
+243            android:configChanges="keyboardHidden|orientation|screenSize"
+243-->D:\intervention\app\src\main\AndroidManifest.xml:249:13-74
+244            android:screenOrientation="portrait"
+244-->D:\intervention\app\src\main\AndroidManifest.xml:250:13-49
+245            android:theme="@android:style/Theme.NoTitleBar"
+245-->D:\intervention\app\src\main\AndroidManifest.xml:251:13-60
+246            android:windowSoftInputMode="stateHidden" >
+246-->D:\intervention\app\src\main\AndroidManifest.xml:252:13-54
+247        </activity>
+248        <activity
+248-->D:\intervention\app\src\main\AndroidManifest.xml:254:9-259:63
+249            android:name="com.investigate.newsupper.activity.PhotoActivity"
+249-->D:\intervention\app\src\main\AndroidManifest.xml:255:13-76
+250            android:configChanges="keyboardHidden|orientation|screenSize"
+250-->D:\intervention\app\src\main\AndroidManifest.xml:256:13-74
+251            android:launchMode="singleTask"
+251-->D:\intervention\app\src\main\AndroidManifest.xml:257:13-44
+252            android:screenOrientation="portrait"
+252-->D:\intervention\app\src\main\AndroidManifest.xml:258:13-49
+253            android:theme="@android:style/Theme.NoTitleBar" />
+253-->D:\intervention\app\src\main\AndroidManifest.xml:259:13-60
+254        <activity
+254-->D:\intervention\app\src\main\AndroidManifest.xml:260:9-266:20
+255            android:name="com.investigate.newsupper.activity.ReviewCommitActivity"
+255-->D:\intervention\app\src\main\AndroidManifest.xml:261:13-83
+256            android:configChanges="orientation|screenSize"
+256-->D:\intervention\app\src\main\AndroidManifest.xml:262:13-59
+257            android:screenOrientation="portrait"
+257-->D:\intervention\app\src\main\AndroidManifest.xml:263:13-49
+258            android:theme="@android:style/Theme.NoTitleBar"
+258-->D:\intervention\app\src\main\AndroidManifest.xml:264:13-60
+259            android:windowSoftInputMode="stateHidden" >
+259-->D:\intervention\app\src\main\AndroidManifest.xml:265:13-54
+260        </activity>
+261        <activity
+261-->D:\intervention\app\src\main\AndroidManifest.xml:267:9-273:20
+262            android:name="com.investigate.newsupper.activity.NativeModeNoPageActivity"
+262-->D:\intervention\app\src\main\AndroidManifest.xml:268:13-87
+263            android:configChanges="keyboardHidden|orientation|screenSize"
+263-->D:\intervention\app\src\main\AndroidManifest.xml:269:13-74
+264            android:screenOrientation="portrait"
+264-->D:\intervention\app\src\main\AndroidManifest.xml:270:13-49
+265            android:theme="@android:style/Theme.NoTitleBar"
+265-->D:\intervention\app\src\main\AndroidManifest.xml:271:13-60
+266            android:windowSoftInputMode="stateHidden" >
+266-->D:\intervention\app\src\main\AndroidManifest.xml:272:13-54
+267        </activity>
+268        <activity
+268-->D:\intervention\app\src\main\AndroidManifest.xml:274:9-280:20
+269            android:name="com.investigate.newsupper.activity.NativeReviewActivity"
+269-->D:\intervention\app\src\main\AndroidManifest.xml:275:13-83
+270            android:configChanges="orientation|screenSize"
+270-->D:\intervention\app\src\main\AndroidManifest.xml:276:13-59
+271            android:screenOrientation="portrait"
+271-->D:\intervention\app\src\main\AndroidManifest.xml:277:13-49
+272            android:theme="@android:style/Theme.NoTitleBar"
+272-->D:\intervention\app\src\main\AndroidManifest.xml:278:13-60
+273            android:windowSoftInputMode="stateHidden" >
+273-->D:\intervention\app\src\main\AndroidManifest.xml:279:13-54
+274        </activity>
+275        <!-- 维码扫描 -->
+276        <activity
+276-->D:\intervention\app\src\main\AndroidManifest.xml:282:9-288:20
+277            android:name="com.investigate.newsupper.activity.CaptureActivity"
+277-->D:\intervention\app\src\main\AndroidManifest.xml:283:13-78
+278            android:configChanges="orientation|keyboardHidden"
+278-->D:\intervention\app\src\main\AndroidManifest.xml:284:13-63
+279            android:screenOrientation="portrait"
+279-->D:\intervention\app\src\main\AndroidManifest.xml:285:13-49
+280            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+280-->D:\intervention\app\src\main\AndroidManifest.xml:286:13-71
+281            android:windowSoftInputMode="stateAlwaysHidden" >
+281-->D:\intervention\app\src\main\AndroidManifest.xml:287:13-60
+282        </activity>
+283
+284        <!-- 大树  以下 -->
+285        <activity
+285-->D:\intervention\app\src\main\AndroidManifest.xml:291:9-297:20
+286            android:name="com.investigate.newsupper.activity.MyWordActivity"
+286-->D:\intervention\app\src\main\AndroidManifest.xml:292:13-77
+287            android:configChanges="orientation|keyboardHidden"
+287-->D:\intervention\app\src\main\AndroidManifest.xml:293:13-63
+288            android:screenOrientation="portrait"
+288-->D:\intervention\app\src\main\AndroidManifest.xml:294:13-49
+289            android:theme="@android:style/Theme.Dialog"
+289-->D:\intervention\app\src\main\AndroidManifest.xml:295:13-56
+290            android:windowSoftInputMode="stateAlwaysHidden" >
+290-->D:\intervention\app\src\main\AndroidManifest.xml:296:13-60
+291        </activity>
+292        <!-- 删除附件 -->
+293        <activity
+293-->D:\intervention\app\src\main\AndroidManifest.xml:299:9-304:63
+294            android:name="com.investigate.newsupper.activity.AttachActivity"
+294-->D:\intervention\app\src\main\AndroidManifest.xml:300:13-77
+295            android:configChanges="orientation|keyboardHidden"
+295-->D:\intervention\app\src\main\AndroidManifest.xml:301:13-63
+296            android:screenOrientation="portrait"
+296-->D:\intervention\app\src\main\AndroidManifest.xml:302:13-49
+297            android:theme="@android:style/Theme.Dialog"
+297-->D:\intervention\app\src\main\AndroidManifest.xml:303:13-56
+298            android:windowSoftInputMode="stateAlwaysHidden" />
+298-->D:\intervention\app\src\main\AndroidManifest.xml:304:13-60
+299        <!-- 下级项目列表 -->
+300        <activity android:name="com.investigate.newsupper.activity.SubitemsListActivity" >
+300-->D:\intervention\app\src\main\AndroidManifest.xml:306:9-308:20
+300-->D:\intervention\app\src\main\AndroidManifest.xml:307:13-83
+301        </activity>
+302
+303        <!-- 调用网页在线观看答案 -->
+304        <activity
+304-->D:\intervention\app\src\main\AndroidManifest.xml:311:9-314:63
+305            android:name="com.investigate.newsupper.activity.SurveyViewAnswerActivity"
+305-->D:\intervention\app\src\main\AndroidManifest.xml:311:19-93
+306            android:configChanges="keyboardHidden|orientation"
+306-->D:\intervention\app\src\main\AndroidManifest.xml:312:13-63
+307            android:screenOrientation="portrait"
+307-->D:\intervention\app\src\main\AndroidManifest.xml:313:13-49
+308            android:theme="@android:style/Theme.NoTitleBar" />
+308-->D:\intervention\app\src\main\AndroidManifest.xml:314:13-60
+309
+310        <!-- 调用网页在线答卷 -->
+311        <activity
+311-->D:\intervention\app\src\main\AndroidManifest.xml:317:9-320:63
+312            android:name="com.investigate.newsupper.activity.OnlineAnswerActivity"
+312-->D:\intervention\app\src\main\AndroidManifest.xml:317:19-89
+313            android:configChanges="keyboardHidden|orientation"
+313-->D:\intervention\app\src\main\AndroidManifest.xml:318:13-63
+314            android:screenOrientation="portrait"
+314-->D:\intervention\app\src\main\AndroidManifest.xml:319:13-49
+315            android:theme="@android:style/Theme.NoTitleBar" />
+315-->D:\intervention\app\src\main\AndroidManifest.xml:320:13-60
+316
+317        <!-- 地图监控开始 -->
+318        <receiver android:name="com.investigate.newsupper.service.AlarmReceiver" >
+318-->D:\intervention\app\src\main\AndroidManifest.xml:323:9-327:20
+318-->D:\intervention\app\src\main\AndroidManifest.xml:323:19-81
+319            <intent-filter>
+319-->D:\intervention\app\src\main\AndroidManifest.xml:324:13-326:29
+320                <action android:name="arui.alarm.action" />
+320-->D:\intervention\app\src\main\AndroidManifest.xml:325:17-60
+320-->D:\intervention\app\src\main\AndroidManifest.xml:325:25-57
+321            </intent-filter>
+322        </receiver>
+323
+324        <service android:name="com.investigate.newsupper.service.DiaryService" />
+324-->D:\intervention\app\src\main\AndroidManifest.xml:329:9-82
+324-->D:\intervention\app\src\main\AndroidManifest.xml:329:18-79
+325        <service android:name="com.investigate.newsupper.service.MyLocation" >
+325-->D:\intervention\app\src\main\AndroidManifest.xml:330:9-331:19
+325-->D:\intervention\app\src\main\AndroidManifest.xml:330:18-77
+326        </service>
+327        <!-- 注册 AsynckService -->
+328        <service android:name="com.investigate.newsupper.main.AsynckService" />
+328-->D:\intervention\app\src\main\AndroidManifest.xml:333:9-80
+328-->D:\intervention\app\src\main\AndroidManifest.xml:333:18-77
+329        <!-- 大树  以上 -->
+330        <!-- 测试权限 -->
+331        <uses-library android:name="android.test.runner" />
+331-->D:\intervention\app\src\main\AndroidManifest.xml:336:9-60
+331-->D:\intervention\app\src\main\AndroidManifest.xml:336:23-57
+332        <!-- 数据库 -->
+333        <provider
+333-->D:\intervention\app\src\main\AndroidManifest.xml:338:9-340:68
+334            android:name="com.investigate.newsupper.db.DBProvider"
+334-->D:\intervention\app\src\main\AndroidManifest.xml:339:13-67
+335            android:authorities="investigate.newsupper.provider" />
+335-->D:\intervention\app\src\main\AndroidManifest.xml:340:13-65
+336
+337        <!-- 负责网络数据处理Service -->
+338        <service android:name="com.investigate.newsupper.main.MainService" >
+338-->D:\intervention\app\src\main\AndroidManifest.xml:343:9-344:19
+338-->D:\intervention\app\src\main\AndroidManifest.xml:343:18-75
+339        </service>
+340        <service
+340-->D:\intervention\app\src\main\AndroidManifest.xml:345:9-349:19
+341            android:name="com.baidu.location.f"
+341-->D:\intervention\app\src\main\AndroidManifest.xml:346:13-48
+342            android:enabled="true"
+342-->D:\intervention\app\src\main\AndroidManifest.xml:347:13-35
+343            android:process=":remote" >
+343-->D:\intervention\app\src\main\AndroidManifest.xml:348:13-38
+344        </service>
+345
+346        <meta-data
+346-->D:\intervention\app\src\main\AndroidManifest.xml:351:9-353:64
+347            android:name="com.baidu.lbsapi.API_KEY"
+347-->D:\intervention\app\src\main\AndroidManifest.xml:352:13-52
+348            android:value="1QgWFuSeECGQIRkzdSGala1BQEowa54V" />
+348-->D:\intervention\app\src\main\AndroidManifest.xml:353:13-61
+349        <!-- 多选图片 -->
+350        <activity
+350-->D:\intervention\app\src\main\AndroidManifest.xml:355:9-359:20
+351            android:name="com.investigate.newsupper.newphoto.MainActivity"
+351-->D:\intervention\app\src\main\AndroidManifest.xml:356:13-75
+352            android:screenOrientation="portrait"
+352-->D:\intervention\app\src\main\AndroidManifest.xml:357:13-49
+353            android:theme="@android:style/Theme.NoTitleBar" >
+353-->D:\intervention\app\src\main\AndroidManifest.xml:358:13-60
+354        </activity>
+355        <activity
+355-->D:\intervention\app\src\main\AndroidManifest.xml:360:9-363:63
+356            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ImageViewerActivity"
+356-->D:\intervention\app\src\main\AndroidManifest.xml:361:13-115
+357            android:screenOrientation="portrait"
+357-->D:\intervention\app\src\main\AndroidManifest.xml:362:13-49
+358            android:theme="@android:style/Theme.NoTitleBar" />
+358-->D:\intervention\app\src\main\AndroidManifest.xml:363:13-60
+359        <activity
+359-->D:\intervention\app\src\main\AndroidManifest.xml:364:9-367:63
+360            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerActivity"
+360-->D:\intervention\app\src\main\AndroidManifest.xml:365:13-113
+361            android:screenOrientation="portrait"
+361-->D:\intervention\app\src\main\AndroidManifest.xml:366:13-49
+362            android:theme="@android:style/Theme.NoTitleBar" />
+362-->D:\intervention\app\src\main\AndroidManifest.xml:367:13-60
+363        <activity
+363-->D:\intervention\app\src\main\AndroidManifest.xml:368:9-371:63
+364            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerDeleteActivity"
+364-->D:\intervention\app\src\main\AndroidManifest.xml:369:13-119
+365            android:screenOrientation="portrait"
+365-->D:\intervention\app\src\main\AndroidManifest.xml:370:13-49
+366            android:theme="@android:style/Theme.NoTitleBar" />
+366-->D:\intervention\app\src\main\AndroidManifest.xml:371:13-60
+367        <activity
+367-->D:\intervention\app\src\main\AndroidManifest.xml:372:9-375:63
+368            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerBitmapActivity"
+368-->D:\intervention\app\src\main\AndroidManifest.xml:373:13-119
+369            android:screenOrientation="portrait"
+369-->D:\intervention\app\src\main\AndroidManifest.xml:374:13-49
+370            android:theme="@android:style/Theme.NoTitleBar" />
+370-->D:\intervention\app\src\main\AndroidManifest.xml:375:13-60
+371        <activity
+371-->D:\intervention\app\src\main\AndroidManifest.xml:376:9-380:63
+372            android:name="com.investigate.newsupper.newphoto.photo.PhotoActivity"
+372-->D:\intervention\app\src\main\AndroidManifest.xml:377:13-82
+373            android:configChanges="orientation|screenSize"
+373-->D:\intervention\app\src\main\AndroidManifest.xml:378:13-59
+374            android:screenOrientation="portrait"
+374-->D:\intervention\app\src\main\AndroidManifest.xml:379:13-49
+375            android:theme="@android:style/Theme.NoTitleBar" />
+375-->D:\intervention\app\src\main\AndroidManifest.xml:380:13-60
+376        <activity
+376-->D:\intervention\app\src\main\AndroidManifest.xml:381:9-384:63
+377            android:name="com.investigate.newsupper.newphoto.photo.PhotoAlbumActivity"
+377-->D:\intervention\app\src\main\AndroidManifest.xml:382:13-87
+378            android:screenOrientation="portrait"
+378-->D:\intervention\app\src\main\AndroidManifest.xml:383:13-49
+379            android:theme="@android:style/Theme.NoTitleBar" />
+379-->D:\intervention\app\src\main\AndroidManifest.xml:384:13-60
+380        <activity
+380-->D:\intervention\app\src\main\AndroidManifest.xml:385:9-388:59
+381            android:name="com.investigate.newsupper.activity.RecordActivity"
+381-->D:\intervention\app\src\main\AndroidManifest.xml:386:13-77
+382            android:screenOrientation="portrait"
+382-->D:\intervention\app\src\main\AndroidManifest.xml:387:13-49
+383            android:theme="@android:style/Theme.Dialog" />
+383-->D:\intervention\app\src\main\AndroidManifest.xml:388:13-56
+384        <!-- 配额 -->
+385        <activity
+385-->D:\intervention\app\src\main\AndroidManifest.xml:390:9-395:20
+386            android:name="com.investigate.newsupper.activity.MyQuotaActivity"
+386-->D:\intervention\app\src\main\AndroidManifest.xml:391:13-78
+387            android:configChanges="keyboardHidden|orientation"
+387-->D:\intervention\app\src\main\AndroidManifest.xml:392:13-63
+388            android:screenOrientation="portrait"
+388-->D:\intervention\app\src\main\AndroidManifest.xml:393:13-49
+389            android:theme="@android:style/Theme.NoTitleBar" >
+389-->D:\intervention\app\src\main\AndroidManifest.xml:394:13-60
+390        </activity>
+391        <!-- 随访fragment主界面 -->
+392        <activity
+392-->D:\intervention\app\src\main\AndroidManifest.xml:397:9-401:25
+393            android:name="com.investigate.newsupper.activity.FragmentMain"
+393-->D:\intervention\app\src\main\AndroidManifest.xml:397:19-81
+394            android:configChanges="keyboardHidden|orientation"
+394-->D:\intervention\app\src\main\AndroidManifest.xml:398:13-63
+395            android:screenOrientation="portrait"
+395-->D:\intervention\app\src\main\AndroidManifest.xml:399:13-49
+396            android:theme="@android:style/Theme.NoTitleBar" >
+396-->D:\intervention\app\src\main\AndroidManifest.xml:400:13-60
+397        </activity>
+398        <!-- 人员详情 -->
+399        <activity
+399-->D:\intervention\app\src\main\AndroidManifest.xml:403:11-407:23
+400            android:name="com.investigate.newsupper.activity.PersionItemActivity"
+400-->D:\intervention\app\src\main\AndroidManifest.xml:403:21-90
+401            android:configChanges="keyboardHidden|orientation"
+401-->D:\intervention\app\src\main\AndroidManifest.xml:404:13-63
+402            android:screenOrientation="portrait"
+402-->D:\intervention\app\src\main\AndroidManifest.xml:405:13-49
+403            android:theme="@android:style/Theme.NoTitleBar" >
+403-->D:\intervention\app\src\main\AndroidManifest.xml:406:13-60
+404        </activity>
+405        <!-- 新建名单 -->
+406        <activity
+406-->D:\intervention\app\src\main\AndroidManifest.xml:409:13-413:23
+407            android:name="com.investigate.newsupper.activity.SetInnerActivity"
+407-->D:\intervention\app\src\main\AndroidManifest.xml:409:23-89
+408            android:configChanges="keyboardHidden|orientation"
+408-->D:\intervention\app\src\main\AndroidManifest.xml:410:13-63
+409            android:screenOrientation="portrait"
+409-->D:\intervention\app\src\main\AndroidManifest.xml:411:13-49
+410            android:theme="@android:style/Theme.NoTitleBar" >
+410-->D:\intervention\app\src\main\AndroidManifest.xml:412:13-60
+411        </activity>
+412
+413        <!-- 没有界面的activity 用来取消通知和结束通话录音 -->
+414        <activity
+414-->D:\intervention\app\src\main\AndroidManifest.xml:416:9-417:63
+415            android:name="com.investigate.newsupper.activity.NoViewAcitvity"
+415-->D:\intervention\app\src\main\AndroidManifest.xml:416:19-83
+416            android:theme="@android:style/Theme.Translucent" />
+416-->D:\intervention\app\src\main\AndroidManifest.xml:417:13-61
+417
+418        <!-- 闹钟广播 -->
+419        <receiver android:name="com.investigate.newsupper.service.MyReceiver" >
+419-->D:\intervention\app\src\main\AndroidManifest.xml:421:9-425:20
+419-->D:\intervention\app\src\main\AndroidManifest.xml:421:19-78
+420            <intent-filter>
+420-->D:\intervention\app\src\main\AndroidManifest.xml:422:13-424:29
+421                <action android:name="ELITOR_CLOCK" />
+421-->D:\intervention\app\src\main\AndroidManifest.xml:423:17-55
+421-->D:\intervention\app\src\main\AndroidManifest.xml:423:25-52
+422            </intent-filter>
+423        </receiver>
+424
+425        <!-- 新写的定位服务 -->
+426        <service android:name="com.investigate.newsupper.service.NewLocationService" >
+426-->D:\intervention\app\src\main\AndroidManifest.xml:428:9-430:19
+426-->D:\intervention\app\src\main\AndroidManifest.xml:429:13-80
+427        </service>
+428        <!-- +++++++++++++++++STARA录音相关+++++++++++++++++++++ -->
+429        <service
+429-->D:\intervention\app\src\main\AndroidManifest.xml:432:9-436:19
+430            android:name="com.investigate.newsupper.service.recordserver.CallListenerService"
+430-->D:\intervention\app\src\main\AndroidManifest.xml:433:13-94
+431            android:enabled="true"
+431-->D:\intervention\app\src\main\AndroidManifest.xml:434:13-35
+432            android:exported="true" >
+432-->D:\intervention\app\src\main\AndroidManifest.xml:435:13-36
+433        </service>
+434
+435        <receiver android:name="com.investigate.newsupper.service.recordserver.PhoneBroadcastReceiver" >
+435-->D:\intervention\app\src\main\AndroidManifest.xml:439:10-444:20
+435-->D:\intervention\app\src\main\AndroidManifest.xml:439:20-104
+436            <intent-filter>
+436-->D:\intervention\app\src\main\AndroidManifest.xml:440:13-443:29
+437                <action android:name="android.intent.action.PHONE_STATE" />
+437-->D:\intervention\app\src\main\AndroidManifest.xml:441:17-75
+437-->D:\intervention\app\src\main\AndroidManifest.xml:441:25-73
+438                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+438-->D:\intervention\app\src\main\AndroidManifest.xml:442:17-82
+438-->D:\intervention\app\src\main\AndroidManifest.xml:442:25-79
+439            </intent-filter>
+440        </receiver>
+441
+442        <!-- ++++++++++++++++++END录音相关++++++++++++++++++++ -->
+443
+444
+445        <!-- <meta-data android:name="android.max_aspect" -->
+446        <!-- android:value="ratio_float"/> -->
+447        <meta-data
+447-->D:\intervention\app\src\main\AndroidManifest.xml:453:9-455:39
+448            android:name="android.max_aspect"
+448-->D:\intervention\app\src\main\AndroidManifest.xml:454:17-50
+449            android:value="2.1" />
+449-->D:\intervention\app\src\main\AndroidManifest.xml:455:17-36
+450    </application>
+451
+452</manifest>

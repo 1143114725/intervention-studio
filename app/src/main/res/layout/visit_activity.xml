@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/visit_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/login_margin_top" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_back" />
+            </LinearLayout>
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_survey_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/panel_right_ll"
+                android:layout_toRightOf="@+id/visit_left_iv"
+                android:gravity="center"
+                android:text="@string/survey_title"
+                android:textColor="#444"
+                android:textSize="@dimen/index_detail"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/panel_right_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/new_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/nq_back"
+                    android:minHeight="30dp"
+                    android:onClick="btnClick"
+                    android:paddingLeft="@dimen/login_margin_top_small"
+                    android:paddingRight="@dimen/login_margin_top_small"
+                    android:text="@string/new_panel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/more_opt_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/login_margin_top" >
+
+                    <ImageView
+                        android:id="@+id/more_opt"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.01dip"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/switch_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/switch_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/login_margin_top_small_thr"
+                    android:text="@string/text_switch_mode"
+                    android:textColor="#444"
+                    android:textSize="@dimen/adpter_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.01dip"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.investigate.newsupper.global.textsize.UICheckBox
+                        android:id="@+id/formal_mode_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/formal_visit"
+                        android:textColor="#444"
+                        android:textSize="@dimen/adpter_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.investigate.newsupper.global.textsize.UICheckBox
+                        android:id="@+id/test_mode_cb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="@string/test_mode"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/adpter_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.01dip"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/inner_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/completed_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/login_margin_top_small_thr"
+                    android:text="@string/completed_num"
+                    android:textColor="#444"
+                    android:textSize="@dimen/adpter_text_size" />
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/completed_num_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/login_margin_top_small_thr"
+                    android:text="0"
+                    android:textColor="#444"
+                    android:textSize="@dimen/adpter_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.01dip"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical" >
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/uploaded_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/login_margin_top_small_thr"
+                    android:text="@string/uploaded_num"
+                    android:textColor="#444"
+                    android:textSize="@dimen/adpter_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dip"
+                    android:background="@color/gray" />
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/unUploaded_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/login_margin_top_small_thr"
+                    android:text="@string/unUploaded_num"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/adpter_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/globle_search_line"
+            android:layout_width="wrap_content"
+            android:layout_height="0.01dip"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/globle_search"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/login_margin_top"
+            android:layout_marginLeft="@dimen/login_margin_top"
+            android:layout_marginRight="@dimen/login_margin_top"
+            android:layout_marginTop="@dimen/login_margin_top"
+            android:layout_weight="1"
+            android:background="@drawable/search_background"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="17"
+                android:gravity="center"
+                android:onClick="btnClick" >
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/login_margin_top"
+                    android:text="@string/more_thing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size" />
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/keyword_actv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="46"
+                android:background="@color/transparent"
+                android:hint="@string/searce"
+                android:paddingLeft="@dimen/login_margin_top_big"
+                android:textColor="#888"
+                android:textColorHint="#d9d9d9"
+                android:textSize="@dimen/adpter_text_size" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/search_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="btnClick"
+                    android:src="@drawable/icon_search" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.01dip"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+
+        <ListView
+            android:id="@+id/visit_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/login_margin_top"
+            android:layout_weight="9"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/white"
+            android:dividerHeight="@dimen/login_margin_top_small"
+            android:scrollbars="none" >
+        </ListView>
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/no_visit_list_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/login_margin_top"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:text="@string/null_list"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/no_survey"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="7" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:paddingRight="30dp" >
+
+            <LinearLayout
+                android:id="@+id/GPS_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/login_margin_top_small"
+                android:background="@drawable/background_with_shadow"
+                android:gravity="center"
+                android:onClick="btnClick"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="@dimen/login_margin_top_small" >
+
+                <ImageView
+                    android:id="@+id/GPS_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/gps_close" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/gps_line"
+                    android:textColor="#444"
+                    android:textSize="@dimen/local_text_size" />
+
+                <TextView
+                    android:id="@+id/GPS_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/gps_line_close"
+                    android:textColor="#444"
+                    android:textSize="@dimen/local_text_size" />
+            </LinearLayout>
+
+          <!--    <LinearLayout
+                android:id="@+id/new_feed_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/background_with_shadow"
+                android:gravity="center"
+                android:onClick="btnClick"
+                android:orientation="vertical"
+                android:padding="@dimen/login_margin_top_small" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_feed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/new_panel"
+                    android:textColor="#444"
+                    android:textSize="@dimen/local_text_size" />
+            </LinearLayout>
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

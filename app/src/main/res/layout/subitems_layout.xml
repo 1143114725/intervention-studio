@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+<!-- 标题栏 -->
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/visit_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/login_margin_top" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icon_back" />
+            </LinearLayout>
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_survey_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/panel_right_ll"
+                android:layout_toRightOf="@+id/visit_left_iv"
+                android:gravity="center"
+                android:text="@string/survey_title"
+                android:textColor="#444"
+                android:textSize="@dimen/index_detail"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/panel_right_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/new_panel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/nq_back"
+                    android:minHeight="30dp"
+                    android:onClick="btnClick"
+                    android:paddingLeft="@dimen/login_margin_top_small"
+                    android:paddingRight="@dimen/login_margin_top_small"
+                    android:text="@string/new_panel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/more_opt_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/login_margin_top" >
+
+                    <ImageView
+                        android:id="@+id/more_opt"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.01dip"
+            android:layout_gravity="center"
+            android:background="@color/gray" />
+    
+    
+   <!-- 搜索栏 -->
+ <LinearLayout
+            android:id="@+id/globle_search"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/doublemargin"
+            android:background="@drawable/search_background"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="17"
+                android:gravity="center"
+                android:onClick="btnClick" >
+
+                <com.investigate.newsupper.global.textsize.UITextView
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/login_margin_top"
+                    android:text="@string/more_thing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size" />
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/keyword_actv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="46"
+                android:background="@color/transparent"
+                android:hint="@string/searce"
+                android:paddingLeft="@dimen/login_margin_top_big"
+                android:textColor="#888"
+                android:textColorHint="#d9d9d9"
+                android:textSize="@dimen/adpter_text_size" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/search_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="btnClick"
+                    android:src="@drawable/icon_search" />
+            </LinearLayout>
+        </LinearLayout>   
+    
+    
+    
+    
+    
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginLeft="@dimen/doublemargin"
+		android:layout_marginRight="@dimen/doublemargin"
+        android:background="@color/sky_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingTop="@dimen/pagemargin"
+            android:paddingBottom="@dimen/pagemargin"
+            android:textSize="@dimen/Tip_Appbar"
+            android:text="@string/surveyname"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/Tip_Appbar"
+            android:paddingTop="@dimen/pagemargin"
+            android:paddingBottom="@dimen/pagemargin"
+            android:textColor="@color/white"
+            android:text="@string/auploaded"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/Tip_Appbar"
+            android:paddingTop="@dimen/pagemargin"
+            android:paddingBottom="@dimen/pagemargin"
+            android:textColor="@color/white"
+            android:text="@string/tuploaded"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginRight="@dimen/doublemargin"
+        android:layout_marginLeft="@dimen/doublemargin"
+        android:id="@+id/lv_subitems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+</LinearLayout>

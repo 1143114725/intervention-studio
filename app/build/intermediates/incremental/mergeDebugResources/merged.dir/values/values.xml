@@ -1,0 +1,1558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="layers_array">
+            <item>@string/normal</item>
+            <item>@string/hybrid</item>
+            <item>@string/satellite</item>
+            <item>@string/terrain</item>
+        </string-array>
+    <attr format="reference" name="coordinatorLayoutStyle"/>
+    <color name="AdminHeaderShadowColor">#ff000000</color>
+    <color name="AdminHeaderTextColor">#ffffffff</color>
+    <color name="AdminMenuBackgroundColor">#ff1d4453</color>
+    <color name="ClearColor">#00000000</color>
+    <color name="FlashingRedTextColor">#ffff0000</color>
+    <color name="Radio_back">#F0F0F0</color>
+    <color name="SurveyFormBackground">#ffffffff</color>
+    <color name="SurveyHeaderShadowColor">#ff000000</color>
+    <color name="ValidationYellow">#fffffa9b</color>
+    <color name="back">#000000</color>
+    <color name="background">#FFFAF0</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="bg_gray">#6C6C6C</color>
+    <color name="black">#000000</color>
+    <color name="blue">#43a077</color>
+    <color name="border">#ffa20a</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="floor_background">#F4F4F4</color>
+    <color name="forbidden_color">#666666</color>
+    <color name="gold">#b89766</color>
+    <color name="gray">#bdbdbd</color>
+    <color name="gray1">#EDEDED</color>
+    <color name="gray_bold">#BEBEBE</color>
+    <color name="grgray">#686868</color>
+    <color name="header">#58567D</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="interior_dack_button_item_bg">#A4A4A4</color>
+    <color name="interior_dack_item_bg">#909090</color>
+    <color name="interior_green_button_item_bg">#54C895</color>
+    <color name="interior_green_item_bg">#50AD84</color>
+    <color name="menu_checked">#434C53</color>
+    <color name="message_back">#8c000000</color>
+    <color name="notification_action_color_filter">#ffffffff</color>
+    <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="pink">#c39696</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="primary_text_default_material_dark">#ffffffff</color>
+    <color name="red">#c94444</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="ripple_material_light">#1f000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="secondary_text_default_material_dark">#b3ffffff</color>
+    <color name="secondary_text_default_material_light">#8a000000</color>
+    <color name="setting_text_color">#ff70777f</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="sky_blue">#1573d3</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="text_gray_color">#7A7A7A</color>
+    <color name="text_hint">#ffa0a0a0</color>
+    <color name="title_hint_line">#6069c0</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#c99245</color>
+    <dimen name="adpter_text_size">16dp</dimen>
+    <dimen name="all_upload_size">16dp</dimen>
+    <dimen name="button_text_size">16dp</dimen>
+    <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
+    <dimen name="compat_button_inset_vertical_material">6dp</dimen>
+    <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
+    <dimen name="compat_button_padding_vertical_material">4dp</dimen>
+    <dimen name="compat_control_corner_material">2dp</dimen>
+    <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
+    <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="dimen_20dp">80dp</dimen>
+    <dimen name="distance_cutting_line">8dp</dimen>
+    <dimen name="distance_screen">16dp</dimen>
+    <dimen name="endbutton_text_size">45dp</dimen>
+    <dimen name="image_out_height">37dp</dimen>
+    <dimen name="image_out_width">110dp</dimen>
+    <dimen name="index_button_top">16dp</dimen>
+    <dimen name="index_detail">18dp</dimen>
+    <dimen name="left_login_bottom">18dp</dimen>
+    <dimen name="left_textsize">18dp</dimen>
+    <dimen name="local_text_size">14dp</dimen>
+    <dimen name="login_margin_top">10dp</dimen>
+    <dimen name="login_margin_top_big">15dp</dimen>
+    <dimen name="login_margin_top_small">5dp</dimen>
+    <dimen name="margin_interval">16dp</dimen>
+    <dimen name="no_survey">18dp</dimen>
+    <dimen name="notification_action_icon_size">32dp</dimen>
+    <dimen name="notification_action_text_size">13sp</dimen>
+    <dimen name="notification_big_circle_margin">12dp</dimen>
+    <dimen name="notification_content_margin_start">8dp</dimen>
+    <dimen name="notification_large_icon_height">64dp</dimen>
+    <dimen name="notification_large_icon_width">64dp</dimen>
+    <dimen name="notification_main_column_padding_top">10dp</dimen>
+    <dimen name="notification_media_narrow_margin">@dimen/notification_content_margin_start</dimen>
+    <dimen name="notification_right_icon_size">16dp</dimen>
+    <dimen name="notification_right_side_padding_top">2dp</dimen>
+    <dimen name="notification_small_icon_background_padding">3dp</dimen>
+    <dimen name="notification_small_icon_size_as_large">24dp</dimen>
+    <dimen name="notification_subtext_size">13sp</dimen>
+    <dimen name="notification_top_pad">10dp</dimen>
+    <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="nqbtn_text_size">18dp</dimen>
+    <dimen name="padding_big_dimens_size">3sp</dimen>
+    <dimen name="padding_dimens_size">2sp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="popmenu_yoff">10.0dp</dimen>
+    <dimen name="small_locate">14dp</dimen>
+    <dimen name="sry_text_big">16dp</dimen>
+    <dimen name="sry_text_small">14dp</dimen>
+    <dimen name="subtitle_corner_radius">2dp</dimen>
+    <dimen name="subtitle_outline_width">2dp</dimen>
+    <dimen name="subtitle_shadow_offset">2dp</dimen>
+    <dimen name="subtitle_shadow_radius">2dp</dimen>
+    <dimen name="survey_big_text_size">19dp</dimen>
+    <dimen name="survey_middle_text_size">18dp</dimen>
+    <dimen name="survey_text_size">16dp</dimen>
+    <dimen name="text_size_default">16dp</dimen>
+    <dimen name="text_size_item_height">40dp</dimen>
+    <dimen name="total_index_detail">18dp</dimen>
+    <dimen name="upload_size">18dp</dimen>
+    <item name="SurveyBackground" type="drawable">#ffffffff</item>
+    <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <item name="auto_focus" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="line1" type="id"/>
+    <item name="line3" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_book_contents_failed" type="id"/>
+    <item name="search_book_contents_succeeded" type="id"/>
+    <item name="tag_transition_group" type="id"/>
+    <item name="tag_unhandled_key_event_manager" type="id"/>
+    <item name="tag_unhandled_key_listeners" type="id"/>
+    <item name="text" type="id"/>
+    <item name="text2" type="id"/>
+    <item name="title" type="id"/>
+    <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="content_slide_anim_duration">300</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="_continue">继续访问</string>
+    <string name="about_dap">关于DAP</string>
+    <string name="accessory">附件</string>
+    <string name="account_frozen">您的账号已经被冻结使用!</string>
+    <string name="aerial_mode">卫星模式</string>
+    <string name="affirm">确认提交</string>
+    <string name="all_upload">全部上传</string>
+    <string name="android_visit">开始访问</string>
+    <string name="answer_value_reference">的回答值-引用</string>
+    <string name="answer_value_rejection">的回答值-排斥</string>
+    <string name="app_data_invalidate">应用数据获取不全, 请退出重新进入应用.</string>
+    <string name="app_fullname">访问专家</string>
+    <string name="app_name">89点调研</string>
+    <string name="app_name_one">青 岛 统 计 局</string>
+    <string name="auploaded">已上传</string>
+    <string name="back">返回</string>
+    <string name="back_info">感谢您注册访问专家，请点击下面的链接验证您的Email：</string>
+    <string name="back_page">上一页</string>
+    <string name="best_new">当前版本已是最新的!</string>
+    <string name="big">大</string>
+    <string name="bigger">更大</string>
+    <string name="bound_matrix_max">复选矩阵每行,最多可回答%d个.</string>
+    <string name="bound_matrix_min">复选矩阵每行,最少要回答%d个.</string>
+    <string name="bound_max">您最多可回答%d个.</string>
+    <string name="bound_min">您最少要回答%d个.</string>
+    <string name="bound_must">您须对所有选项进行排序.</string>
+    <string name="brief_introduction"/>
+    <string name="camera">拍照</string>
+    <string name="camera_select">选择拍照</string>
+    <string name="camera_take_pictures">相机拍照</string>
+    <string name="camera_take_recording">录制视频</string>
+    <string name="cancel">取消</string>
+    <string name="cancle">取消</string>
+    <string name="change_save_file">切换文件储存目录</string>
+    <string name="change_save_inner">内部卡</string>
+    <string name="change_save_sdcard">SDCard</string>
+    <string name="check_data">(请查看SdCard/CAPI_DATA_EXPERT/...目录)</string>
+    <string name="check_new_version">检测更新</string>
+    <string name="check_sum_bound">%1$s项累计选择不能超过%2$s个！</string>
+    <string name="choiceType">选择状态</string>
+    <string name="choice_mode">选择的类别为：</string>
+    <string name="choose_date">选择日期</string>
+    <string name="clean_cache">清除应用缓存</string>
+    <string name="clear">清除</string>
+    <string name="clear_data">清除应用缓存</string>
+    <string name="clear_finish">清除完毕.</string>
+    <string name="close_photo">关闭图库</string>
+    <string name="commit">提交</string>
+    <string name="commit_survey">提  交</string>
+    <string name="company_name">89点钟调研软件客服电话</string>
+    <string name="completed">已完成</string>
+    <string name="completed_num">已完成问卷</string>
+    <string name="contact_way">联系我们</string>
+    <string name="content">个人研究者免费使用，支持手机或网页进行连接跟踪</string>
+    <string name="control_soundControl">调音</string>
+    <string name="control_soundControl_mute">静音</string>
+    <string name="copy_xml_finish">数据导出完成.</string>
+    <string name="copyright">德派软件（北京）有限公司 版权所有</string>
+    <string name="copyright_detail">Copyright © 2008–2015 DAP Corp. All Rights Reserved.</string>
+    <string name="current_no_explain">目前没有说明，请到网页端设置!</string>
+    <string name="current_position">当前位置：%s</string>
+    <string name="current_time">当前时间</string>
+    <string name="current_version">当前版本3.0</string>
+    <string name="dap_no_tool">访问专家，不只是个调查工具</string>
+    <string name="dapchina_ip">dapchina.cn</string>
+    <string name="data_monitor">监测数据</string>
+    <string name="date_equal_error">%1$s题第%2$s项的值应该等于%3$s题第%4$s项的值.</string>
+    <string name="date_low_equal_error">%1$s题第%2$s项的值应该小于等于%3$s题第%4$s项的值.</string>
+    <string name="date_low_error">%1$s题第%2$s项的值应该小于%3$s题第%4$s项的值.</string>
+    <string name="date_no_equal_error">%1$s题第%2$s项的值应该不等于%3$s题第%4$s项的值.</string>
+    <string name="date_upper_equal_error">%1$s题第%2$s项的值应该大于等于%3$s题第%4$s项的值.</string>
+    <string name="date_upper_error">%1$s题第%2$s项的值应该大于%3$s题第%4$s项的值.</string>
+    <string name="day">日</string>
+    <string name="deafult">默认</string>
+    <string name="dear_visite">亲爱的用户,</string>
+    <string name="decimel_places_no_meet">小数点后必须保留两位有效数字</string>
+    <string name="delete">是否删除编号为</string>
+    <string name="delete_Remote_Faild">删除远程文件失败</string>
+    <string name="delete_survey">是否删除此项目</string>
+    <string name="delete_survey_warning">此项目有未上传数据，是否确认删除</string>
+    <string name="dialog_content">正在加载数据,请稍候....</string>
+    <string name="dire_fail">目录创建失败</string>
+    <string formatted="false" name="disk_info">内存(剩余/总共):\t%sM / %sM\nSDCard(剩余/总共):%sM / %sM</string>
+    <string name="do_upload_start">正在上传问卷，请传完在继续上传下一个!</string>
+    <string name="doing_local">没有定位成功</string>
+    <string name="doing_send">正在把错误信息发送到德派邮箱，以便改正错误更好的服务用户</string>
+    <string name="down_M">下载流量</string>
+    <string name="down_refresh">下拉刷新</string>
+    <string name="down_success">下载成功</string>
+    <string name="down_survey_first">请先下载问卷.</string>
+    <string name="download">下载</string>
+    <string name="download_inner">下载内部名单</string>
+    <string name="download_sum">现有问卷</string>
+    <string name="download_survey_state1">下载</string>
+    <string name="download_survey_state2">下载成功</string>
+    <string name="download_survey_state3">更新</string>
+    <string name="download_survey_state4">更新成功</string>
+    <string name="download_survey_state5">最新版本</string>
+    <string name="download_url">下载地址</string>
+    <string name="each_answer_associated">回答项关联</string>
+    <string name="edit_email">请输入邮箱</string>
+    <string name="edit_max">最大%s.</string>
+    <string name="edit_min">最小%s.</string>
+    <string name="edit_min_to_max">最小%1$s,最大%2$s.</string>
+    <string name="edit_survey_help_four">创建好问卷，我们就要把问卷生成为android端使用的下载包。帮助里会告诉我们怎么生成的。最后我们就可以在我们平板上体验我们刚才编辑好的问卷了。是不是很简单。来试一下吧。</string>
+    <string name="edit_survey_help_one">下面我简单介绍下如何在我们web平台上创建问卷。</string>
+    <string name="edit_survey_help_three">首先登录上面的域名，在登录页面输入刚才成功注册的用户名密码进行登录，会进到项目列表，点击新建项目就可以创建我们要使用的问卷了。问卷创建的详细步骤可以参照我们的视屏帮助：<a href="http://free.survey-expert.cn/help/help.html">http://free.survey-expert.cn/help/help.html</a></string>
+    <string name="edit_survey_help_two">这是免费服务器的域名地址：<a href="http://free.survey-expert.cn/">http://free.survey-expert.cn/</a></string>
+    <string formatted="false" name="email">\t\t邮  箱:  zhouhong@dapchina.cn</string>
+    <string name="email_cancel">取消发送</string>
+    <string name="email_not_exit">邮箱不存在，请重新输入</string>
+    <string name="email_submit">确认发送</string>
+    <string name="empty">空</string>
+    <string name="end_point_hit">终点:</string>
+    <string name="err_feedid_get">上报失败：此样本卷号获取失败</string>
+    <string name="err_feedid_update">上报失败：此样本卷号更新失败</string>
+    <string name="err_net">上报失败：网络异常，请稍后再试!</string>
+    <string name="err_upass">上报失败：用户名或密码错误!</string>
+    <string name="error_message">%1$s的错误</string>
+    <string name="error_permission">mac地址已经绑定到其他移动终端!</string>
+    <string name="error_video_msg">是否启用其他播放器播放?</string>
+    <string name="error_video_msg_title">对不起 </string>
+    <string name="exit_fw">是否注销访问专家帐号？</string>
+    <string name="exit_ok">注销成功</string>
+    <string name="exit_survey">中 断 退  出</string>
+    <string name="exit_title">退出访问专家?</string>
+    <string name="exp_net">抱歉,您的网络不佳!</string>
+    <string name="exp_net_no_down">抱歉,您的网络不佳!无法下载试用问卷</string>
+    <string name="export_data">导出数据</string>
+    <string name="export_xml">导出数据\n(请查看“/sdcard/CAPI_DATA_EXPORT/..”目录)</string>
+    <string name="fail_login">登录失败!</string>
+    <string name="fail_update">应用信息获取失败!</string>
+    <string name="feed_back">意见反馈</string>
+    <string name="feedback_failue">抱歉, 您的意见反馈失败!</string>
+    <string name="feedback_success">您的意见反馈成功!</string>
+    <string name="fifty_km">50公里</string>
+    <string name="fifty_meters">50米</string>
+    <string name="file_exist">文件已经存在</string>
+    <string name="file_failed">上传文件失败</string>
+    <string name="file_send_success">发送邮箱成功,邮件请去您的邮箱查找</string>
+    <string name="finish_survey">问卷 "%s" 上报完成!</string>
+    <string name="finish_survey_">问卷 "%s" 上报完成, 开始上传录音照片文件!</string>
+    <string name="finish_survey_other">照片录音 "%s" 已经上报完成!</string>
+    <string name="finish_survey_others">照片录音视频已经上报完成!</string>
+    <string name="finish_survey_start">开始上传"%s"问卷的录音照片文件!</string>
+    <string name="finish_survey_starts">开始上传问卷的录音照片视频文件!</string>
+    <string name="finish_surveys">问卷上报完成!</string>
+    <string name="first_question">第一题</string>
+    <string name="first_step">第一步，你可以免费体验我们的工具</string>
+    <string name="five_hundred_km">500公里</string>
+    <string name="five_hundred_meters">500米</string>
+    <string name="five_km">5公里</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="formal_visit">正式执行</string>
+    <string name="format_no_email">您填写的第%s项不是标准E-mail格式.</string>
+    <string name="format_no_float_number">您填写的第%s项应是整数.</string>
+    <string name="format_no_number">您填写的第%s项应是整数或者小数.</string>
+    <string name="format_no_word_and_number">您填写的第%s项应是数字或者英文.</string>
+    <string name="format_wrong">输入格式不对，应为数字</string>
+    <string name="free">免费:</string>
+    <string name="free_ip">免费域名：</string>
+    <string name="free_login">免费版登录</string>
+    <string name="free_refresh">松开刷新</string>
+    <string name="free_regist">免费版注册</string>
+    <string name="free_server">免费版</string>
+    <string name="fs_null">date为空</string>
+    <string name="ftp_conect_fail">连接服务器失败</string>
+    <string name="ftp_dire_fail">创建目录失败或者没有找到目录</string>
+    <string name="ftp_workdire_fail">创建工作目录失败或者没有找到工作目录</string>
+    <string name="fw">访　问</string>
+    <string name="fwjl">访问记录</string>
+    <string name="get_addr_fail">已定位,获取地址名称失败,请检查网络</string>
+    <string name="get_addr_null">未定位</string>
+    <string name="get_message">错误信息:\n帐号:%1$s,mac地址：%2$s,路径:%3$s</string>
+    <string name="giveup">放弃</string>
+    <string name="gps_line">轨迹</string>
+    <string name="gps_line_close">关闭</string>
+    <string name="gps_line_open">开启</string>
+    <string name="home_page">首页</string>
+    <string name="hour">时</string>
+    <string name="http_protocol_type">HTTP</string>
+    <string name="https_protocol_type">HTTPS</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="id">ID</string>
+    <string name="image_cancle">取消照片</string>
+    <string name="image_null">没有选择照片</string>
+    <string name="image_obtain">获得照片</string>
+    <string name="image_obtain_fail">获得照片失败</string>
+    <string name="image_ok">确认照片</string>
+    <string name="image_style">选择照片方式</string>
+    <string name="img_change">旋转90度</string>
+    <string name="inner_done">内部名单</string>
+    <string name="inner_failure">内部名单操作失败.</string>
+    <string name="inner_name">（有内部受邀名单）</string>
+    <string name="inner_notice">更新名单</string>
+    <string name="inner_refrense">本题是选项内部关联</string>
+    <string name="input_category">选择类别</string>
+    <string name="input_category_please">请选择要查询类别</string>
+    <string name="input_content">输入查询内容</string>
+    <string name="input_feedback">请填写您的意见.</string>
+    <string name="input_free_ip">请输入免费域名</string>
+    <string name="input_ip_addrs">输入ip地址</string>
+    <string name="input_keyword">请输入查询关键字</string>
+    <string name="input_msg">输入您的消息</string>
+    <string name="input_name">请输入项目名称</string>
+    <string name="input_pay_ip">请输入付费域名</string>
+    <string name="input_pwd">请输入验证密码</string>
+    <string name="input_size">输入您要设置的字体的大小</string>
+    <string name="install_google_service">请到/mnt/sdcard/目录下\n安装google_play.apk和\ngoogle_play_store.apk</string>
+    <string name="intevention_notice"/>
+    <string name="introduce">89点钟调研软件</string>
+    <string name="is_completed">问卷已完成</string>
+    <string name="is_one">已经是第一题</string>
+    <string name="is_one_page">已经是第一页</string>
+    <string name="is_submit">是否确认提交</string>
+    <string name="item_Completed">已完成</string>
+    <string name="item_PadtDue">此项目已过期</string>
+    <string name="item_UnCondition">条件不符</string>
+    <string name="item_UnDeadline">无期限</string>
+    <string name="item_UnProceed">未进行</string>
+    <string name="item_error">今天无访问人员</string>
+    <string name="item_no_continue">输入的关键词不符合要求</string>
+    <string name="item_no_required">您填写的第%s项是必答题,请填写.</string>
+    <string name="item_persion_enddata">项目关闭时间:</string>
+    <string name="item_persion_enddata_content"/>
+    <string name="item_persion_name">姓名:</string>
+    <string name="item_persion_name_content"/>
+    <string name="item_persion_nextproject">当前随访项目:</string>
+    <string name="item_persion_nextproject_content"/>
+    <string name="item_persion_nowstate">上次随访状态:</string>
+    <string name="item_persion_nowstate_content"/>
+    <string name="item_persion_pid">PID:</string>
+    <string name="item_persion_pid_content"/>
+    <string name="item_persion_project">项目：</string>
+    <string name="item_persion_project_content"/>
+    <string name="item_persion_residue">距离开始时间:</string>
+    <string name="item_persion_residue_content"/>
+    <string name="item_persion_startdata">项目开启时间:</string>
+    <string name="item_persion_tel">电话:</string>
+    <string name="item_persion_tel_content"/>
+    <string name="item_persions_PID">PID：</string>
+    <string name="item_persions_enddata">项目关闭时间：</string>
+    <string name="item_persions_name">姓名：</string>
+    <string name="item_persions_project">项目：</string>
+    <string name="item_persions_residue">剩余时间：</string>
+    <string name="item_persions_startdata">项目开启时间：</string>
+    <string name="item_persions_state">项目状态：</string>
+    <string name="item_persions_tel">电话：</string>
+    <string name="jump_btn">跳转测试</string>
+    <string name="kcontent">问题</string>
+    <string name="kind">分类</string>
+    <string name="know_attach">已下载附件</string>
+    <string name="know_attach_list">附件列表</string>
+    <string name="know_detail_content">详细内容</string>
+    <string name="know_download">下载知识库</string>
+    <string name="know_in_kind">所在分类</string>
+    <string name="know_question">本地知识库</string>
+    <string name="know_question_info">知识库问题信息</string>
+    <string name="know_update">更新知识库</string>
+    <string name="knowleage">知识库</string>
+    <string name="knowledge_local">知识库</string>
+    <string name="knowlege_accessory_downfail">知识库附件下载失败</string>
+    <string name="knowlege_accessory_not_exsit">知识库附件不存在</string>
+    <string name="knowlege_null">知识库为空</string>
+    <string name="land_port_change_l">问卷切换至竖屏</string>
+    <string name="land_port_change_p">问卷切换至横屏</string>
+    <string name="largest">最大</string>
+    <string name="last_info">德派软件(北京)有限公司</string>
+    <string name="len_equal_error">%1$s题第%2$s项的文字长度应该等于%3$s.</string>
+    <string name="len_low_equal_error">%1$s题第%2$s项的文字长度应该小于等于%3$s.</string>
+    <string name="len_low_error">%1$s题第%2$s项的文字长度应该小于%3$s.</string>
+    <string name="len_no_equal_error">%1$s题第%2$s项的文字长度应该不等于%3$s.</string>
+    <string name="len_plsces_error">%1$s题第%2$s项的小数位数应该等于%3$s.</string>
+    <string name="len_upper_equal_error">%1$s题第%2$s项的文字长度应该大于等于%3$s.</string>
+    <string name="len_upper_error">%1$s题第%2$s项的文字长度应该大于%3$s.</string>
+    <string name="less_compare">, 剩余重置比对</string>
+    <string name="less_than">不足200M</string>
+    <string name="load_more">获取更多</string>
+    <string name="local_id">本地ID</string>
+    <string name="login">登录</string>
+    <string name="login_account_hint">帐号</string>
+    <string name="login_error">登录失败，错误代码：%d</string>
+    <string name="login_inner">登录后可更新项目名单</string>
+    <string name="login_offline">离 线 登 录</string>
+    <string name="login_online">在 线 登 录</string>
+    <string name="login_password_hint">密码</string>
+    <string name="login_survey">登录后可更新项目</string>
+    <string name="login_upadate">登录更新</string>
+    <string name="login_upload">登录后可上传项目</string>
+    <string name="login_user_error">用户名或者密码错误</string>
+    <string name="luoji_wrong">逻辑错误</string>
+    <string name="mainfragment_title_persion">人员列表</string>
+    <string name="mainfragment_title_project">项目列表</string>
+    <string name="mainfragment_title_time">时间列表</string>
+    <string name="map">地图</string>
+    <string name="map_address">当前位置: %s</string>
+    <string name="map_no_recored">这一天的行程轨迹没有记录</string>
+    <string name="map_not_ready">Map is not ready yet</string>
+    <string formatted="false" name="max_value">本题第%s项最大值不能大于 %s</string>
+    <string formatted="false" name="max_value_range">是否确认本题第%s项最大值能大于 %s</string>
+    <string name="media_file_upload_success">照片文件和录音文件上传完成!</string>
+    <string name="media_file_upload_success_start">照片文件和录音文件上传完成!开始上传问卷。</string>
+    <string name="memory_total">内存\n(剩余%1$s/总共)</string>
+    <string name="middle">标准</string>
+    <string formatted="false" name="min_value">本题第%s项最小值不能小于 %s</string>
+    <string formatted="false" name="min_value_range">是否确认本题第%s项最小值能小于 %s</string>
+    <string name="minute">分</string>
+    <string name="model_map">地图模式</string>
+    <string name="model_visit">访问模式</string>
+    <string name="modify">修改</string>
+    <string name="month">月</string>
+    <string name="more_thing">类别</string>
+    <string name="move_record_finish">文件移动完成.</string>
+    <string name="msg_must">本题是必填项, 请作答.</string>
+    <string name="msg_must_item">还有必填项未作答.</string>
+    <string name="msg_null_edit">您的文本框未填.</string>
+    <string name="msg_share">#德派软件（北京）有限公司# 亲,我正在使用德派Android访问专家,功能很强大哦!更多信息请关注www.dapchina.cn!</string>
+    <string name="must_size">字体只能设置到12-50大小之间！</string>
+    <string name="my_location">My Location</string>
+    <string name="mystery_title">德派访问专家注册验证</string>
+    <string name="n_upload">%s/未报</string>
+    <string name="net_exception">网络没有连接,无法发送邮件</string>
+    <string formatted="false" name="net_info">总耗流量:\t%s\n下载流量:\t%s\n上传流量:\t%s</string>
+    <string name="net_no_regist">网络没有连接,不能注册</string>
+    <string name="new_add">　新增　</string>
+    <string name="new_panel">新建</string>
+    <string name="new_panel_next">继续新建</string>
+    <string name="new_submit">确认</string>
+    <string name="next_page">下一页</string>
+    <string name="no_cache">无需清除应用缓存</string>
+    <string name="no_check_file">没找到指定文件,请重新下载知识库在重试!</string>
+    <string name="no_explain">暂无说明</string>
+    <string name="no_fang">%1$s</string>
+    <string name="no_fang_mao">访问状态: %1$s</string>
+    <string name="no_find">很抱歉,没有找到该关键字</string>
+    <string name="no_gps_line">请开启轨迹后进行访问</string>
+    <string name="no_kind">未分类</string>
+    <string name="no_login">请先登录您的帐号</string>
+    <string name="no_login_no_click">您还没登录, 请先登录.</string>
+    <string name="no_login_no_compare">没有登录无法显示任务提示</string>
+    <string name="no_meet">用户名或密码长度太长，不合要求</string>
+    <string name="no_need_reset">该项目没有可重置的数据</string>
+    <string name="no_net_no_compare">没有网络无法显示任务提示</string>
+    <string name="no_null">不能为空</string>
+    <string name="no_picture">本题目还没有进行单题拍照.</string>
+    <string name="no_quota">没有可下载的配额</string>
+    <string name="no_reason_reupload">未知原因，请重新选择您要上传的项目，重新点击上传!</string>
+    <string name="no_reason_reupload_exit">由于网络中断未获取服务器断点，请等待2分钟后重新上传即可，谢谢!</string>
+    <string name="no_record">本题目还没有进行单题录音.</string>
+    <string name="no_sign">本题目还没有进行单题签名.</string>
+    <string name="no_state">暂无状态</string>
+    <string name="no_title">没有标题</string>
+    <string name="no_upload">没有选择要上传的项目</string>
+    <string name="normal">Normal</string>
+    <string name="notes">的记录</string>
+    <string name="notice">提示</string>
+    <string name="notice_required">*</string>
+    <string name="null_addr">访问地点: 未能获取</string>
+    <string name="null_city">请填写您要查询的城市.</string>
+    <string name="null_city2">请填写您要去的城市.</string>
+    <string name="null_data">访问状态: 保存数据为空，请检查问卷js程序</string>
+    <string name="null_end">请填写您的终点.</string>
+    <string name="null_list">暂无记录</string>
+    <string name="null_pwd">请填写密码.</string>
+    <string name="null_questions">请确认该问卷是否生成正确.</string>
+    <string name="null_reverse_input">为空,请重新输入</string>
+    <string name="null_show">抱歉,您的问卷暂时无法预览.</string>
+    <string name="null_start">请填写您的起点.</string>
+    <string name="null_str">访问状态: js返回空串</string>
+    <string name="null_survey">问卷不存在,请重新下载.</string>
+    <string name="null_upload">上传数据为空</string>
+    <string name="null_userid">请填写帐号.</string>
+    <string name="num_no_repeat">, 数字不能重复</string>
+    <string name="number">99+</string>
+    <string name="offline_excute_opt">离线登录不能执行下载上传操作</string>
+    <string name="ok">确定</string>
+    <string name="old_format_no_number">您填写的不是数字.</string>
+    <string formatted="false" name="old_max_value">最大值不能大于 %s</string>
+    <string formatted="false" name="old_min_value">最小值不能小于 %s</string>
+    <string name="once_again">再次按返回键退出</string>
+    <string name="one_hundred_km">100公里</string>
+    <string name="one_hundred_meters">100米</string>
+    <string name="one_km">1公里</string>
+    <string name="one_thousand_km">1000公里</string>
+    <string name="open_photo">打开图库</string>
+    <string name="operation">操作</string>
+    <string name="opt_position">现在地图上暂时没有轨迹</string>
+    <string name="opt_word">选项的提示说明</string>
+    <string name="option_bottom"/>
+    <string name="option_top"/>
+    <string name="other_item_null">有选项未输入</string>
+    <string name="pause">　点击暂停　</string>
+    <string name="pay">付费:</string>
+    <string name="pay_ip">付费域名：</string>
+    <string name="pay_login">专业版登录</string>
+    <string name="pay_no_regist">付费地址不能免费注册</string>
+    <string name="pay_regist">专业版注册</string>
+    <string name="pay_server">专业版</string>
+    <string name="phone_no_permission">您的设备没有读写权限,不能把错误信息保存到外部sdcard中!</string>
+    <string name="photo">照片</string>
+    <string name="pick_from_album">从图库中选取</string>
+    <string name="please_input_email">请输入E-mail.</string>
+    <string name="please_input_password">请填写登录密码</string>
+    <string name="please_input_username">请填写用户名</string>
+    <string name="please_login">请先登录</string>
+    <string name="please_set_password">请设置登录密码(6-20个字符)</string>
+    <string name="please_set_username">请设置用户名</string>
+    <string name="please_wait">请稍候....</string>
+    <string name="portal">竖屏</string>
+    <string name="previous_update">上次更新</string>
+    <string name="prot">横屏</string>
+    <string name="publish_time">发布时间</string>
+    <string name="pwd_no">密码错误</string>
+    <string name="qualified">%s/符合</string>
+    <string formatted="false" name="question_bound"> (最多回答%d个) (最少回答%d个)</string>
+    <string formatted="false" name="question_bound_max">(最多回答%d个)</string>
+    <string formatted="false" name="question_bound_min">(最少回答%d个)</string>
+    <string name="question_coutinuous">连续回答相同列选项不超过%d个.</string>
+    <string name="question_coutinuous_new">连续%d个选项回答相同，请确认！</string>
+    <string name="question_info">问题信息</string>
+    <string name="question_innerying_error">本题除选项%1$s之外的所有数字选项之和不等于选项%1$s的值</string>
+    <string formatted="false" name="question_max_min">请在半角状态下输入数字 ，最小值 %s，最大值%s</string>
+    <string name="question_must">(必填项目)</string>
+    <string name="question_no_repeat">数字不能重复.</string>
+    <string name="question_num_sum">本题数字之和%s.</string>
+    <string name="question_num_sum_no_repeat">本题数字之和%s,数字不能重复.</string>
+    <string name="question_order">Q%d</string>
+    <string name="question_outying_display_right">本题显示行数量等于%1$s的数字回答项%2$s的填写数</string>
+    <string name="question_outying_error">本题数字回答项之和不等于Q%1$s的数字回答项%2$s的填写数</string>
+    <string name="question_outying_right">本题数字回答项之和等于%s</string>
+    <string name="question_random"/>
+    <string formatted="false" name="question_sum">本题数字之和应该%s</string>
+    <string formatted="false" name="question_syb">请在半角状态下输入数字 ，最小值 %s，最大值 %s，本题数字之和%s</string>
+    <string name="quota_center">配额</string>
+    <string name="quota_name">配额名称</string>
+    <string name="quota_notice">有配额名单更新</string>
+    <string name="quota_num">数量</string>
+    <string name="quota_success">成功</string>
+    <string name="quota_suce">总完成/本人</string>
+    <string name="quota_text">配额说明</string>
+    <string name="quota_update">配额更新</string>
+    <string name="re_upload">又发现新附件，请把附件上传后在上传数据!</string>
+    <string name="read_attach">查看删除附件</string>
+    <string name="read_ins">阅读说明</string>
+    <string name="read_map">查看地图</string>
+    <string name="read_quota">查看配额</string>
+    <string name="read_vedio">查看视频 (%1$s)</string>
+    <string name="read_voice">查看录音 (%1$s)</string>
+    <string name="real_farmbank_ip">202.85.212.198/abc</string>
+    <string name="real_free_ip">free.survey-expert.cn</string>
+    <string name="real_pay_ims_ip">202.85.212.198/imshealth</string>
+    <string name="real_pay_ip">89survey.cn</string>
+    <string name="real_pay_ipsos1_ip">www.ipsoschina.cn</string>
+    <string name="real_pay_ipsos_ip">www.survey-expert.com/web</string>
+    <string name="reason">照片文件和录音文件上传完成!但由于中途退出，得重新手动点击要上传问卷完成上传。</string>
+    <string name="recently_refresh">最近更新:%s</string>
+    <string name="recod_video">音频/视频</string>
+    <string name="recode">录音</string>
+    <string name="record_close">录音功能已关闭</string>
+    <string name="record_file">录音</string>
+    <string name="record_open">录音功能已开启</string>
+    <string name="record_open_false">录音设备启用失败，请确认录音设备和权限可用后重试!</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="regisit_fail">注册失败</string>
+    <string name="regist">注册免费版</string>
+    <string name="regist_url">http://free.survey-expert.cn/alisoft/OfflineRegisterVerification.asp?userId=%1$s&amp;userPsd=%2$s&amp;mailAddress=%3$s</string>
+    <string name="registe_acount">强大离线调查系统，免费注册!</string>
+    <string name="remember_password">记住密码</string>
+    <string name="remote_bigger_local">远程文件大于本地文件</string>
+    <string name="reset">重置</string>
+    <string name="reset_fail">重置失败</string>
+    <string name="reset_success">重置功能完成</string>
+    <string name="resume_load">题目编号不存在，请重新输入</string>
+    <string name="return_back">返回修改</string>
+    <string name="review">预　览</string>
+    <string name="review_commit">预览并确认提交</string>
+    <string name="road_line">路线</string>
+    <string name="row_less">矩阵必填项每一行必须回答.</string>
+    <string name="s_word_explain">的访前说明</string>
+    <string name="satellite">Satellite</string>
+    <string name="screen_send_mail">正在发送验证到你的邮箱中..</string>
+    <string name="sdcar_total">SDCard(剩余%1$s/总共)</string>
+    <string name="sdcard_mount">请挂载SDCard!</string>
+    <string name="searce">搜索</string>
+    <string name="search_city">您要查询的城市:</string>
+    <string name="search_city2">您要到达的城市:</string>
+    <string name="search_hit">请输入您要搜索的关键字</string>
+    <string name="search_review_question">请输入题目的编号</string>
+    <string name="second_step">第二步，你可以注册我们的帐号</string>
+    <string name="secord">秒</string>
+    <string name="see_survey_size">当前预览的字体大小</string>
+    <string name="select_all">全选</string>
+    <string name="select_null">反选</string>
+    <string name="select_share_style">请选择分享方式</string>
+    <string name="selection_album">相册选择</string>
+    <string name="send">发送</string>
+    <string name="send_all">错误信息发送完成</string>
+    <string name="sequence_repeat">选项值不能出现重复</string>
+    <string name="set">设  置</string>
+    <string name="set_ip">设置域名</string>
+    <string name="set_protocol_type">切换协议类型</string>
+    <string name="set_size">设置答卷字体大小：</string>
+    <string name="set_survey_size">设置答卷字号</string>
+    <string formatted="false" name="set_survey_size_show">设置答卷字号(当前大小为%s)</string>
+    <string name="share">分享应用</string>
+    <string name="skip">跳过</string>
+    <string name="small">小</string>
+    <string name="sorry_no_result">没有找到结果</string>
+    <string name="start">开始</string>
+    <string name="start_dap">直接开始我的德派旅程</string>
+    <string name="start_dap_five">开始我的德派旅程</string>
+    <string name="start_get_loc">正在获取定位信息,请稍候...</string>
+    <string name="start_loc_line">开启轨迹定位</string>
+    <string name="start_point_hit">起点:</string>
+    <string name="start_record">录音</string>
+    <string name="start_time">开始时间</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="stop_loc_line">轨迹定位已关闭</string>
+    <string name="subscibe_center">项目中心</string>
+    <string name="sucess_fail">已经存在该帐号,注册失败!</string>
+    <string name="sucess_fail_reason">注册失败，请检查有无特殊字符,请重新输入!</string>
+    <string name="sucess_login">登录成功!</string>
+    <string name="sucess_regist">注册成功,请输入邮箱验证已完成激活!</string>
+    <string name="sum">SUM</string>
+    <string name="sure_exist">访问进行中，确定退出访问?</string>
+    <string name="survey_add_complete">项目添加完成!</string>
+    <string name="survey_description">详细说明</string>
+    <string name="survey_id">项目ID</string>
+    <string name="survey_ins">支持Android终端，超乎想象的人性化触感，将问卷、GPS定位、拍照、录音融合为一。支持 在线环境、离线环境下的数据采集,上报数据。</string>
+    <string name="survey_landspace">问卷切换至横屏</string>
+    <string name="survey_mapclose">关闭</string>
+    <string name="survey_mapopen">开启</string>
+    <string name="survey_mapspace">问卷开启地图监控</string>
+    <string name="survey_name">项目名称</string>
+    <string name="survey_notice">更新问卷</string>
+    <string name="survey_sys">人口调查电子采集管理系统</string>
+    <string name="survey_title">公众体验问卷</string>
+    <string name="survey_title_before">问卷标题</string>
+    <string name="surveyname">名称</string>
+    <string name="tab_author">下载</string>
+    <string name="tab_author_kg">下　载</string>
+    <string name="tab_local">访问</string>
+    <string name="tab_local_kg">访　问</string>
+    <string name="tab_setting">更多</string>
+    <string name="tab_setting_kg">更　多</string>
+    <string name="tab_upload">上传</string>
+    <string name="tab_upload_kg">上　传</string>
+    <string name="take_photo">拍照</string>
+    <string name="task_notice">任务提示</string>
+    <string formatted="false" name="tel">\t\t电  话:  010–63517795</string>
+    <string name="telphone">17701252286</string>
+    <string name="ten_km">10公里</string>
+    <string name="terminal">返回列表</string>
+    <string name="terrain">Terrain</string>
+    <string name="test_mode">测试模式</string>
+    <string name="text_size_default">默认</string>
+    <string name="text_size_large">大</string>
+    <string name="text_size_larger">更大</string>
+    <string name="text_size_max">最大</string>
+    <string name="text_size_small">小</string>
+    <string name="text_size_standard">标准</string>
+    <string name="text_switch_mode">选择模式</string>
+    <string name="third_step">第三步，你可以正式开启德派旅程</string>
+    <string name="title">体验问卷</string>
+    <string name="title_activity_main">89点调研</string>
+    <string name="toast_gps">请前往空旷位置获取定位信息！</string>
+    <string name="tolerant">跟随系统</string>
+    <string name="too_frequently">您操作过于频繁!</string>
+    <string name="total_M">总耗流量</string>
+    <string name="total_byte">总字节数:%s</string>
+    <string formatted="false" name="total_byte_">总字节数:%s/%s</string>
+    <string formatted="false" name="total_file">文件个数:%s/%s</string>
+    <string name="traffic">Traffic</string>
+    <string name="traffic_mode">交通模式</string>
+    <string name="transparency">Transparency</string>
+    <string name="try_again">重试</string>
+    <string name="tuploaded">未上传</string>
+    <string name="twenty_five_km">25公里</string>
+    <string name="twenty_km">20公里</string>
+    <string name="twenty_meters">20米</string>
+    <string name="two_hundred_km">200公里</string>
+    <string name="two_hundred_meters">200米</string>
+    <string name="two_km">2公里</string>
+    <string name="two_thousand_km">2000公里</string>
+    <string name="unUploaded_num">未上传量:数据%1$s个,附件%2$s个</string>
+    <string name="unex">捕获到异常，退出程序，异常会发送到邮箱上</string>
+    <string name="unknown_error">未知错误!</string>
+    <string name="unqualified">%s/不符合</string>
+    <string name="unupload">未上传</string>
+    <string name="unupload_num">未上传样本数量</string>
+    <string name="update">更新</string>
+    <string name="update_alert">此项目有更新,确认更新以继续访问？</string>
+    <string name="update_apk">检测更新</string>
+    <string name="update_app">更新应用</string>
+    <string name="update_inner">更新内部名单</string>
+    <string name="update_success">更新完成</string>
+    <string name="update_time">更新时间</string>
+    <string name="upload">上传</string>
+    <string name="upload_M">上传流量</string>
+    <string name="upload_completed">上传已完成</string>
+    <string name="upload_false">上传状态: 未上传</string>
+    <string name="upload_feedid">服务器ID</string>
+    <string name="upload_incompleted">上传未完成</string>
+    <string name="upload_notice">上传任务</string>
+    <string name="upload_true">上传状态: 已上传</string>
+    <string name="uploaded">已完成</string>
+    <string name="uploaded_all">样本已全部上传</string>
+    <string name="uploaded_num">已上传量:数据%1$s个,附件%2$s个</string>
+    <string name="uploading">上传中</string>
+    <string name="uploading_wait">正在上传请稍后</string>
+    <string name="user_error">用户名/密码错误</string>
+    <string name="user_name">未登录</string>
+    <string name="user_name_test">游客</string>
+    <string name="userid_null">userId为空</string>
+    <string name="value_repeat">您填写值不能重复.</string>
+    <string name="verital">竖屏</string>
+    <string name="version">当前版本 %s(EP)</string>
+    <string name="version_info">检查到新版本(%s),是否升级?</string>
+    <string name="version_not_matched">帐号版本不一致,请更新应用</string>
+    <string name="version_null_error">服务器版本号为空！</string>
+    <string name="version_reset_error"> 您当前的访问专家程序不匹配！请先卸载当前访问专家，然后将复制的下载地址粘贴到浏览器下载！</string>
+    <string name="version_under_error">app版本号低于服务器，请更新版本</string>
+    <string name="version_update_error">直接更新访问专家！</string>
+    <string name="video">摄像</string>
+    <string name="video_obtain">获得视频</string>
+    <string name="view_attachments">——(点击可查看附件)</string>
+    <string name="visit">开始访问</string>
+    <string name="visit_addr">访问地点: %s</string>
+    <string name="visit_explain">访前说明</string>
+    <string name="visit_interrupt">继续访问</string>
+    <string name="visit_noaccess">@string/tab_local</string>
+    <string name="visit_review">预览</string>
+    <string name="visit_state">访问状态</string>
+    <string name="visit_state_completed">已完成</string>
+    <string name="visit_state_interrupt">中断待续</string>
+    <string name="visit_state_mismatch">条件不符</string>
+    <string name="visit_state_noaccess">未访问</string>
+    <string name="visit_state_quota">配额已满</string>
+    <string name="visit_successfully">访问状态: 访问完成</string>
+    <string name="visit_time">访问时间: %s</string>
+    <string name="visited_interrupt">访问状态: 中断待续</string>
+    <string name="visitor">记录人员: %s</string>
+    <string name="wait_pro">请耐心等待%s....</string>
+    <string name="warn">警告</string>
+    <string name="warn_version">已是最新版本</string>
+    <string name="warn_version_new">版本需要更新</string>
+    <string name="web_visit">Web模式</string>
+    <string name="welcom_user">欢迎, %s</string>
+    <string name="welcome_foot">www.dapchina.cn</string>
+    <string name="welcome_user">★ 欢迎进入监测数据页面，请您不要退出，技术人员正努力帮您调试。</string>
+    <string name="welcome_version">Version %s</string>
+    <string name="word_explain">访前说明</string>
+    <string name="word_have">内部名单:    有</string>
+    <string name="word_ins">的访前说明</string>
+    <string name="word_nohave">内部名单:    无</string>
+    <string name="word_num">项目ID:    </string>
+    <string name="word_time">发布时间:    </string>
+    <string name="write_email">输入邮箱已完成验证</string>
+    <string name="write_email_empty">输出的邮箱为空</string>
+    <string name="write_email_error">输出的邮箱格式不正确</string>
+    <string name="write_failure">访问状态: 数据写入失败</string>
+    <string name="www">\t\t网  址:  www.dapchina.cn</string>
+    <string name="xml_error">没有传版本号或xml名，请更新版本</string>
+    <string name="year">年</string>
+    <style name="AdminAdvancedButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:paddingLeft">10.0px</item>
+        <item name="android:paddingTop">0.0px</item>
+        <item name="android:paddingRight">10.0px</item>
+        <item name="android:paddingBottom">0.0px</item>
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="AdminButton">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5.0px</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_marginBottom">10.0dip</item>
+    </style>
+    <style name="AdminEditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">18.0sp</item>
+    </style>
+    <style name="AdminHeader">
+        
+    </style>
+    <style name="AdminHelpHeaderText">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_marginLeft">5.0px</item>
+        <item name="android:layout_marginTop">5.0px</item>
+        <item name="android:layout_marginRight">5.0px</item>
+    </style>
+    <style name="AdminHelpText">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:layout_marginLeft">5.0px</item>
+        <item name="android:layout_marginTop">5.0px</item>
+        <item name="android:layout_marginRight">5.0px</item>
+        <item name="android:layout_marginBottom">5.0px</item>
+    </style>
+    <style name="AdminMenuBackgroundText">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="AdminMenuBluebox">
+
+        
+        <item name="android:layout_margin">10.0px</item>
+    </style>
+    <style name="AdminMenuBlueboxDetailsText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="AdminMenuBlueboxTitleText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">20.0sp</item>
+    </style>
+    <style name="AdminRadioButton" parent="@android:style/Widget.CompoundButton">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="AdminSelectItem">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:paddingLeft">5.0px</item>
+        <item name="android:paddingTop">10.0px</item>
+        <item name="android:paddingRight">5.0px</item>
+        <item name="android:paddingBottom">10.0px</item>
+    </style>
+    <style name="AnimBottom" parent="@android:style/Animation">  
+    	<item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+	</style>
+    <style name="AppBaseTheme" parent="android:Theme.Light"/>
+    <style name="AppTheme" parent="android:Theme.Light"/>
+    <style name="AppTheme.CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="BrandingText">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#ff000000</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="DevelopmentText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="RadioButtonStyles">
+        <item name="android:button">@drawable/upload_button_selector</item>
+    </style>
+    <style name="StyleProgressBarMini" parent="@android:style/Widget.ProgressBar.Horizontal">
+<item name="android:maxHeight">50dip</item>
+<item name="android:minHeight">10dip</item>
+<item name="android:indeterminateOnly">false</item>
+<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+<item name="android:progressDrawable">@drawable/shape_mini</item>
+</style>
+    <style name="SurveyBackButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">8.0pt</item>
+        <item name="android:textStyle">bold</item>
+        
+    </style>
+    <style name="SurveyDateTimeMultiText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyEditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">18.0sp</item>
+        
+    </style>
+    <style name="SurveyEditTextInform">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="SurveyEditTextLayout">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyEditTextLeft">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:layout_marginLeft">3.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyEditTextRight">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">3.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyFormImage">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyFormMultiText">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:paddingTop">10.0px</item>
+        <item name="android:paddingBottom">10.0px</item>
+        <item name="android:layout_marginLeft">10.0sp</item>
+        <item name="android:layout_marginTop">1.0sp</item>
+        <item name="android:layout_marginRight">10.0sp</item>
+        <item name="android:layout_marginBottom">0.0px</item>
+    </style>
+    <style name="SurveyFormText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:paddingLeft">10.0px</item>
+        <item name="android:paddingTop">10.0px</item>
+        <item name="android:paddingRight">10.0px</item>
+        <item name="android:paddingBottom">10.0px</item>
+    </style>
+    <style name="SurveyHeader">
+        
+    </style>
+    <style name="SurveyHeaderText" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">5.0</item>
+        <item name="android:shadowDy">4.0</item>
+        <item name="android:shadowRadius">4.0</item>
+    </style>
+    <style name="SurveyIntervalLayout">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyIntervalScaleBoundsText">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="SurveyIntervalScaleBoundsTextSmall">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="SurveyIntervalScaleSmallLayout">
+        <item name="android:layout_marginLeft">30.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">30.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyMatrixHeaderText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyMatrixItemText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:background">#ff000000</item>
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyMatrixNotchedScale">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="SurveyMatrixRadioButton" parent="@android:style/Widget.CompoundButton">
+        <item name="android:textSize">16.0sp</item>
+        
+        
+    </style>
+    <style name="SurveyMatrixText">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyNextButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">8.0pt</item>
+        <item name="android:textStyle">bold</item>
+        
+    </style>
+    <style name="SurveyRadioButton" parent="@android:style/Widget.CompoundButton">
+        <item name="android:textSize">16.0sp</item>
+        
+        
+    </style>
+    <style name="SurveyRadioButtonMulti" parent="@android:style/Widget.CompoundButton">
+        <item name="android:textSize">16.0sp</item>
+        
+        
+    </style>
+    <style name="SurveyScaleHeaderText">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="SurveyScaleHeaderTextSmall">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="SurveyScaleLayout">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveyScaleSmallLayout">
+        <item name="android:layout_marginLeft">30.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">30.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveySelectEditText">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="SurveySelectHelpTextSmall">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:paddingLeft">3.0px</item>
+    </style>
+    <style name="SurveySelectLayout">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveySignatureLayout">
+        <item name="android:layout_marginLeft">10.0px</item>
+        <item name="android:layout_marginTop">10.0px</item>
+        <item name="android:layout_marginRight">10.0px</item>
+        <item name="android:layout_marginBottom">10.0px</item>
+    </style>
+    <style name="SurveySignatureOverlayLayout">
+        <item name="android:background">@color/SurveyFormBackground</item>
+        <item name="android:paddingLeft">15.0px</item>
+        <item name="android:paddingTop">5.0px</item>
+        <item name="android:paddingRight">15.0px</item>
+        <item name="android:paddingBottom">5.0px</item>
+        <item name="android:layout_marginLeft">15.0px</item>
+        <item name="android:layout_marginTop">5.0px</item>
+        <item name="android:layout_marginRight">15.0px</item>
+        <item name="android:layout_marginBottom">5.0px</item>
+    </style>
+    <style name="SurveyTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent"/>
+    <style name="TextAppearance.Compat.Notification.Info">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Line2" parent="TextAppearance.Compat.Notification.Info"/>
+    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="TextAppearance.Compat.Notification.Info.Media"/>
+    <style name="TextAppearance.Compat.Notification.Media"/>
+    <style name="TextAppearance.Compat.Notification.Time">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media"/>
+    <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title"/>
+    <style name="TextAppearance.Compat.Notification.Title.Media"/>
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+    <style name="Transparent_white">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+    <style name="Widget.Compat.NotificationActionContainer" parent=""/>
+    <style name="Widget.Compat.NotificationActionText" parent=""/>
+    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
+        <item name="statusBarBackground">#000000</item>
+    </style>
+    <style name="ds">
+        <item name="android:windowBackground">@color/ClearColor</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    </style>
+    <style name="home_tab_bottom" parent="@android:style/Widget.Button">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/local_text_size</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="input_del">
+
+        
+        <item name="android:layout_width">20.0dip</item>
+        <item name="android:layout_height">20.0dip</item>
+    </style>
+    <style name="item_btn_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/applicationbar_button_highlight_bg</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">8dip</item>
+        <item name="android:paddingRight">8dip</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/white</item>
+:        <item name="android:typeface">serif</item>
+    </style>
+    <style name="login_btn">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">20dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDy">-0.1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
+    </style>
+    <style name="login_field">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingRight">40.0dip</item>
+        <item name="android:paddingBottom">0.0dip</item>
+    </style>
+    <style name="login_mask">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="play_controler">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">1dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="play_lists_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        
+        <item name="android:layout_marginLeft">320dip</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="qmtips_wrap">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/bg_qmtips</item>
+        <item name="android:padding">0.0dip</item>
+        <item name="android:layout_width">140.0dip</item>
+        <item name="android:layout_height">140.0dip</item>
+    </style>
+    <style name="question_ds">
+        <item name="android:windowBackground">@color/ClearColor</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@anim/dialog_show</item>
+    </style>
+    <style name="sdw_79351b">
+        <item name="android:shadowColor">#ff79351b</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="sdw_white">
+        <item name="android:shadowColor">#7fffffff</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">0.65</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="slide_bottom_anim">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+    <style name="style_clear" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="style_no_record">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/null_list</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="text_15_666666_sdw" parent="@style/sdw_white">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="text_15_ffffff_sdw" parent="@style/sdw_79351b">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="text_16_666666">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="text_18_ffffff">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="text_shadow_light">
+        <item name="android:shadowColor">#ffffffff</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="text_white_shadow">
+        <item name="android:shadowColor">#ffffffff</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="timePicker" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="visit_left_bottom" parent="@android:style/Widget.Button">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_width">@dimen/image_out_width</item>
+        <item name="android:layout_height">@dimen/image_out_height</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_marginTop">2.0px</item>
+        <item name="android:layout_marginBottom">2.0px</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="visit_right_bottom" parent="@android:style/Widget.Button">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">right|center_vertical</item>
+        <item name="android:layout_width">@dimen/image_out_width</item>
+        <item name="android:layout_height">@dimen/image_out_height</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_marginTop">2.0px</item>
+        <item name="android:layout_marginBottom">2.0px</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <declare-styleable name="AdapterLinearLayout">
+        <attr format="color|reference" name="divider"/>
+        <attr format="dimension" name="dividerHeight"/>
+        <attr format="boolean" name="showLastDivider"/>
+    </declare-styleable>
+    <declare-styleable name="ColorStateListItem">
+        
+        <attr name="android:color"/>
+        
+        <attr format="float" name="alpha"/>
+        <attr name="android:alpha"/>
+    </declare-styleable>
+    <declare-styleable name="CoordinatorLayout">
+        
+        <attr format="reference" name="keylines"/>
+        
+        <attr format="color|reference" name="statusBarBackground"/>
+    </declare-styleable>
+    <declare-styleable name="CoordinatorLayout_Layout">
+        <attr name="android:layout_gravity"/>
+        
+        <attr format="string" name="layout_behavior"/>
+        
+        <attr format="reference" name="layout_anchor"/>
+        
+        <attr format="integer" name="layout_keyline"/>
+
+        
+        <attr name="layout_anchorGravity">
+            
+            <flag name="top" value="0x30"/>
+            
+            <flag name="bottom" value="0x50"/>
+            
+            <flag name="left" value="0x03"/>
+            
+            <flag name="right" value="0x05"/>
+            
+            <flag name="center_vertical" value="0x10"/>
+            
+            <flag name="fill_vertical" value="0x70"/>
+            
+            <flag name="center_horizontal" value="0x01"/>
+            
+            <flag name="fill_horizontal" value="0x07"/>
+            
+            <flag name="center" value="0x11"/>
+            
+            <flag name="fill" value="0x77"/>
+            
+            <flag name="clip_vertical" value="0x80"/>
+            
+            <flag name="clip_horizontal" value="0x08"/>
+            
+            <flag name="start" value="0x00800003"/>
+            
+            <flag name="end" value="0x00800005"/>
+        </attr>
+
+        
+        <attr format="enum" name="layout_insetEdge">
+            
+            <enum name="none" value="0x0"/>
+            
+            <enum name="top" value="0x30"/>
+            
+            <enum name="bottom" value="0x50"/>
+            
+            <enum name="left" value="0x03"/>
+            
+            <enum name="right" value="0x05"/>
+            
+            <enum name="start" value="0x00800003"/>
+            
+            <enum name="end" value="0x00800005"/>
+        </attr>
+        
+        <attr name="layout_dodgeInsetEdges">
+            
+            <flag name="none" value="0x0"/>
+            
+            <flag name="top" value="0x30"/>
+            
+            <flag name="bottom" value="0x50"/>
+            
+            <flag name="left" value="0x03"/>
+            
+            <flag name="right" value="0x05"/>
+            
+            <flag name="start" value="0x00800003"/>
+            
+            <flag name="end" value="0x00800005"/>
+            
+            <flag name="all" value="0x77"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FontFamily">
+        
+        <attr format="string" name="fontProviderAuthority"/>
+        
+        <attr format="string" name="fontProviderPackage"/>
+        
+        <attr format="string" name="fontProviderQuery"/>
+        
+        <attr format="reference" name="fontProviderCerts"/>
+        
+        <attr name="fontProviderFetchStrategy">
+            
+            <enum name="blocking" value="0"/>
+            
+            <enum name="async" value="1"/>
+        </attr>
+        
+        <attr format="integer" name="fontProviderFetchTimeout">
+            
+            <enum name="forever" value="-1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FontFamilyFont">
+        
+        <attr name="fontStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+        </attr>
+        
+        <attr format="reference" name="font"/>
+        
+        <attr format="integer" name="fontWeight"/>
+        
+        <attr format="string" name="fontVariationSettings"/>
+        
+        <attr format="integer" name="ttcIndex"/>
+        
+        <attr name="android:fontStyle"/>
+        <attr name="android:font"/>
+        <attr name="android:fontWeight"/>
+        <attr name="android:fontVariationSettings"/>
+        <attr name="android:ttcIndex"/>
+    </declare-styleable>
+    <declare-styleable name="GradientColor">
+        
+        <attr name="android:startColor"/>
+        
+        <attr name="android:centerColor"/>
+        
+        <attr name="android:endColor"/>
+        
+        <attr name="android:type"/>
+
+        
+        
+        <attr name="android:gradientRadius"/>
+
+        
+        
+        <attr name="android:centerX"/>
+        
+        <attr name="android:centerY"/>
+
+        
+        
+        <attr name="android:startX"/>
+        
+        <attr name="android:startY"/>
+        
+        <attr name="android:endX"/>
+        
+        <attr name="android:endY"/>
+
+        
+        <attr name="android:tileMode"/>
+    </declare-styleable>
+    <declare-styleable name="GradientColorItem">
+        
+        <attr name="android:offset"/>
+        
+        <attr name="android:color"/>
+    </declare-styleable>
+</resources>

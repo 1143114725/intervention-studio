@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.investigate.newsupper"
+    android:versionCode="8"
+    android:versionName="18.3" >
+
+    <!-- app上线更新  6 -->
+    <permission
+        android:name="com.investigate.newsupper.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.investigate.newsupper.permission.MAPS_RECEIVE" />
+    <!-- 新版本定位key -->
+
+
+
+    <!-- __________________________Permission_________________________ -->
+    <!-- 异常上传的权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 拨打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 访问网络的链接状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问GPS位置的链接状态 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 访问互联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- SDCARD写入权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问WIFI的链接状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 访问WIFI状态改变权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 改变网路状态权限 -->
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 允许程序读取或写入系统设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 维码扫描 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 指纹识别权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    
+    
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    
+    <!-- 测试权限 -->
+<!--    <instrumentation-->
+<!--        android:name="android.test.InstrumentationTestRunner"-->
+<!--        android:targetPackage="com.investigate.newsupper" />-->
+
+    <!-- 屏幕适配支持 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    
+    <application
+        xmlns:tool="http://schemas.android.com/tools"
+        android:name="com.investigate.newsupper.global.MyApp"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        tool:ignore="LockedOrientationActivity"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDeSNFQnx4XeL2hSKrBFMz-I__56Oq1m4w" />
+     <!--
+        
+          <activity android:name="com.investigate.newsupper.test.TestActivity" > 
+              <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+           </activity>
+          -->
+          
+       <activity
+            android:name="com.investigate.newsupper.activity.WelcomeActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> 
+           
+        <activity
+            android:name="com.investigate.newsupper.activity.HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.CheckAddrActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.UploadActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 旧新提示 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.ShowNoticeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.investigate.newsupper.activity.ShowImageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name="com.investigate.newsupper.activity.VideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|locale|navigation"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.activity.SettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.KnowleageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.KnowledgeDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 注销页面 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.LogoutDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <!-- 提示页面 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.NoticeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <!-- 追加说明类 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.MyDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- 数据字典 -->
+        <activity
+            android:name="com.investigate.newsupper.view.EditTextListView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.SubscibeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.RegistActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.VisitActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.ChoiceModeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.MapActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.DataMonitorActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.WebModeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.activity.NativeModeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.PhotoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.activity.ReviewCommitActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.NativeModeNoPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.activity.NativeReviewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <!-- 维码扫描 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <!-- 大树  以下 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.MyWordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- 删除附件 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.AttachActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!-- 下级项目列表 -->
+        <activity 
+            android:name="com.investigate.newsupper.activity.SubitemsListActivity">
+        </activity>
+        
+         <!--调用网页在线观看答案-->
+        <activity android:name="com.investigate.newsupper.activity.SurveyViewAnswerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        
+         <!--调用网页在线答卷-->
+        <activity android:name="com.investigate.newsupper.activity.OnlineAnswerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        
+        <!-- 地图监控开始 -->
+        <receiver android:name="com.investigate.newsupper.service.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="arui.alarm.action" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.investigate.newsupper.service.DiaryService" />
+        <service android:name="com.investigate.newsupper.service.MyLocation" >
+        </service>
+        <!-- 注册 AsynckService -->
+        <service android:name="com.investigate.newsupper.main.AsynckService" />
+        <!-- 大树  以上 -->
+        <!-- 测试权限 -->
+        <uses-library android:name="android.test.runner" />
+        <!-- 数据库 -->
+        <provider
+            android:name="com.investigate.newsupper.db.DBProvider"
+            android:authorities="investigate.newsupper.provider" />
+
+        <!-- 负责网络数据处理Service -->
+        <service android:name="com.investigate.newsupper.main.MainService" >
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="1QgWFuSeECGQIRkzdSGala1BQEowa54V" />
+        <!-- 多选图片 -->
+        <activity
+            android:name="com.investigate.newsupper.newphoto.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ImageViewerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerDeleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photoviewer.photoviewerinterface.ViewPagerBitmapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photo.PhotoActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.newphoto.photo.PhotoAlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.investigate.newsupper.activity.RecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+        <!-- 配额 -->
+        <activity
+            android:name="com.investigate.newsupper.activity.MyQuotaActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 随访fragment主界面 -->
+        <activity android:name="com.investigate.newsupper.activity.FragmentMain"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+             </activity>
+             <!-- 人员详情 -->
+          <activity android:name="com.investigate.newsupper.activity.PersionItemActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" > 
+           </activity>
+        <!-- 新建名单 -->
+            <activity android:name="com.investigate.newsupper.activity.SetInnerActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" > 
+           </activity>
+          
+           <!--没有界面的activity 用来取消通知和结束通话录音-->
+        <activity android:name="com.investigate.newsupper.activity.NoViewAcitvity"
+            android:theme="@android:style/Theme.Translucent"/>
+          
+          
+            <!-- 闹钟广播 -->
+        <receiver android:name="com.investigate.newsupper.service.MyReceiver">
+            <intent-filter>
+                <action android:name="ELITOR_CLOCK" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 新写的定位服务 -->
+        <service
+            android:name="com.investigate.newsupper.service.NewLocationService">
+        </service>
+         <!--+++++++++++++++++STARA录音相关+++++++++++++++++++++-->
+        <service
+            android:name="com.investigate.newsupper.service.recordserver.CallListenerService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        
+         <receiver android:name="com.investigate.newsupper.service.recordserver.PhoneBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        
+         
+        <!--++++++++++++++++++END录音相关++++++++++++++++++++-->
+        
+        
+        
+<!--        <meta-data android:name="android.max_aspect"-->
+<!--                   android:value="ratio_float"/>-->
+        <meta-data
+                android:name="android.max_aspect"
+                android:value="2.1" />
+        
+    </application>
+
+</manifest>

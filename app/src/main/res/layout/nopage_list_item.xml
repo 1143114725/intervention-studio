@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quesiont_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp" 
+    android:orientation="vertical">
+
+    <!-- 单题拍照 -->
+
+    <View
+        android:id="@+id/bfy_fgx"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/zh_segmentation" />
+
+    <LinearLayout
+        android:id="@+id/ltitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bfy_fgx"
+        android:layout_marginBottom="20dip"
+         android:orientation="vertical"
+        android:gravity="left|center_vertical" >
+
+        <TextView
+            android:id="@+id/qtitle_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical" />
+
+        <ImageView
+            android:id="@+id/ivSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/login_margin_top"
+            android:background="@drawable/signs"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- 上方追加说明 -->
+
+    <TextView
+        android:id="@+id/caption_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ltitle_tv"
+        android:layout_marginBottom="20dip"
+        android:gravity="left|center_vertical"
+        android:visibility="gone" />
+    <!-- 加 图片 -->
+
+    <LinearLayout
+        android:id="@+id/caption_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caption_tv"
+        android:layout_marginBottom="20dip"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+    <!-- 大树  干预提示语  显示 -->
+
+    <TextView
+        android:id="@+id/notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caption_ll"
+        android:visibility="gone" />
+    <!-- 大树  干预提示语  显示 -->
+
+    <LinearLayout
+        android:id="@+id/body_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notice_tv"
+        android:layout_marginBottom="15dip"
+        android:orientation="horizontal" >
+        
+    </LinearLayout>
+    <!-- 下方追加说明 -->
+
+    <TextView
+        android:id="@+id/comment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/body_ll"
+        android:visibility="gone" />
+    <!-- 下方包含图片追加说明 -->
+
+    <LinearLayout
+        android:id="@+id/comment_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_tv"
+        android:layout_marginBottom="15dip"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+</LinearLayout>

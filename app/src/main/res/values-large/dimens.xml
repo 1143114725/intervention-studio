@@ -1,0 +1,40 @@
+<resources>
+
+    <dimen name="endbutton_text_size">50dp</dimen>
+    <dimen name="nqbtn_text_size">24dp</dimen>
+    <dimen name="button_text_size">22dp</dimen>
+    <dimen name="sry_text_big">22dp</dimen>
+    <dimen name="sry_text_small">20dp</dimen>
+    <dimen name="all_upload_size">22dp</dimen>
+    <dimen name="upload_size">24dp</dimen>
+    <dimen name="left_textsize">24dp</dimen>
+    <dimen name="left_login_bottom">20dp</dimen>
+    <dimen name="index_button_top">22dp</dimen>
+    <dimen name="index_detail">24dp</dimen>
+    <dimen name="adpter_text_size">22dp</dimen>
+    <dimen name="total_index_detail">24dp</dimen>
+    <dimen name="local_text_size">20dp</dimen>
+    <dimen name="padding_dimens_size">2sp</dimen>
+    <dimen name="no_survey">24dp</dimen>
+    <dimen name="small_locate">20dp</dimen>
+    <dimen name="image_out_width">110dp</dimen>
+    <dimen name="image_out_height">37dp</dimen>
+    <dimen name="padding_big_dimens_size">3sp</dimen>
+    <dimen name="login_margin_top">15dp</dimen>
+    <dimen name="login_margin_top_small">10dp</dimen>
+    <dimen name="login_margin_top_big">20dp</dimen>
+    <dimen name="popmenu_yoff">10.0dp</dimen>
+    <dimen name="text_size_default">22dp</dimen>
+    <dimen name="survey_text_size">22dp</dimen>
+    <dimen name="survey_middle_text_size">24dp</dimen>
+    <dimen name="survey_big_text_size">25dp</dimen>
+    
+    
+    
+    <!-- 页边距 -->
+    <dimen name="pagemargin">22dp</dimen>
+	<!-- 字号 -->
+	<dimen name="Tip_Body">20dp</dimen>
+	<dimen name="Tip_Subtitle">22dp</dimen>
+
+</resources>

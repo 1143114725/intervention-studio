@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        style="@style/SurveyHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!--
+                 <ImageView
+                android:id="@+id/native_left_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/login_margin_top_big"
+                android:layout_marginTop="@dimen/login_margin_top_big"
+                android:src="@drawable/icon_back" />
+        -->
+        <!-- 更多 -->
+
+        <LinearLayout
+            android:id="@+id/my_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_more" />
+        </LinearLayout>
+
+        <!-- 目录 -->
+
+        <LinearLayout
+            android:id="@+id/my_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_back" />
+        </LinearLayout>
+
+        <!-- 知识库 -->
+
+        <LinearLayout
+            android:id="@+id/survey_title_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="@dimen/login_margin_top" >
+
+            <TextView
+                android:id="@+id/survey_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="问卷加载中..."
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/index_detail" />
+
+            <Button
+                android:id="@+id/btn_title_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/mm_title_btn_back"
+                android:focusable="true"
+                android:gravity="center"
+                android:minWidth="@dimen/image_out_height"
+                android:text="@string/choiceType"
+                android:textColor="@color/btn_text_title"
+                android:textSize="@dimen/local_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/title_rl"
+        android:layout_gravity="center"
+        android:background="@color/gray" />
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        style="@style/StyleProgressBarMini"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/title_bar_line"
+        android:background="@drawable/shape"
+        android:max="100"
+        android:padding="0dp"
+        android:progress="50" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttons_line"
+        android:layout_below="@id/pb_progressbar"
+        android:orientation="vertical" >
+
+      
+
+        <LinearLayout
+            android:id="@+id/visit_sv"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/nopage_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/quesiont_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="@color/white"
+                android:orientation="vertical" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/buttons_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/re_btn"
+        android:background="@color/gray" />
+
+    <!-- 上一页下一页 -->
+    <RelativeLayout
+        android:id="@+id/re_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/login_margin_top"
+        android:layout_marginTop="@dimen/login_margin_top" >
+
+        <Button
+            android:id="@+id/bq_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bq_back"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top_small"
+            android:text="@string/exit_survey"
+            android:textColor="@color/black"
+            android:textSize="@dimen/nqbtn_text_size"
+            android:textStyle="bold" />
+        <!-- android:background="" -->
+
+        <Button
+            android:id="@+id/nq_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nq_back"
+            android:onClick="btnClick"
+            android:padding="@dimen/login_margin_top_small"
+            android:text="@string/commit_survey"
+            android:textColor="@color/white"
+            android:textSize="@dimen/nqbtn_text_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_locationshow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/nq_btn"
+            android:src="@drawable/locationgone" />
+
+    </RelativeLayout>
+    <!-- android:background="@drawable/sy" -->
+
+    <ProgressBar
+        android:id="@+id/visit_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_qmtips"
+        android:padding="25dip"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:id="@+id/result_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/login_margin_top_big"
+            android:background="#e7e7e7"
+            android:orientation="vertical"
+            android:padding="10dip"
+            android:visibility="gone" >
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:gravity="center"
+                android:text="您已完成本访问"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问时间：2014/09/24 15:53:20"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visitor_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="记录人员：DAP"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visit_addr_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问地点：阜成大厦"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/visitor_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="访问状态：中断断续"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/upload_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="上传状态：未上传"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif" />
+
+            <com.investigate.newsupper.global.textsize.UITextView
+                android:id="@+id/upload_alert_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:text="返回首页选择左侧上传页面，手动上传数据。"
+                android:textColor="#585858"
+                android:textSize="@dimen/sry_text_small"
+                android:typeface="serif"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dip"
+                android:orientation="vertical" >
+
+                <!-- android:layout_gravity="left|center_vertical" -->
+
+                <Button
+                    android:id="@+id/left_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/endbutton_text_size"
+                    android:layout_marginBottom="@dimen/login_margin_top"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:background="@drawable/nq_back"
+                    android:gravity="center"
+                    android:onClick="btnClick"
+                    android:text="继 续"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:typeface="serif" />
+
+                <!-- android:layout_gravity="right|center_vertical" -->
+
+                <Button
+                    android:id="@+id/right_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/endbutton_text_size"
+                    android:layout_marginBottom="@dimen/login_margin_top"
+                    android:layout_marginTop="@dimen/login_margin_top"
+                    android:background="@drawable/bq_back"
+                    android:gravity="center"
+                    android:onClick="btnClick"
+                    android:text="终 止"
+                    android:textColor="#585858"
+                    android:textSize="@dimen/adpter_text_size"
+                    android:typeface="serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <SlidingDrawer
+        android:id="@+id/pic_sd"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent"
+        android:content="@+id/images_rl"
+        android:handle="@+id/drag_icon_iv"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/images_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" >
+
+            <ImageSwitcher
+                android:id="@+id/switcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/img_count_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/gallery"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:typeface="serif" />
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:spacing="16dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/drag_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tray_handle" />
+    </SlidingDrawer>
+
+    <LinearLayout
+        android:id="@+id/popup_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#aa000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/popup_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>
