@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_persions_llroot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/pagemargin"
+    android:background="@drawable/item_solid"
+    android:orientation="vertical"
+    android:padding="@dimen/pagemargin" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sry_text_small"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_persions_project"
+            android:textColor="@color/message_back" />
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_persions_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sry_text_small"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_persions_state"
+            android:textColor="@color/message_back" />
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_persions_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_starttime"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sry_text_small"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_iten_starttile"
+            android:textSize="@dimen/pagemargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_persions_startdata"
+            android:textColor="@color/message_back" />
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_persions_startdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_item_endtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sry_text_small"
+        
+        android:orientation="horizontal" >
+
+        <TextView
+             android:id="@+id/tv_iten_endtile"
+            android:textSize="@dimen/pagemargin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_persions_enddata"
+            android:textColor="@color/message_back" />
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_persions_enddata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back" />
+    </LinearLayout>
+
+    <LinearLayout
+        
+        android:id="@+id/ll_item_residuetiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/sry_text_small"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_residuetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_persions_residue"
+            android:textColor="@color/message_back" />
+
+        <TextView
+            android:textSize="@dimen/pagemargin"
+            android:id="@+id/tv_item_persions_residue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/back" />
+    </LinearLayout>
+
+</LinearLayout>

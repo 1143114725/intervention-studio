@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_interval">
+
+        <ImageView
+            android:id="@+id/back_img_setinner"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/distance_cutting_line"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/setinner_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#444"
+            android:layout_gravity="center"
+            android:textSize="@dimen/index_detail"
+            android:textStyle="bold"
+            android:text="新建名单" />
+
+        <TextView
+            android:id="@+id/setinner_tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/distance_cutting_line"
+            android:gravity="center"
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/nq_back"
+            android:textColor="@color/white"
+        
+            android:padding="@dimen/distance_cutting_line"
+            android:text="保存" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ll_root_setinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_gray_color"
+            android:orientation="vertical"
+            android:paddingTop="1dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

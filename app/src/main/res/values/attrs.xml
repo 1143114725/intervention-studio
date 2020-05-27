@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AdapterLinearLayout">
+        <attr name="divider" format="color|reference"/>
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="showLastDivider" format="boolean" />
+    </declare-styleable>
+</resources>

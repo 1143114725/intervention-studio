@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subscibe_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/interior_green_item_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/login_margin_top_big" >
+
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="体验问卷体验体验问卷体验"
+            android:textColor="@color/white"
+            android:textSize="@dimen/local_text_size" />
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/textView4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="2014-11-19"
+            android:textColor="@color/white"
+            android:textSize="@dimen/local_text_size" />
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="2014-11-19"
+            android:textColor="@color/white"
+            android:textSize="@dimen/local_text_size" />
+
+        <com.investigate.newsupper.global.textsize.UITextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:text="个人使用者，使用守则告诉我一个原著中，大部分的时间在干什么呢"
+            android:textColor="@color/white"
+            android:textSize="@dimen/local_text_size" />
+    
+
+</LinearLayout>

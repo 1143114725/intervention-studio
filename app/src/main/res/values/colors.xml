@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="AdminHeaderTextColor">#ffffffff</color>
+    <color name="AdminHeaderShadowColor">#ff000000</color>
+    <color name="AdminMenuBackgroundColor">#ff1d4453</color>
+    <color name="ValidationYellow">#fffffa9b</color>
+    <color name="FlashingRedTextColor">#ffff0000</color>
+    <color name="ClearColor">#00000000</color>
+    <color name="SurveyFormBackground">#ffffffff</color>
+    <color name="SurveyHeaderShadowColor">#ff000000</color>
+    <color name="text_hint">#ffa0a0a0</color>
+    <!-- 蓝色 -->
+    <color name="bg_gray">#6C6C6C</color>
+    <color name="setting_text_color">#ff70777f</color>
+    <color name="transparent">#00000000</color>
+    <color name="gold">#b89766</color>
+    <!-- 维码 -->
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <color name="gray1">#EDEDED</color>
+    <color name="sky_blue">#1573d3</color>
+    <color name="pink">#c39696</color>
+    <color name="blue">#43a077</color>
+    <color name="red">#c94444</color>
+    <color name="gray_bold">#BEBEBE</color>
+    <color name="yellow">#c99245</color>
+    <color name="gray">#bdbdbd</color>
+    <color name="background">#FFFAF0</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="menu_checked">#434C53</color>
+    <color name="border">#ffa20a</color>
+    <color name="Radio_back">#F0F0F0</color>
+
+    
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    
+    <color name="back">#000000</color>
+    <!--<color name="back">#a1a7da</color>-->
+    <color name="message_back">#8c000000</color>
+    <color name="title_hint_line">#6069c0</color>
+    
+    <color name="forbidden_color">#666666</color>
+    <!-- 绿色内部listview的item 的背景颜色 -->
+    <color name="interior_green_item_bg">#50AD84</color>
+    <!-- 绿色listview的item里下载问卷 的背景颜色 -->
+    <color name="interior_green_button_item_bg">#54C895</color>
+    
+    
+    <!-- 灰色内部listview的item 的背景颜色 -->
+    <color name="interior_dack_item_bg">#909090</color>
+    <!-- 灰色listview的item里下载问卷 的背景颜色 -->
+    <color name="interior_dack_button_item_bg">#A4A4A4</color>
+    <!--底层背景色-->
+    <color name="floor_background">#F4F4F4</color>
+    <!--文字灰色 7A7A7A 比引用背景色深 比导航色浅 -->
+    <color name="text_gray_color">#7A7A7A</color>
+</resources>
