@@ -1,23 +1,5 @@
 package com.investigate.newsupper.slide;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Properties;
-
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
-import javax.mail.Authenticator;
-import javax.mail.Message.RecipientType;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-import javax.mail.internet.MimeUtility;
-
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -41,7 +23,6 @@ import android.widget.Toast;
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.activity.HomeActivity;
 import com.investigate.newsupper.activity.LoginActivity;
-import com.investigate.newsupper.activity.NoticeActivity;
 import com.investigate.newsupper.activity.SubscibeActivity;
 import com.investigate.newsupper.adapter.HomeAdapter;
 import com.investigate.newsupper.bean.DapException;
@@ -56,6 +37,24 @@ import com.investigate.newsupper.util.Config;
 import com.investigate.newsupper.util.NetUtil;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.Toasts;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.Authenticator;
+import javax.mail.Message.RecipientType;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.MimeUtility;
 
 public class CenterFagment extends Fragment implements OnClickListener {
 
@@ -115,9 +114,10 @@ public class CenterFagment extends Fragment implements OnClickListener {
 		
 		if(NetUtil.checkNet(this.getActivity())&&!Util.isEmpty(cfg.getString(Cnt.USER_ID, ""))){
 			//提示页面
-			Intent in=new Intent(CenterFagment.this.getActivity(),NoticeActivity.class);
-			in.putExtra("notice", "1");//1代表不能操作
-			startActivity(in);
+//			Intent in=new Intent(CenterFagment.this.getActivity(),NoticeActivity.class);
+//			in.putExtra("notice", "1");//1代表不能操作
+//			startActivity(in);
+			Toast.makeText(getActivity(), "有任务提示", Toast.LENGTH_LONG).show();
 		}else if(Util.isEmpty(cfg.getString(Cnt.USER_ID, ""))){
 			Toast.makeText(getActivity(), R.string.no_login_no_compare, Toast.LENGTH_LONG).show();
 		}else if(!NetUtil.checkNet(this.getActivity())){

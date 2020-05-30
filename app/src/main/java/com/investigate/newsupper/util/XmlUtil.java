@@ -1,22 +1,8 @@
 package com.investigate.newsupper.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
+import android.util.Base64;
+import android.util.Base64InputStream;
+import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.investigate.newsupper.bean.Answer;
@@ -52,9 +38,23 @@ import com.investigate.newsupper.bean.UserBean;
 import com.investigate.newsupper.bean.UserList;
 import com.investigate.newsupper.global.Cnt;
 
-import android.util.Base64;
-import android.util.Base64InputStream;
-import android.util.Log;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 public class XmlUtil {
 
@@ -3557,7 +3557,7 @@ public class XmlUtil {
 	 * @return
 	 */
 	public static String jsonArr2Str(ArrayList<QuestionItem> items) {
-		return JSON.toJSONString(items);
+		return GsonUtil.GsonToString(items);
 	}
 
 	/**
@@ -3587,19 +3587,19 @@ public class XmlUtil {
 	 * @return
 	 */
 	public static String jsonArr2MapStr(ArrayList<AnswerMap> maps) {
-		return JSON.toJSONString(maps);
+		return GsonUtil.GsonToString(maps);
 	}
 
 	public static String jsonArr2optionStr(ArrayList<Option> opt) {
-		return JSON.toJSONString(opt);
+		return GsonUtil.GsonToString(opt);
 	}
 
 	public static String jsonArr2RestrictionStr(ArrayList<Restriction> rs) {
-		return JSON.toJSONString(rs);
+		return GsonUtil.GsonToString(rs);
 	}
 
 	public static String jsonArr2QgRestrictionStr(ArrayList<QgRestriction> qgrs) {
-		return JSON.toJSONString(qgrs);
+		return GsonUtil.GsonToString(qgrs);
 	}
 
 	public static ArrayList<Restriction> restrictionStr2JsonArr(String json) {
@@ -3618,7 +3618,8 @@ public class XmlUtil {
 	}
 
 	public static String jsonArr2ReturnTypeStr(ArrayList<ReturnType> rs) {
-		return JSON.toJSONString(rs);
+//		return JSON.toJSONString(rs);
+		return GsonUtil.GsonToString(rs);
 	}
 
 	// 访问状态结束
@@ -3633,7 +3634,7 @@ public class XmlUtil {
 		if (null == ip) {
 			return null;
 		}
-		return JSON.toJSONString(ip);
+		return GsonUtil.GsonToString(ip);
 	}
 
 	/**
@@ -3650,7 +3651,7 @@ public class XmlUtil {
 	}
 
 	public static String parserRestValueArr2Json(ArrayList<RestrictionValue> vs) {
-		return JSON.toJSONString(vs);
+		return GsonUtil.GsonToString(vs);
 	}
 
 	public static ArrayList<RestrictionValue> parserJson2RestValueArr(
@@ -3660,7 +3661,7 @@ public class XmlUtil {
 	}
 
 	public static String parserGRestRIDArr2Json(ArrayList<RID> vs) {
-		return JSON.toJSONString(vs);
+		return GsonUtil.GsonToString(vs);
 	}
 
 	public static ArrayList<RID> parserJson2GRestRIDArr(String json) {
@@ -3668,7 +3669,7 @@ public class XmlUtil {
 	}
 
 	public static String parserGRestArr2Json(ArrayList<GRestriction> vs) {
-		return JSON.toJSONString(vs);
+		return GsonUtil.GsonToString(vs);
 	}
 
 	public static ArrayList<GRestriction> parserJson2GRestArr(String json) {
@@ -3683,7 +3684,7 @@ public class XmlUtil {
 	 * @return
 	 */
 	public static String parserIntervention2Json(Intervention intervention) {
-		return JSON.toJSONString(intervention);
+		return GsonUtil.GsonToString(intervention);
 	}
 
 	/**

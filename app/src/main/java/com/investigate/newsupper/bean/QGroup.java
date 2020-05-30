@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-import com.alibaba.fastjson.JSON;
+import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.Util;
 
 /**
@@ -127,6 +127,7 @@ public class QGroup extends IBean {
 	public void setGroups(ArrayList<Group> mGroups) {
 		this.groups = mGroups;
 		if (!Util.isEmpty(mGroups)) {
+			GsonUtil.BeanToJson()
 			this.groupsStr = JSON.toJSONString(mGroups);
 		}
 	}

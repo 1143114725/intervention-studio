@@ -29,7 +29,6 @@ dependencies {
     implementation files('libs/commons-compress-1.4.1.jar')
     implementation files('libs/commons-lang3-3.1.jar')
     implementation files('libs/commons-net-ftp-2.0.jar')
-    implementation files('libs/fastjson-1.1.17.jar')
     implementation files('libs/mail.jar')
     implementation files('libs/okhttp-3.8.1.jar')
     implementation files('libs/okio-1.13.0.jar')
