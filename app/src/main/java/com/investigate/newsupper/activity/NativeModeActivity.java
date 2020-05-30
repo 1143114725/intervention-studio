@@ -1,35 +1,5 @@
 package com.investigate.newsupper.activity;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.StringWriter;
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.net.URLEncoder;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Random;
-import java.util.UUID;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xmlpull.v1.XmlSerializer;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -157,7 +127,7 @@ import com.investigate.newsupper.intervention.InterventionEP1;
 import com.investigate.newsupper.intervention.InterventionEP2;
 import com.investigate.newsupper.intervention.InterventionEP3;
 import com.investigate.newsupper.intervention.InterventionEP4;
-import com.investigate.newsupper.intervention.InterventionQjq;
+import com.investigate.newsupper.intervention.Interventionutil;
 import com.investigate.newsupper.listener.OnActionListener;
 import com.investigate.newsupper.main.MainService;
 import com.investigate.newsupper.pageview.MenuHorizontalScrollView;
@@ -179,12 +149,10 @@ import com.investigate.newsupper.util.DialogUtil;
 import com.investigate.newsupper.util.FileUtil;
 import com.investigate.newsupper.util.HtmlTagHandler;
 import com.investigate.newsupper.util.ImsIntervetion;
-import com.investigate.newsupper.util.ListUtils;
 import com.investigate.newsupper.util.MD5;
 import com.investigate.newsupper.util.NetService;
 import com.investigate.newsupper.util.NetUtils;
 import com.investigate.newsupper.util.Publisher;
-import com.investigate.newsupper.util.SpUtil;
 import com.investigate.newsupper.util.Publisher.Subscriber;
 import com.investigate.newsupper.util.Publisher.SubscriberKey;
 import com.investigate.newsupper.util.SDCardUtils;
@@ -206,6 +174,36 @@ import com.investigate.newsupper.view.UIEditText;
 import com.investigate.newsupper.view.UIScrollView;
 import com.investigate.newsupper.view.UISeekBar;
 import com.investigate.newsupper.xhttp.Xutils;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.xmlpull.v1.XmlSerializer;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.net.URLEncoder;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Random;
+import java.util.UUID;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * @author kejunyao 原生模式访问
@@ -5735,8 +5733,17 @@ public class NativeModeActivity extends BaseActivity implements
 	 * 哑题无验证的方法
 	 */
 	private void nextPage(boolean isNoValidate) {
+        int state = getQuestionAnswer(MSG_NEXT, isNoValidate);
+        boolean result = Interventionutil.getInstance(Integer.parseInt(feed.getSurveyId()), ma, feed.getUuid())
+                .nextpage(q.qIndex,vs,NativeModeActivity.this,feed.getUuid());
 
-		int state = getQuestionAnswer(MSG_NEXT, isNoValidate);
+
+        if (!result) {
+            setTopClick(true);
+            return;
+        }
+
+
 		sum = 0;
 		// System.out.println("state--------->" + state);
 		// 为false就验证 不让过。
@@ -5974,7 +5981,8 @@ public class NativeModeActivity extends BaseActivity implements
 	ArrayList<AshingBean> ashingBeans = new ArrayList<AshingBean>();
 	ArrayList<String> ettagids = new ArrayList<String>();
 
-	public void createQuestionBodyView(int operType) {// 动态生成题干的方法
+	public void createQuestionBodyView(int operType) {
+	    // 动态生成题干的方法
 
 		NativeModeActivity.this.show();
 		closeQRecord();
@@ -10719,7 +10727,10 @@ public class NativeModeActivity extends BaseActivity implements
 			}
 
 
-		}
+		}else{
+            Interventionutil.getInstance(Integer.parseInt(q.surveyId), ma, feed.getUuid())
+                    .createQuestionBodyViewBefore(q.qIndex, vs);
+        }
 
 		
 
