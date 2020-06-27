@@ -1,11 +1,14 @@
 package com.investigate.newsupper.activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.global.Cnt;
@@ -15,8 +18,10 @@ import com.investigate.newsupper.slide.CenterFagment;
 import com.investigate.newsupper.slide.LeftFragment;
 import com.investigate.newsupper.slide.RightFragment;
 import com.investigate.newsupper.slide.SlidingMenu;
+import com.investigate.newsupper.util.BaseToast;
 import com.investigate.newsupper.util.LogUtil;
 import com.investigate.newsupper.util.NetUtil;
+import com.investigate.newsupper.util.PermissionUtil;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.Toasts;
 
@@ -32,13 +37,37 @@ public class HomeActivity extends FragmentActivity {
 	private boolean isFree;// true是免费 false是付费
 	private String freeIp, payIp;
 
-	@Override
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
 		setContentView(R.layout.slide_activity);
 		if (null == ma) {
 			ma = (MyApp) getApplication();
 		}
+
+        PermissionUtil.with(this).isPermission(Manifest.permission.CALL_PHONE, new PermissionUtil.Operation() {
+            @Override
+            public void OnNext() {
+
+                BaseToast.showLongToast(HomeActivity.this,"电话权限申请成功！！");
+            }
+        });
+
+//                init(this)
+//                .permissions(Manifest.permission.CALL_PHONE)
+//                .request { allGranted, grantedList, deniedList ->
+//            if (allGranted) {
+//                call()
+//            } else {
+//                Toast.makeText(this, "您拒绝了拨打电话权限", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 		//startService(new Intent(this, MyLocation.class));
 		// 假如是访问专家版本,读取是什么版本 注释部分
 		// if (Cnt.appVersion == 1 || Cnt.appVersion == 4) {

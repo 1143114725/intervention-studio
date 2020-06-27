@@ -1,7 +1,5 @@
 package com.investigate.newsupper.fragment;
 
-import java.util.ArrayList;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +13,8 @@ import com.investigate.newsupper.base.BaseFragment;
 import com.investigate.newsupper.bean.Survey;
 import com.investigate.newsupper.bean.UploadFeed;
 import com.investigate.newsupper.global.MyApp;
+
+import java.util.ArrayList;
 
 
 /**

@@ -1,9 +1,5 @@
 package com.investigate.newsupper.adapter;
 
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collections;
-
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -13,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.activity.MyQuotaActivity;
 import com.investigate.newsupper.bean.Answer;
@@ -23,8 +18,13 @@ import com.investigate.newsupper.bean.Quota;
 import com.investigate.newsupper.bean.Survey;
 import com.investigate.newsupper.bean.UploadFeed;
 import com.investigate.newsupper.global.MyApp;
+import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.QuotaSucessUtil;
 import com.investigate.newsupper.util.Util;
+
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class QuotaAdapter extends BaseAdapter {
 	String TAG = "QuotaAdapter";
@@ -191,8 +191,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);
@@ -230,8 +229,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);
@@ -311,8 +309,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>)GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);
@@ -394,8 +391,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);
@@ -475,8 +471,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);
@@ -555,8 +550,7 @@ public class QuotaAdapter extends BaseAdapter {
 									if (!Util.isEmpty(uploadFeed
 											.getParametersStr())) {
 										parameterList.clear();
-										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-												.parseArray(parametersStr,
+										ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 														Parameter.class);
 										if (!Util.isEmpty(tParameters)) {
 											parameterList.addAll(tParameters);

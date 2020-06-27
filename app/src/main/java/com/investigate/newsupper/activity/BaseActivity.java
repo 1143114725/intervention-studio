@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnKeyListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.KeyEvent;
@@ -17,6 +16,8 @@ import android.view.View.OnLongClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.global.Cnt;
@@ -303,5 +304,27 @@ public abstract class BaseActivity extends FragmentActivity {
         context.startActivity(intent);
     }
 
-	
+
+    /**
+     * 启动一个startActivityForResult
+     *
+     * @param context
+     *            上下文
+     * @param requestCode
+     *            返回标识
+     * @param cls
+     *            目标类
+     * @param bundle
+     *            数据
+     */
+    public static void goToActivityFor(Context context, int requestCode,
+                                Class<?> cls, Bundle bundle) {
+        Intent intent = new Intent();
+        intent.setClass(context, cls);
+        intent.putExtras(bundle);
+        ((FragmentActivity) context).startActivityForResult(intent, requestCode);
+    }
+
+
+
 }

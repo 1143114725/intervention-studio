@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.investigate.newsupper"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 28
     }
 
@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    implementation "com.android.support:support-v4:28.0.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation files('libs/activation.jar')
     implementation files('libs/additionnal.jar')
@@ -34,4 +34,8 @@ dependencies {
     implementation files('libs/okio-1.13.0.jar')
     implementation files('libs/XUtils.jar')
     implementation files('libs/zxing.jar')
+    implementation 'com.alibaba:fastjson:1.2.68'
+    implementation 'com.permissionx.guolindev:permissionx:1.1.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:+'
+
 }

@@ -1,8 +1,5 @@
 package com.investigate.newsupper.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -23,7 +20,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.base.BaseInterface;
 import com.investigate.newsupper.bean.FeedAnsBean;
@@ -45,6 +41,9 @@ import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.CustomProgressDialog;
 import com.investigate.newsupper.xhttp.Xutils;
 import com.investigate.newsupper.xhttp.Xutils.XCallBack2;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 访问预览界面
@@ -390,8 +389,7 @@ public class ChoiceModeActivity extends Activity implements OnClickListener {
 		String parametersStr = feed.getParametersStr();
 		if (!Util.isEmpty(parametersStr)) {
 			parameterList.clear();
-			ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-					.parseArray(parametersStr, Parameter.class);
+			ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr, Parameter.class);
 			if (!Util.isEmpty(tParameters)) {
 				parameterList.addAll(tParameters);
 			}

@@ -12,7 +12,7 @@ import com.investigate.newsupper.view.adapterlinearlayout.AdapterLinearLayout.On
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.Gravity;

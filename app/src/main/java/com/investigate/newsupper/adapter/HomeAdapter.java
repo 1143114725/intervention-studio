@@ -1,7 +1,5 @@
 package com.investigate.newsupper.adapter;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -43,16 +41,16 @@ import com.investigate.newsupper.util.UIUtils;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.Toasts;
 
+import java.util.ArrayList;
+
 public class HomeAdapter extends BaseAdapter {
 	private String TAG;
 	private Activity activity;
 	private ArrayList<Survey> list;
 	private MyApp ma;
 	private String language;
-	int dialogBtnSize = (int) (UIUtils.getDimenPixelSize(R.dimen.sry_text_big) * TextSizeManager
-			.getInstance().getRealScale());;
-	int dialogMsg = (int) (UIUtils.getDimenPixelSize(R.dimen.sry_text_big) * TextSizeManager
-			.getInstance().getRealScale());;
+	int dialogBtnSize = (int) (UIUtils.getDimenPixelSize(R.dimen.sry_text_big) * TextSizeManager.getRealScale());;
+	int dialogMsg = (int) (UIUtils.getDimenPixelSize(R.dimen.sry_text_big) * TextSizeManager.getRealScale());;
 
 	public HomeAdapter(Activity activity, ArrayList<Survey> list, String TAG) {
 		super();
@@ -443,7 +441,8 @@ public class HomeAdapter extends BaseAdapter {
 			builder.setMessage(deleteMsg);
 			builder.setPositiveButton(R.string.ok,
 					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) {
+						@Override
+                        public void onClick(DialogInterface dialog, int which) {
 							// 有子项目的
 							if (!Util.isEmpty(survey.SCID)) {
 								// 获取所有已完成且未上传的数据数量
@@ -468,7 +467,8 @@ public class HomeAdapter extends BaseAdapter {
 									builder.setPositiveButton(
 											R.string.ok,
 											new DialogInterface.OnClickListener() {
-												public void onClick(
+												@Override
+                                                public void onClick(
 														DialogInterface dialog,
 														int which) {
 													if (number > 1) {
@@ -486,7 +486,8 @@ public class HomeAdapter extends BaseAdapter {
 									builder.setNegativeButton(
 											R.string.cancle,
 											new android.content.DialogInterface.OnClickListener() {
-												public void onClick(
+												@Override
+                                                public void onClick(
 														DialogInterface dialog,
 														int which) {
 													dialog.dismiss();
@@ -542,7 +543,8 @@ public class HomeAdapter extends BaseAdapter {
 									builder.setPositiveButton(
 											R.string.ok,
 											new DialogInterface.OnClickListener() {
-												public void onClick(
+												@Override
+                                                public void onClick(
 														DialogInterface dialog,
 														int which) {
 													ma.dbService
@@ -556,7 +558,8 @@ public class HomeAdapter extends BaseAdapter {
 									builder.setNegativeButton(
 											R.string.cancle,
 											new android.content.DialogInterface.OnClickListener() {
-												public void onClick(
+												@Override
+                                                public void onClick(
 														DialogInterface dialog,
 														int which) {
 													dialog.dismiss();
@@ -595,7 +598,8 @@ public class HomeAdapter extends BaseAdapter {
 					});
 			builder.setNegativeButton(R.string.cancle,
 					new android.content.DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) {
+						@Override
+                        public void onClick(DialogInterface dialog, int which) {
 							dialog.dismiss();
 						}
 					});
@@ -609,9 +613,9 @@ public class HomeAdapter extends BaseAdapter {
 			msgTv.setMinLines(2);
 			msgTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, dialogMsg);
 			msgTv.setGravity(Gravity.CENTER_VERTICAL);
-			create.getButton(create.BUTTON_NEGATIVE).setTextSize(
+			create.getButton(DialogInterface.BUTTON_NEGATIVE).setTextSize(
 					TypedValue.COMPLEX_UNIT_PX, dialogBtnSize);
-			create.getButton(create.BUTTON_POSITIVE).setTextSize(
+			create.getButton(DialogInterface.BUTTON_POSITIVE).setTextSize(
 					TypedValue.COMPLEX_UNIT_PX, dialogBtnSize);
 			return false;
 		}

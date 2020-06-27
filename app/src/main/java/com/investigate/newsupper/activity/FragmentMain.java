@@ -1,15 +1,10 @@
 package com.investigate.newsupper.activity;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
 import android.util.Log;
 import android.util.TypedValue;
@@ -22,6 +17,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
@@ -42,6 +40,9 @@ import com.investigate.newsupper.util.UIUtils;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.util.locationutils.RxLocationTool;
 import com.investigate.newsupper.view.CustomProgressDialog;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 列表依赖的activity Created by EEH on 2018/3/28.
@@ -70,8 +71,7 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 		setListener();
 		initData();
 		dialogBtnSize = (int) (UIUtils
-				.getDimenPixelSize(R.dimen.button_text_size) * TextSizeManager
-				.getInstance().getRealScale());
+				.getDimenPixelSize(R.dimen.button_text_size) * TextSizeManager.getRealScale());
 	}
 
 	protected void initView() {
@@ -475,7 +475,8 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 	int locationtime = 0;
 
 	Runnable startlocationrun = new Runnable() {
-		public void run() {  
+		@Override
+        public void run() {
 			
        	 if (lat == 0.0) {
        		 stoplocation();
@@ -535,7 +536,8 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 						create = locBuilder.create();
 						create.show();
 						new Handler().postDelayed(new Runnable(){  
-						    public void run() {  
+						    @Override
+                            public void run() {
 						    //execute the task  
 							//关闭提示框
 							create.dismiss();
@@ -562,7 +564,8 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 				create = locBuilder.create();
 				create.show();
 				new Handler().postDelayed(new Runnable(){  
-				    public void run() {  
+				    @Override
+                    public void run() {
 				    //execute the task  
 					//关闭提示框
 					create.dismiss();
@@ -580,7 +583,8 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 						create = locBuilder.create();
 						create.show();
 						new Handler().postDelayed(new Runnable(){  
-						    public void run() {  
+						    @Override
+                            public void run() {
 						    //execute the task  
 							//关闭提示框
 							create.dismiss();
@@ -598,7 +602,8 @@ public class FragmentMain extends BaseActivity implements View.OnClickListener {
 							create = locBuilder.create();
 							create.show();
 							new Handler().postDelayed(new Runnable(){  
-							    public void run() {  
+							    @Override
+                                public void run() {
 							    //execute the task  
 								//关闭提示框
 								create.dismiss();

@@ -210,16 +210,16 @@ public class AdapterLinearLayout extends LinearLayout {
         mGestureDetector = new GestureDetector(getContext(), mGestureListener);
         mTouchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.AdapterLinearLayout, 0, 0);
-            final Drawable d = a.getDrawable(R.styleable.AdapterLinearLayout_divider);
+            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.AdapterLinearLayoutStyleable, 0, 0);
+            final Drawable d = a.getDrawable(R.styleable.AdapterLinearLayoutStyleable_dividers);
             if (d != null) {
                 setDividerDrawable(d);
             }
-            final int h = a.getDimensionPixelSize(R.styleable.AdapterLinearLayout_dividerHeight, 0);
+            final int h = a.getDimensionPixelSize(R.styleable.AdapterLinearLayoutStyleable_dividerHeight, 0);
             if (h > 0) {
                 setDividerSize(h);
             }
-            showLastDivider(a.getBoolean(R.styleable.AdapterLinearLayout_showLastDivider, false));
+            showLastDivider(a.getBoolean(R.styleable.AdapterLinearLayoutStyleable_showLastDivider, false));
             a.recycle();
         }
         /*if (mDividerSize == 0) {

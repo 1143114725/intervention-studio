@@ -1,10 +1,5 @@
 package com.investigate.newsupper.fragment;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -50,6 +45,11 @@ import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.util.XmlUtil;
 import com.investigate.newsupper.view.PinnedSectionListView;
 import com.investigate.newsupper.view.Toasts;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
 /**
  * 时间列表 Created by EEH on 2018/3/28.

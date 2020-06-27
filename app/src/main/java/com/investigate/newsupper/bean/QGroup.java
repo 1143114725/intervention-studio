@@ -1,11 +1,10 @@
 package com.investigate.newsupper.bean;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-
 import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.Util;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 大题组
@@ -127,8 +126,8 @@ public class QGroup extends IBean {
 	public void setGroups(ArrayList<Group> mGroups) {
 		this.groups = mGroups;
 		if (!Util.isEmpty(mGroups)) {
-			GsonUtil.BeanToJson()
-			this.groupsStr = JSON.toJSONString(mGroups);
+
+			this.groupsStr = GsonUtil.GsonToString(mGroups);
 		}
 	}
 
@@ -140,7 +139,8 @@ public class QGroup extends IBean {
 		this.groupsStr = mGroupsStr;
 		if (!Util.isEmpty(mGroupsStr)) {
 			this.groups.clear();
-			ArrayList<Group> gs = (ArrayList<Group>) JSON.parseArray(mGroupsStr, Group.class);
+
+			ArrayList<Group> gs = (ArrayList<Group>) GsonUtil.GsonToList(mGroupsStr,Group.class);
 			if (!Util.isEmpty(gs)) {
 				this.groups.addAll(gs);
 				for (Group g : gs) {

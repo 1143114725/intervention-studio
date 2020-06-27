@@ -1,12 +1,5 @@
 package com.investigate.newsupper.fragment;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.xutils.http.RequestParams;
-
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
@@ -46,6 +39,13 @@ import com.investigate.newsupper.util.XmlUtil;
 import com.investigate.newsupper.view.Toasts;
 import com.investigate.newsupper.xhttp.HttpCallBack;
 import com.investigate.newsupper.xhttp.SendHttp;
+
+import org.xutils.http.RequestParams;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 人员列表 Created by EEH on 2018/3/20.

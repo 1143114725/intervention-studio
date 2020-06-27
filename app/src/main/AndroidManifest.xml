@@ -394,12 +394,7 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <!-- 随访fragment主界面 -->
-        <activity android:name="com.investigate.newsupper.activity.FragmentMain"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-             </activity>
-             <!-- 人员详情 -->
+        <!-- 人员详情 -->
           <activity android:name="com.investigate.newsupper.activity.PersionItemActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"

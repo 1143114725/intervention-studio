@@ -1,35 +1,5 @@
 package com.investigate.newsupper.activity;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.StringWriter;
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.net.URLEncoder;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Random;
-import java.util.UUID;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xmlpull.v1.XmlSerializer;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -157,7 +127,6 @@ import com.investigate.newsupper.intervention.InterventionEP1;
 import com.investigate.newsupper.intervention.InterventionEP2;
 import com.investigate.newsupper.intervention.InterventionEP3;
 import com.investigate.newsupper.intervention.InterventionEP4;
-import com.investigate.newsupper.intervention.InterventionQjq;
 import com.investigate.newsupper.listener.OnActionListener;
 import com.investigate.newsupper.main.MainService;
 import com.investigate.newsupper.pageview.MenuHorizontalScrollView;
@@ -177,14 +146,13 @@ import com.investigate.newsupper.util.Config;
 import com.investigate.newsupper.util.DialogListener;
 import com.investigate.newsupper.util.DialogUtil;
 import com.investigate.newsupper.util.FileUtil;
+import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.HtmlTagHandler;
 import com.investigate.newsupper.util.ImsIntervetion;
-import com.investigate.newsupper.util.ListUtils;
 import com.investigate.newsupper.util.MD5;
 import com.investigate.newsupper.util.NetService;
 import com.investigate.newsupper.util.NetUtils;
 import com.investigate.newsupper.util.Publisher;
-import com.investigate.newsupper.util.SpUtil;
 import com.investigate.newsupper.util.Publisher.Subscriber;
 import com.investigate.newsupper.util.Publisher.SubscriberKey;
 import com.investigate.newsupper.util.SDCardUtils;
@@ -206,6 +174,36 @@ import com.investigate.newsupper.view.UIEditText;
 import com.investigate.newsupper.view.UIScrollView;
 import com.investigate.newsupper.view.UISeekBar;
 import com.investigate.newsupper.xhttp.Xutils;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.xmlpull.v1.XmlSerializer;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.net.URLEncoder;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Random;
+import java.util.UUID;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * @author kejunyao 原生模式访问
@@ -933,8 +931,7 @@ public class NativeModeActivity extends BaseActivity implements
 					ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 					if (!Util.isEmpty(parametersStr)) {
 						parameterList.clear();
-						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-								.parseArray(parametersStr, Parameter.class);
+						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList (parametersStr, Parameter.class);
 						if (!Util.isEmpty(tParameters)) {
 							parameterList.addAll(tParameters);
 						}
@@ -975,8 +972,7 @@ public class NativeModeActivity extends BaseActivity implements
 						ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 						if (!Util.isEmpty(parametersStr)) {
 							parameterList.clear();
-							ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-									.parseArray(parametersStr, Parameter.class);
+							ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList (parametersStr, Parameter.class);
 							if (!Util.isEmpty(tParameters)) {
 								parameterList.addAll(tParameters);
 							}
@@ -1036,7 +1032,8 @@ public class NativeModeActivity extends BaseActivity implements
 		return (int) (pxValue / scale + 0.5f);
 	}
 
-	@Override
+	@SuppressLint("SourceLockedOrientationActivity")
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, //
@@ -1079,7 +1076,7 @@ public class NativeModeActivity extends BaseActivity implements
 		 * 初始化问卷字号动态设置完毕
 		 */
 		if (1 == screen) {
-			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 		} else {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		}
@@ -2149,7 +2146,8 @@ public class NativeModeActivity extends BaseActivity implements
 	/**
 	 * 开启单题录音
 	 * 
-	 * @param params
+	 * @param num
+	 * @param selectIv
 	 */
 	private void openQRecord(String num, ImageView selectIv) {
 		if (null != selectIv) {
@@ -2164,7 +2162,8 @@ public class NativeModeActivity extends BaseActivity implements
 	/**
 	 * 开启录音
 	 * 
-	 * @param params
+	 *  * @param num
+     * 	 * @param selectIv
 	 */
 	private void openRecord(String num, ImageView selectIv) {
 		if (null != selectIv) {
@@ -2571,7 +2570,7 @@ public class NativeModeActivity extends BaseActivity implements
 	 * 
 	 * @param item
 	 * @param rb
-	 * @param isDumbOk
+	 * @param
 	 * @param operType
 	 * @param qType
 	 *            0为单选，1为复选
@@ -2777,8 +2776,7 @@ public class NativeModeActivity extends BaseActivity implements
 											ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 											if (!Util.isEmpty(parametersStr)) {
 												parameterList.clear();
-												ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-														.parseArray(
+												ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(
 																parametersStr,
 																Parameter.class);
 												if (!Util.isEmpty(tParameters)) {
@@ -3097,8 +3095,7 @@ public class NativeModeActivity extends BaseActivity implements
 										ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 										if (!Util.isEmpty(parametersStr)) {
 											parameterList.clear();
-											ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-													.parseArray(parametersStr,
+											ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 															Parameter.class);
 											if (!Util.isEmpty(tParameters)) {
 												parameterList
@@ -3255,8 +3252,7 @@ public class NativeModeActivity extends BaseActivity implements
 										ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 										if (!Util.isEmpty(parametersStr)) {
 											parameterList.clear();
-											ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-													.parseArray(parametersStr,
+											ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr,
 															Parameter.class);
 											if (!Util.isEmpty(tParameters)) {
 												parameterList
@@ -3764,8 +3760,7 @@ public class NativeModeActivity extends BaseActivity implements
 					ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 					if (!Util.isEmpty(parametersStr)) {
 						parameterList.clear();
-						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-								.parseArray(parametersStr, Parameter.class);
+						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr, Parameter.class);
 						if (!Util.isEmpty(tParameters)) {
 							parameterList.addAll(tParameters);
 						}
@@ -4027,8 +4022,7 @@ public class NativeModeActivity extends BaseActivity implements
 					ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
 					if (!Util.isEmpty(parametersStr)) {
 						parameterList.clear();
-						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) JSON
-								.parseArray(parametersStr, Parameter.class);
+						ArrayList<Parameter> tParameters = (ArrayList<Parameter>) GsonUtil.GsonToList(parametersStr, Parameter.class);
 						if (!Util.isEmpty(tParameters)) {
 							parameterList.addAll(tParameters);
 						}
@@ -19146,6 +19140,7 @@ public class NativeModeActivity extends BaseActivity implements
 												.trim()) == (rowItem
 												.getItemValue())) {
 											radio.setChecked(false);
+                                            radio.setBackground(getResources().getDrawable(R.drawable.ic_btn_speak_now_1));
 											radio.setVisibility(View.INVISIBLE);
 										}
 									}

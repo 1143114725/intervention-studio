@@ -46,7 +46,7 @@ public class CustomDialog extends Dialog {
 		/**
 		 * Set the Dialog message from resource
 		 * 
-		 * @param title
+		 * @param message
 		 * @return
 		 */
 		public Builder setMessage(int message) {
@@ -135,7 +135,8 @@ public class CustomDialog extends Dialog {
 				if (positiveButtonClickListener != null) {
 					((Button) layout.findViewById(R.id.positiveButton))
 							.setOnClickListener(new View.OnClickListener() {
-								public void onClick(View v) {
+								@Override
+                                public void onClick(View v) {
 									positiveButtonClickListener.onClick(dialog,
 											DialogInterface.BUTTON_POSITIVE);
 								}
@@ -153,7 +154,8 @@ public class CustomDialog extends Dialog {
 				if (negativeButtonClickListener != null) {
 					((Button) layout.findViewById(R.id.negativeButton))
 							.setOnClickListener(new View.OnClickListener() {
-								public void onClick(View v) {
+								@Override
+                                public void onClick(View v) {
 									negativeButtonClickListener.onClick(dialog,
 											DialogInterface.BUTTON_NEGATIVE);
 								}
@@ -181,6 +183,6 @@ public class CustomDialog extends Dialog {
 			return dialog;
 		}
 
-		
+
 	}
 }

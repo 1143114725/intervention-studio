@@ -1,8 +1,5 @@
 package com.investigate.newsupper.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -14,7 +11,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.NotificationCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,7 +20,6 @@ import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.bean.Parameter;
 import com.investigate.newsupper.bean.Survey;
@@ -31,7 +27,11 @@ import com.investigate.newsupper.bean.UploadFeed;
 import com.investigate.newsupper.global.Cnt;
 import com.investigate.newsupper.global.MyApp;
 import com.investigate.newsupper.service.recordserver.RecordUtils;
+import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.Util;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 /**
  * 内部名单确认界面
  * @author EraJi
@@ -120,7 +120,8 @@ public class CheckAddrActivity extends Activity {
 		
 		
 		String immer = feed.getParametersStr();
-		ArrayList<Parameter> pip = (ArrayList<Parameter>) JSON.parseArray(immer, Parameter.class);
+
+		ArrayList<Parameter> pip = (ArrayList<Parameter>) GsonUtil.GsonToList(immer, Parameter.class);
 		if (!Util.isEmpty(pip)) {
 			for (int i = 0; i < pip.size(); i++) {
 				if (pip.get(i).getSid().equals("Phone")) {
