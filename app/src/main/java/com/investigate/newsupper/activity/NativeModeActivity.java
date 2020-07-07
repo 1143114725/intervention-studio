@@ -33,6 +33,7 @@ import android.text.InputType;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ForegroundColorSpan;
@@ -8047,7 +8048,8 @@ public class NativeModeActivity extends BaseActivity implements
 							final float imgItemWidth = rowsOneWidth;
 							// 更改的样式
 							ImageGetter imgGetter = new Html.ImageGetter() {
-								public Drawable getDrawable(String source) {
+								@Override
+                                public Drawable getDrawable(String source) {
 									Drawable drawable = null;
 									String name = NativeModeActivity.this
 											.getFilesDir()
@@ -8863,8 +8865,7 @@ public class NativeModeActivity extends BaseActivity implements
 						//复选选项
 						String rowtext = getRowText(item.itemText);
 
-						BaseLog.w("列标题 " + item.itemText + "- 固定=rowtext = "
-								+ rowtext);
+
 
 						if (!Util.isEmpty(rowtext)) {
 							cb.setText(rowtext);
@@ -21114,6 +21115,10 @@ public class NativeModeActivity extends BaseActivity implements
 	private long secClick = 0;
 	private int etHashCode = 0;
 
+    /**
+     * 单行文本
+     * @param amList
+     */
 	@SuppressLint("ClickableViewAccessibility")
 	private void freeTextBox(ArrayList<AnswerMap> amList) {
 
@@ -21129,7 +21134,13 @@ public class NativeModeActivity extends BaseActivity implements
 				isNew = false;
 				break;
 			}
-		}
+
+            String rowtext = getRowText(questionItem.getLeftsideWord());
+			if(!TextUtils.isEmpty(rowtext)){
+                tbColumns.get(i).setLeftsideWord(rowtext);
+            }
+
+        }
 
 		if (isNew) {
 			bodyView.setOrientation(LinearLayout.VERTICAL);
@@ -27132,6 +27143,9 @@ public class NativeModeActivity extends BaseActivity implements
 		String s[] = str.split("@@");
 		for (int i = 0; i < s.length; i++) {
 			BaseLog.v("s= " + s[i]);
+			if(s[i].indexOf("|") != -1){
+                return null;
+            }
 		}
 		Answer ans = getanswer(s[0]);
 		BaseLog.v("ans= " + ans);
@@ -27172,19 +27186,19 @@ public class NativeModeActivity extends BaseActivity implements
 		return rowtext;
 	}
 
-	/**
-	 * 获取答案
-	 * 
-	 * @param index
-	 * @return
-	 */
-	public Answer geianswer(String index) {
-		Answer p4aans = ma.dbService.getAnswer(feed.getUuid(), index);
-		if (p4aans != null && p4aans.getAnswerMapArr() != null) {
-			return p4aans;
-		}
-		return null;
-
-	}
+//	/**
+//	 * 获取答案
+//	 *
+//	 * @param index
+//	 * @return
+//	 */
+//	public Answer geianswer(String index) {
+//		Answer p4aans = ma.dbService.getAnswer(feed.getUuid(), index);
+//		if (p4aans != null && p4aans.getAnswerMapArr() != null) {
+//			return p4aans;
+//		}
+//		return null;
+//
+//	}
 
 }

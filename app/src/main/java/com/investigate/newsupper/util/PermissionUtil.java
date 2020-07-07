@@ -71,10 +71,6 @@ public class PermissionUtil {
             } else {
                 operation.OnNext();
             }
-            int [] grantResults= {1,2,3};
-            String [] permissions= {"","",""};
-            mActivity.onRequestPermissionsResult(0,permissions,grantResults);
-
         }
 
 
@@ -116,33 +112,7 @@ public class PermissionUtil {
             }
         }
 
-        /**
-         *没有权限的时候弹出对话框让用户去设置里开启权限
-         * @param context
-         * @param message  对话框提示内容
-         * @param listener  点击取消的时候的响应事件
-         */
-        public static void showMessageOKCancel(final Activity context, String message, DialogInterface.OnClickListener listener) {
-            if (message.equals("")){
-                message = "请前往设置界面打开相应权限！";
-            }
-            new AlertDialog.Builder(context)
-                    .setMessage(message)
-                    .setPositiveButton("OK",  new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent();
-                            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                            Uri uri = Uri.fromParts("package", context.getPackageName(), null);
-                            intent.setData(uri);
-                            context.startActivity(intent);
-                        }
-                    })
-                    .setNegativeButton("Cancel",listener)
-                    .create()
-                    .show();
 
-        }
 
     }
     /**
@@ -150,6 +120,88 @@ public class PermissionUtil {
      */
     public interface Operation{
         void OnNext();
+    }
+
+    /**
+     *没有权限的时候弹出对话框让用户去设置里开启权限
+     * @param context
+     * @param message  对话框提示内容
+     * @param listener  点击取消的时候的响应事件
+     */
+    public static void showMessageOKCancel(final Activity context, String message, DialogInterface.OnClickListener listener) {
+        if (message.equals("")){
+            message = "请前往设置界面打开相应权限！";
+        }
+        new AlertDialog.Builder(context)
+                .setMessage(message)
+                .setPositiveButton("OK",  new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", context.getPackageName(), null);
+                        intent.setData(uri);
+                        context.startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancel",listener)
+                .create()
+                .show();
+
+    }
+
+
+    public static String getPremissionName(String permission){
+        String premissionName = "";
+        switch (permission) {
+            case "android.permission.WRITE_CONTACTS":
+            case "android.permission.GET_ACCOUNTS":
+            case "android.permission.READ_CONTACTS":
+                premissionName = "联系人";
+                break;
+            case "android.permission.READ_CALL_LOG":
+            case "android.permission.READ_PHONE_STATE":
+            case "android.permission.CALL_PHONE":
+            case "android.permission.WRITE_CALL_LOG":
+            case "android.permission.USE_SIP":
+            case "android.permission.PROCESS_OUTGOING_CALLS":
+            case "com.android.voicemail.permission.ADD_VOICEMAIL":
+                premissionName = "电话";
+                break;
+            case "android.permission.READ_CALENDAR":
+            case "android.permission.WRITE_CALENDAR":
+                premissionName = "手机时间";
+                break;
+            case "android.permission.CAMERA":
+                premissionName = "相机";
+                break;
+            case "android.permission.BODY_SENSORS":
+                premissionName = "传感器";
+                break;
+            case "android.permission.ACCESS_FINE_LOCATION":
+            case "android.permission.ACCESS_COARSE_LOCATION":
+                premissionName = "定位";
+                break;
+            case "android.permission.READ_EXTERNAL_STORAGE":
+            case "android.permission.WRITE_EXTERNAL_STORAGE":
+                premissionName = "数据存储";
+                break;
+            case "android.permission.RECORD_AUDIO":
+                premissionName = "麦克风";
+                break;
+            case "android.permission.READ_SMS":
+            case "android.permission.RECEIVE_WAP_PUSH":
+            case "android.permission.RECEIVE_MMS":
+            case "android.permission.RECEIVE_SMS":
+            case "android.permission.SEND_SMS":
+            case "android.permission.READ_CELL_BROADCASTS":
+                premissionName = "短信";
+                break;
+            default:
+                premissionName = "相关";
+                break;
+        }
+        return premissionName;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.investigate.newsupper.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -20,6 +21,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.investigate.newsupper.R;
 import com.investigate.newsupper.base.BaseInterface;
 import com.investigate.newsupper.bean.FeedAnsBean;
@@ -36,6 +39,7 @@ import com.investigate.newsupper.util.CheckAudioPermission;
 import com.investigate.newsupper.util.GsonUtil;
 import com.investigate.newsupper.util.MD5;
 import com.investigate.newsupper.util.NetUtil;
+import com.investigate.newsupper.util.PermissionUtil;
 import com.investigate.newsupper.util.UIUtils;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.CustomProgressDialog;
@@ -562,4 +566,40 @@ public class ChoiceModeActivity extends Activity implements OnClickListener {
 		return new MyOnKeyListener();
 	}
 
+    /**
+     * 检查权限
+     */
+    private void checkPremission() {
+        PermissionUtil.with(this).isPermissions(permissions, new PermissionUtil.Operation() {
+            @Override
+            public void OnNext() {
+
+            }
+        });
+    }
+    /**
+     * 权限回调
+     * @param requestCode 传入的值  固定1
+     * @param permissions   权限名数组
+     * @param grantResults  对应的权限是否通过 -1 拒绝  0 同意
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        for (int i = 0, size = grantResults.length; i < size; i++) {
+            if(grantResults[i] == -1){
+                String permissionName = PermissionUtil.getPremissionName(permissions[i]);
+                BaseToast.showShortToast(ChoiceModeActivity.this,"您已拒绝"+permissionName+"权限！");
+                if (Manifest.permission.READ_EXTERNAL_STORAGE.equals(permissions[i])){
+                    finish();
+                }
+            }
+        }
+    }
+
+    private String permissions[] = {Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.CAMERA,
+            Manifest.permission.RECORD_AUDIO};
 }

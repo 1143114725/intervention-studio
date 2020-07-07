@@ -16,13 +16,10 @@
             android:id="@+id/grid_item_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/login_margin_top_small"
             android:layout_marginLeft="@dimen/login_margin_top_small"
-            android:layout_marginTop="@dimen/login_margin_top_small"
             android:text="@string/number"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/red"
-            android:textSize="@dimen/sry_text_big" />
+            android:textSize="@dimen/sry_text_small" />
         
         <com.investigate.newsupper.global.textsize.UITextView
             android:id="@+id/grid_item_scsize"

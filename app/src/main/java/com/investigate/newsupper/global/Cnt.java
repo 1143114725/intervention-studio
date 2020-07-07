@@ -181,7 +181,7 @@ public class Cnt {
 	// * 免费地址
 	// */
 	public static String FREE_REGIST_URL = "http://www.survey-expert.cn/FreeReg.asp";
-	public static String CONFIG_XML_NAME = "app_dapsurvey_ep";
+	public static String CONFIG_XML_NAME = "app_dapsurvey_shzs";
 	public static String LOGIN_URL = "http://free.dapchina.cn/alisoft/OfflineLogin.asp";
 	public static String UPLOAD_URL = "http://free.dapchina.cn/alisoft/OfflineUpload.aspx";
 	//ftp地址

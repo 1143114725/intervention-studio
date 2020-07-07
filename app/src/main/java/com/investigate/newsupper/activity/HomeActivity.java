@@ -2,11 +2,13 @@ package com.investigate.newsupper.activity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -25,24 +27,54 @@ import com.investigate.newsupper.util.PermissionUtil;
 import com.investigate.newsupper.util.Util;
 import com.investigate.newsupper.view.Toasts;
 
+/**
+ * @author EraJi
+ */
 public class HomeActivity extends FragmentActivity {
 
+
+    private String permissions[] = {Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.CAMERA,
+            Manifest.permission.RECORD_AUDIO};
 	SlidingMenu mSlidingMenu;
 	LeftFragment leftFragment;
 	RightFragment rightFragment;
 	CenterFagment centerFagment;
 	FragmentTransaction t;
 	public static boolean isHide = true;
-	private MyApp ma;// 自动转换地址
-	private boolean isFree;// true是免费 false是付费
+	private MyApp ma;
+    /**
+     * 自动转换地址
+     */
+	private boolean isFree;
+    /**
+     *  true是免费 false是付费
+     */
 	private String freeIp, payIp;
 
+    /**
+     * 权限回调
+     * @param requestCode 传入的值  固定1
+     * @param permissions   权限名数组
+     * @param grantResults  对应的权限是否通过 -1 拒绝  0 同意
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
 
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        for (int i = 0, size = grantResults.length; i < size; i++) {
+            if(grantResults[i] == -1){
+                String permissionName = PermissionUtil.getPremissionName(permissions[i]);
+                BaseToast.showShortToast(HomeActivity.this,"您已拒绝"+permissionName+"权限！");
+                if (Manifest.permission.READ_EXTERNAL_STORAGE.equals(permissions[i])){
+                    finish();
+                }
+            }
+        }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
@@ -50,70 +82,25 @@ public class HomeActivity extends FragmentActivity {
 		if (null == ma) {
 			ma = (MyApp) getApplication();
 		}
+		checkPremission();
 
-        PermissionUtil.with(this).isPermission(Manifest.permission.CALL_PHONE, new PermissionUtil.Operation() {
-            @Override
-            public void OnNext() {
-
-                BaseToast.showLongToast(HomeActivity.this,"电话权限申请成功！！");
-            }
-        });
-
-//                init(this)
-//                .permissions(Manifest.permission.CALL_PHONE)
-//                .request { allGranted, grantedList, deniedList ->
-//            if (allGranted) {
-//                call()
-//            } else {
-//                Toast.makeText(this, "您拒绝了拨打电话权限", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-		//startService(new Intent(this, MyLocation.class));
-		// 假如是访问专家版本,读取是什么版本 注释部分
-		// if (Cnt.appVersion == 1 || Cnt.appVersion == 4) {
-		// isFree = ma.cfg.getBoolean("isFree");
-		// // System.out.println("isFree:"+isFree);
-		// } else {
-		// // 其他的没有免费版
-		// isFree = true;
-		// }
-		// // 兼容性
-		// // 假如是访问专家读取配置的地址
-		// if (Cnt.appVersion == 1) {
-		// // 设置域名
-		// payIp = ma.cfg.getString("payIp", "");
-		// freeIp = this.getString(R.string.real_free_ip);
-		// if (Util.isEmpty(payIp)) {
-		// payIp = this.getString(R.string.real_pay_ip);
-		// }
-		// } else {
-		// // 非访问专家直接使用他们的地址
-		// // 设置域名
-		// freeIp = this.getString(R.string.real_free_ip);
-		// // 美国服务器 版本控制
-		// if (Cnt.appVersion == 4) {
-		// payIp = this.getString(R.string.real_pay_ipsos_ip);
-		// }
-		// // IMS
-		// if (Cnt.appVersion == 3) {
-		// payIp = this.getString(R.string.real_pay_ims_ip);
-		// }
-		// // IPSOS
-		// if (Cnt.appVersion == 2) {
-		// payIp = this.getString(R.string.real_pay_ipsos1_ip);
-		// }
-		// }
-		// // 假如是免费的改成免费地址
-		// if (!isFree) {
-		// Cnt.changeNewURL(true, freeIp, freeIp, payIp);
-		// } else {
-		// Cnt.changeNewURL(false, payIp, freeIp, payIp);
-		// }
-		// System.out.println("Cnt.SHOUQUAN_URL:"+Cnt.SHOUQUAN_URL);
 		init();
 	}
 
-	@Override
+    /**
+     * 检查权限
+     */
+    private void checkPremission() {
+        PermissionUtil.with(this).isPermissions(permissions, new PermissionUtil.Operation() {
+            @Override
+            public void OnNext() {
+
+            }
+        });
+    }
+
+
+    @Override
 	protected void onResume() {
 		time = 0;
 		isFree = ma.cfg.getBoolean("isFree");
@@ -121,10 +108,14 @@ public class HomeActivity extends FragmentActivity {
 		LogUtil.printfLog("appUrl", Cnt.APP_URL);
 		super.onResume();
 	}
-
-	private int time = 0;// 次数
-	private long myTime = 0;// 时间
-
+    /**
+     * 次数
+     */
+    private int time = 0;
+    /**
+     * 时间
+     */
+    private long myTime = 0;
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {

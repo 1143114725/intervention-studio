@@ -8,6 +8,11 @@ android {
         applicationId "com.investigate.newsupper"
         minSdkVersion 15
         targetSdkVersion 28
+        versionCode 1
+        versionName "18.7"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
 
     buildTypes {
